@@ -1,0 +1,102 @@
+/* CSS document */
+
+@font-face {
+    font-family: "petit";
+    src: url(../fonts/Petit_Formal_Script/PetitFormalScript-Regular.ttf);
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    outline: none;
+}
+
+html {
+    height: 100vh;
+    min-height: 100%;
+    margin: 0;
+	padding: 0;
+}
+
+body {
+    background-image: url(../images/bgclouds.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.tm-container {
+    background-color: #FF6699;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #990099;
+    min-height: 150px;
+
+    & div {
+        max-height: 150px;
+        padding: 0 !important;
+    }
+
+    div:first-of-type {
+        background-color: #990000;
+    }
+
+    div:nth-last-of-type(2) {
+        background-color: #aa9900;
+    }
+}
+
+img {
+    &.tm-logo {
+    
+    }
+
+    &.tm-portrait {
+        border: 3px solid #ffffff;
+        border-radius: 50%;
+        max-height: 150px;
+    }
+}
+
+.nav {
+    &.navbar-nav li {
+        font-family: "petit";
+        font-size: 1em;
+        font-weight: bold;
+    }
+}
+
+main {
+    background-color: #ffffff;
+    padding: 15px;
+    min-height: 100%;
+}
+
+footer {
+    background-color: #FF9900;
+    line-height: 40px;
+    min-height: 40px;
+    text-align: center;
+}
+
+/* xs, sm */
+@media (max-width: 991px) {
+    header {
+        text-align: center;
+    }
+}
+
+/* md, lg */
+@media (min-width: 992px) {
+    header {
+        text-align: initial;
+    }
+}
