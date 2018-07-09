@@ -1,0 +1,22 @@
+[
+    {
+        "caption": "Kezdőoldal",
+        "url": "kezdo"
+    },
+    {
+        "caption": "Mi a TM?",
+        "url": "tm"
+    },
+    {
+        "caption": "A TM hatásai",
+        "url": "tm_hatasai"
+    },
+    {
+        "caption": "Referenciák",
+        "url": "referenciak"
+    },
+    {
+        "caption": "Elérhetőség",
+        "url": "elerhetoseg"
+    }
+]

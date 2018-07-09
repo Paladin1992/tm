@@ -10,8 +10,6 @@
   outline: none;
 }
 html {
-  height: 100vh;
-  min-height: 100%;
   margin: 0;
   padding: 0;
 }
@@ -24,58 +22,91 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  min-height: 100vh;
   margin: 0;
   padding: 0;
+  font-size: 14px;
+}
+h1 {
+  font-size: 30px;
+  margin-top: 0;
+}
+h2 {
+  font-size: 28px;
 }
 .tm-container {
-  background-color: #FF6699;
-  min-height: 100vh;
+  background-color: #204080;
 }
 header {
-  background-color: #990099;
-  min-height: 150px;
+  min-height: 100px;
+  color: #ffffff;
 }
-header div {
-  max-height: 150px;
-  padding: 0 !important;
+header div#tm-logo {
+  min-height: 100px;
+  padding: 5px 0;
+  position: relative;
 }
-header div:first-of-type {
-  background-color: #990000;
+header div#tm-title {
+  padding: 0 10px;
 }
-header div:nth-last-of-type(2) {
-  background-color: #aa9900;
+.navbar {
+  border-radius: 0;
+  margin-bottom: 10px;
 }
-img.tm-portrait {
-  border: 3px solid #ffffff;
-  border-radius: 50%;
-  max-height: 150px;
-}
-.nav.navbar-nav li {
-  font-family: "petit";
-  font-size: 1em;
+.navbar .nav.navbar-nav li {
   font-weight: bold;
+}
+.navbar .nav.navbar-nav li a {
+  background-color: white;
+  transition: background-color 0.75s linear, color 0.75s linear;
+  color: #204080;
+}
+.navbar .nav.navbar-nav li a:hover {
+  background-color: #204080;
+  /*1040f0*/
+  transition: background-color 0.25s linear, color 0.25s linear;
+  color: white;
 }
 main {
   background-color: #ffffff;
+  background-image: url(../images/margareta_20.png);
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  background-size: 200px;
   padding: 15px;
   min-height: 100%;
 }
 footer {
-  background-color: #FF9900;
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 80px;
+  color: #ffffff;
   line-height: 40px;
-  min-height: 40px;
+  min-height: 80px;
   text-align: center;
 }
-/* xs, sm */
-@media (max-width: 991px) {
+/* xs */
+@media (max-width: 767px) {
+  body {
+    font-size: 16px;
+  }
   header {
     text-align: center;
   }
 }
-/* md, lg */
-@media (min-width: 992px) {
+/* sm, md, lg */
+@media (min-width: 768px) {
+  body {
+    font-size: 14px;
+  }
   header {
     text-align: initial;
+  }
+  header .tm-logo {
+    max-height: 100px;
+    max-width: 100px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
   }
 }
