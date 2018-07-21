@@ -1,0 +1,1 @@
+<?=print_page_title($site)?>

@@ -1,3 +1,5 @@
+<?=print_page_title($site)?>
+
 <h2>Az élet célja</h2>
 
 <p style="font-style: italic">

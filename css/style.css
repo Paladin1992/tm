@@ -1,8 +1,24 @@
-/* CSS document */
 @font-face {
-  font-family: "petit";
+  font-family: 'Dancing Script', serif;
+  src: url(../fonts/Dancing_Script/DancingScript-Regular.ttf);
+}
+@font-face {
+  font-family: 'Italianno', cursive;
+  src: url(../fonts/Italianno/Italianno-Regular.ttf);
+}
+@font-face {
+  font-family: 'Lobster', cursive;
+  src: url(../fonts/Lobster/Lobster-Regular.ttf);
+}
+@font-face {
+  font-family: 'Petit Formal Script', cursive;
   src: url(../fonts/Petit_Formal_Script/PetitFormalScript-Regular.ttf);
 }
+@font-face {
+  font-family: 'Sriracha', cursive;
+  src: url(../fonts/Sriracha/Sriracha-Regular.ttf);
+}
+/*** Common ***/
 *,
 *::before,
 *::after {
@@ -14,7 +30,7 @@ html {
   padding: 0;
 }
 body {
-  background-image: url(../images/bgclouds.jpg);
+  background-image: url(../images/margaritas_flowers_bg_50.png);
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-position: center center;
@@ -27,44 +43,73 @@ body {
   font-size: 14px;
 }
 h1 {
+  font-family: "Dancing Script", cursive;
   font-size: 30px;
   margin-top: 0;
 }
 h2 {
+  font-family: "Petit Formal Script";
   font-size: 28px;
+  font-weight: bold;
+  margin: 10px 0 20px;
 }
 .tm-container {
   background-color: #204080;
 }
-header {
-  min-height: 100px;
-  color: #ffffff;
+nav {
+  border-radius: 0 !important;
+  border: none !important;
+  margin-bottom: 0 !important;
 }
-header div#tm-logo {
-  min-height: 100px;
-  padding: 5px 0;
+nav .navbar-header {
+  background: #204080;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #204080 15%, #2989d8 66%, #ffffff 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #204080 15%, #2989d8 66%, #ffffff 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #204080 15%, #2989d8 66%, #ffffff 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#204080', endColorstr='#ffffff', GradientType=0);
+  /* IE6-9 */
+  min-height: 80px;
+  padding: 10px 0;
   position: relative;
 }
-header div#tm-title {
-  padding: 0 10px;
-}
-.navbar {
-  border-radius: 0;
-  margin-bottom: 10px;
-}
-.navbar .nav.navbar-nav li {
-  font-weight: bold;
-}
-.navbar .nav.navbar-nav li a {
-  background-color: white;
-  transition: background-color 0.75s linear, color 0.75s linear;
+nav button {
+  background-color: transparent !important;
+  border-color: white !important;
+  border-radius: 4px !important;
   color: #204080;
+  margin-right: 0 !important;
+  padding-bottom: 9px;
+  position: absolute !important;
+  right: 0;
+  top: 10px;
+  transition: background-color 0.4s linear, border-radius 0.4s linear, padding-bottom 0.4s linear;
 }
-.navbar .nav.navbar-nav li a:hover {
-  background-color: #204080;
-  /*1040f0*/
-  transition: background-color 0.25s linear, color 0.25s linear;
-  color: white;
+nav button.opened {
+  background-color: white !important;
+  border-radius: 4px 4px 0 0 !important;
+  padding-bottom: 39px;
+  transition: background-color 0.4s linear, border-radius 0.4s linear, padding-bottom 0.4s linear;
+}
+nav button.opened .icon-bar {
+  background-color: #888888 !important;
+  transition: background-color 0.4s linear;
+}
+nav button .icon-bar {
+  background-color: white !important;
+  display: block;
+  transition: background-color 0.4s linear;
+}
+nav button i {
+  transform: rotateZ(0deg);
+  transition: transform 0.4s linear;
+}
+nav button i.opened {
+  transform: rotateZ(180deg);
+  transition: transform 0.4s linear;
 }
 main {
   background-color: #ffffff;
@@ -72,41 +117,191 @@ main {
   background-repeat: no-repeat;
   background-position: left bottom;
   background-size: 200px;
+  border-radius: 0 0 25px 25px;
   padding: 15px;
-  min-height: 100%;
+  min-height: 200px;
 }
 footer {
-  background-repeat: no-repeat;
-  background-position: left center;
-  background-size: 80px;
   color: #ffffff;
+  font-size: 14px;
   line-height: 40px;
-  min-height: 80px;
   text-align: center;
 }
-/* xs */
-@media (max-width: 767px) {
+/*** Common END ***/
+/*** xs ***/
+@media screen and (max-width: 767px) {
   body {
     font-size: 16px;
   }
   header {
+    display: none;
+    min-height: 100px;
+    text-align: center;
+  }
+  header #tm-logo-container {
+    padding: 5px 0;
+  }
+  header #tm-logo-container .tm-logo {
+    max-height: 100px;
+    max-width: 90px;
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+  }
+  header #tm-title-container {
+    min-height: 70px;
+    position: relative;
+  }
+  header #tm-title-container h1 {
+    color: white;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+  }
+  nav #menu-logo {
+    display: initial;
+    float: left;
+    height: 50px;
+    margin: 5px 0 0 5px;
+  }
+  nav h1 {
+    color: white;
+    display: block;
+    font-size: 6.5vw;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+  }
+  nav div .navbar-collapse {
+    border-color: white !important;
+  }
+  nav div .navbar-collapse.collapse {
+    padding-bottom: 10px;
+  }
+  nav div .navbar-collapse.collapse.in {
+    background-color: #204080;
+  }
+  nav ul {
+    margin: 0 -15px !important;
+  }
+  nav ul > .active > a {
+    background-color: #ffb600 !important;
+    box-shadow: 1px 1px 25px 0px #994422 inset;
+    color: #66270f !important;
+  }
+  nav ul img {
+    height: 45px;
+    position: absolute;
+    top: 53%;
+    transform: translateY(-50%);
+  }
+  nav ul img.menu-flower-left {
+    float: left;
+    left: 5px;
+    transform: translateY(-50%) rotateZ(-20deg);
+  }
+  nav ul img.menu-flower-right {
+    float: right;
+    right: 5px;
+    transform: translateY(-50%) scaleX(-1) rotateZ(-20deg);
+  }
+  nav ul li::after {
+    clear: both;
+  }
+  nav ul li a {
+    background-color: white;
+    color: #204080 !important;
+    font-family: "Sriracha";
+    font-size: 1.5em;
+    margin-bottom: 1px;
+    padding: 15px 5px !important;
     text-align: center;
   }
 }
-/* sm, md, lg */
-@media (min-width: 768px) {
+/*** xs END ***/
+/*** sm, md, lg ***/
+@media screen and (min-width: 768px) {
   body {
     font-size: 14px;
   }
+  .tm-container {
+    border-radius: 0 0 25px 25px;
+  }
   header {
+    display: block;
+    min-height: 100px;
     text-align: initial;
   }
-  header .tm-logo {
+  header #tm-logo-container {
+    min-height: 100px;
+    padding: 5px 0;
+  }
+  header #tm-logo-container .tm-logo {
     max-height: 100px;
-    max-width: 100px;
+    max-width: 90px;
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+  }
+  header #tm-title-container {
+    min-height: 100px;
+    position: relative;
+  }
+  header #tm-title-container h1 {
+    color: white;
+    font-size: 5vw;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     width: 100%;
   }
+  nav #menu-logo {
+    display: none;
+  }
+  nav h1 {
+    display: none;
+  }
+  nav div .navbar-collapse.collapse {
+    padding-bottom: 10px;
+  }
+  nav div .navbar-collapse.collapse.in {
+    background-color: #204080;
+  }
+  nav ul {
+    margin: 0 -15px !important;
+  }
+  nav ul .menu-flower-left,
+  nav ul .menu-flower-right {
+    display: none;
+  }
+  nav ul li::after {
+    clear: both;
+  }
+  nav ul li a {
+    background-color: white;
+    border: 3px outset #ddd;
+    border-radius: 10px;
+    color: #204080 !important;
+    font-family: "Sriracha";
+    margin: 2px 3px;
+    padding: 10px 5px !important;
+    text-align: center;
+    transition: background-color 0.25s linear, color 0.25s linear;
+    width: 120px;
+  }
+  nav ul li a:hover {
+    background-color: #204080 !important;
+    /*1040f0*/
+    border-style: inset;
+    color: white !important;
+    transition: background-color 0.25s linear, color 0.25s linear;
+  }
+  nav ul li .active a {
+    background-color: #1060f0 !important;
+    color: white !important;
+  }
 }
+/*** sm, md, lg END ***/

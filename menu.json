@@ -1,22 +1,30 @@
 [
     {
-        "caption": "Kezdőoldal",
+        "caption": "Főoldal",
         "url": "kezdo"
     },
     {
-        "caption": "Mi a TM?",
-        "url": "tm"
+        "caption": "Fejlődés",
+        "url": "fejlodes"
     },
     {
-        "caption": "A TM hatásai",
-        "url": "tm_hatasai"
+        "caption": "Igazolt hatások",
+        "url": "hatasok"
     },
     {
         "caption": "Referenciák",
         "url": "referenciak"
     },
     {
-        "caption": "Elérhetőség",
-        "url": "elerhetoseg"
+        "caption": "Videók",
+        "url": "videok"
+    },
+    {
+        "caption": "Idézetek",
+        "url": "idezetek"
+    },
+    {
+        "caption": "Kapcsolat",
+        "url": "kapcsolat"
     }
 ]
