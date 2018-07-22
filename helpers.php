@@ -7,25 +7,34 @@
         $sm_offset = (12 - $sm) / 2;
         $md_offset = (12 - $md) / 2;
         $lg_offset = (12 - $lg) / 2;
+        $result = '';
 
-        $result = 'col-xs-'.$xs;
-        if ($use_offset && $xs_offset != 0) {
-            $result .= ' col-xs-offset-'.$xs_offset;
+        if ($xs != 0) {
+            $result .= 'col-xs-'.$xs;
+            if ($use_offset && $xs_offset != 0) {
+                $result .= ' col-xs-offset-'.$xs_offset;
+            }
         }
 
-        $result .= ' col-sm-'.$sm;
-        if ($use_offset && $sm_offset != 0) {
-            $result .= ' col-sm-offset-'.$sm_offset;
+        if ($sm != 0) {
+            $result .= ' col-sm-'.$sm;
+            if ($use_offset && $sm_offset != 0) {
+                $result .= ' col-sm-offset-'.$sm_offset;
+            }
         }
 
-        $result .= ' col-md-'.$md;
-        if ($use_offset && $md_offset != 0) {
-            $result .= ' col-md-offset-'.$md_offset;
+        if ($md != 0) {
+            $result .= ' col-md-'.$md;
+            if ($use_offset && $md_offset != 0) {
+                $result .= ' col-md-offset-'.$md_offset;
+            }
         }
 
-        $result .= ' col-lg-'.$lg;
-        if ($use_offset && $lg_offset != 0) {
-            $result .= ' col-lg-offset-'.$lg_offset;
+        if ($lg != 0) {
+            $result .= ' col-lg-'.$lg;
+            if ($use_offset && $lg_offset != 0) {
+                $result .= ' col-lg-offset-'.$lg_offset;
+            }
         }
 
         return $result;

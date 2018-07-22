@@ -1,23 +1,3 @@
-@font-face {
-  font-family: 'Dancing Script', serif;
-  src: url(../fonts/Dancing_Script/DancingScript-Regular.ttf);
-}
-@font-face {
-  font-family: 'Italianno', cursive;
-  src: url(../fonts/Italianno/Italianno-Regular.ttf);
-}
-@font-face {
-  font-family: 'Lobster', cursive;
-  src: url(../fonts/Lobster/Lobster-Regular.ttf);
-}
-@font-face {
-  font-family: 'Petit Formal Script', cursive;
-  src: url(../fonts/Petit_Formal_Script/PetitFormalScript-Regular.ttf);
-}
-@font-face {
-  font-family: 'Sriracha', cursive;
-  src: url(../fonts/Sriracha/Sriracha-Regular.ttf);
-}
 /*** Common ***/
 *,
 *::before,
@@ -30,10 +10,10 @@ html {
   padding: 0;
 }
 body {
-  background-image: url(../images/margaritas_flowers_bg_50.png);
+  background-image: url(../images/margareta_field_bg_75.jpg);
   background-attachment: fixed;
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: center 60%;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -51,7 +31,16 @@ h2 {
   font-family: "Petit Formal Script";
   font-size: 28px;
   font-weight: bold;
-  margin: 10px 0 20px;
+  margin: 0 0 20px;
+}
+.portrait {
+  border: 2px solid #204080;
+  box-shadow: 5px 5px 20px 0px grey;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 20px auto;
+  height: 250px;
+  display: block;
 }
 .tm-container {
   background-color: #204080;
@@ -62,17 +51,7 @@ nav {
   margin-bottom: 0 !important;
 }
 nav .navbar-header {
-  background: #204080;
-  /* Old browsers */
-  background: -moz-linear-gradient(top, #204080 15%, #2989d8 66%, #ffffff 100%);
-  /* FF3.6-15 */
-  background: -webkit-linear-gradient(top, #204080 15%, #2989d8 66%, #ffffff 100%);
-  /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to bottom, #204080 15%, #2989d8 66%, #ffffff 100%);
-  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#204080', endColorstr='#ffffff', GradientType=0);
-  /* IE6-9 */
-  min-height: 80px;
+  background-color: #204080;
   padding: 10px 0;
   position: relative;
 }
@@ -91,17 +70,42 @@ nav button {
 nav button.opened {
   background-color: white !important;
   border-radius: 4px 4px 0 0 !important;
-  padding-bottom: 39px;
+  padding-bottom: 32px;
   transition: background-color 0.4s linear, border-radius 0.4s linear, padding-bottom 0.4s linear;
 }
 nav button.opened .icon-bar {
-  background-color: #888888 !important;
+  background-color: #204080 !important;
+  position: relative;
   transition: background-color 0.4s linear;
+}
+nav button.opened .icon-bar.bar1 {
+  top: 6px;
+  transform: rotateZ(45deg);
+  transition: top 0.4s linear, transform 0.4s linear;
+}
+nav button.opened .icon-bar.bar2 {
+  transform: rotateZ(-45deg);
+  transition: transform 0.4s linear;
+}
+nav button.opened .icon-bar.bar3 {
+  background-color: white !important;
+  opacity: 0;
+  transition: background-color 0.4s linear, opacity 0.4s linear;
 }
 nav button .icon-bar {
   background-color: white !important;
   display: block;
+  position: relative;
   transition: background-color 0.4s linear;
+}
+nav button .icon-bar.bar1 {
+  transition: top 0.4s linear, transform 0.4s linear;
+}
+nav button .icon-bar.bar2 {
+  transition: transform 0.4s linear;
+}
+nav button .icon-bar.bar3 {
+  transition: background-color 0.4s linear, opacity 0.4s linear;
 }
 nav button i {
   transform: rotateZ(0deg);
@@ -111,20 +115,32 @@ nav button i.opened {
   transform: rotateZ(180deg);
   transition: transform 0.4s linear;
 }
+#tm-navbar-placeholder {
+  background: #204080;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #204080 0%, #2989d8 50%, #ffffff 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #204080 0%, #2989d8 50%, #ffffff 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #204080 0%, #2989d8 50%, #ffffff 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#204080', endColorstr='#ffffff', GradientType=0);
+  /* IE6-9 */
+  height: 25px;
+  margin: 0 -15px;
+}
 main {
   background-color: #ffffff;
-  background-image: url(../images/margareta_20.png);
-  background-repeat: no-repeat;
-  background-position: left bottom;
-  background-size: 200px;
+  /* margareta */
+  /* logo */
   border-radius: 0 0 25px 25px;
-  padding: 15px;
+  padding: 0 15px 15px;
   min-height: 200px;
 }
 footer {
   color: #ffffff;
-  font-size: 14px;
-  line-height: 40px;
+  font-size: 12px;
+  line-height: 35px;
   text-align: center;
 }
 /*** Common END ***/
@@ -177,10 +193,15 @@ footer {
   }
   nav div .navbar-collapse {
     border-color: white !important;
+    border-top: none !important;
+    box-shadow: none !important;
   }
+  nav div .navbar-collapse.collapsing,
   nav div .navbar-collapse.collapse {
+    background-color: #204080;
     padding-bottom: 10px;
   }
+  nav div .navbar-collapse.collapsing.in,
   nav div .navbar-collapse.collapse.in {
     background-color: #204080;
   }
@@ -211,6 +232,12 @@ footer {
   nav ul li::after {
     clear: both;
   }
+  nav ul li:first-of-type a {
+    border-radius: 4px 0 0 0;
+  }
+  nav ul li:last-of-type a {
+    border-radius: 0 0 4px 4px;
+  }
   nav ul li a {
     background-color: white;
     color: #204080 !important;
@@ -219,6 +246,11 @@ footer {
     margin-bottom: 1px;
     padding: 15px 5px !important;
     text-align: center;
+  }
+  nav ul li a:hover {
+    background-color: #ffb600 !important;
+    box-shadow: 1px 1px 25px 0px #994422 inset;
+    color: #66270f !important;
   }
 }
 /*** xs END ***/
@@ -258,20 +290,32 @@ footer {
     transform: translateY(-50%);
     width: 100%;
   }
-  nav #menu-logo {
-    display: none;
+  nav {
+    border-top: 1px solid white !important;
+    border-radius: 4px 4px 0 0 !important;
   }
+  nav #menu-logo,
   nav h1 {
     display: none;
   }
-  nav div .navbar-collapse.collapse {
-    padding-bottom: 10px;
+  nav div .navbar-collapse.collapse,
+  nav div .collapsing {
+    background-color: purple;
+    padding: 0;
   }
-  nav div .navbar-collapse.collapse.in {
+  nav div .navbar-collapse.collapse.in,
+  nav div .collapsing.in {
     background-color: #204080;
   }
-  nav ul {
-    margin: 0 -15px !important;
+  nav ul > .active > a {
+    background-color: #ffb600 !important;
+    box-shadow: 1px 1px 25px 0px #994422 inset;
+    color: #66270f !important;
+  }
+  nav ul > .active > a:hover {
+    background-color: #ffb600 !important;
+    box-shadow: 1px 1px 25px 0px white inset;
+    color: black !important;
   }
   nav ul .menu-flower-left,
   nav ul .menu-flower-right {
@@ -282,25 +326,12 @@ footer {
   }
   nav ul li a {
     background-color: white;
-    border: 3px outset #ddd;
-    border-radius: 10px;
     color: #204080 !important;
     font-family: "Sriracha";
-    margin: 2px 3px;
-    padding: 10px 5px !important;
     text-align: center;
-    transition: background-color 0.25s linear, color 0.25s linear;
-    width: 120px;
   }
   nav ul li a:hover {
     background-color: #204080 !important;
-    /*1040f0*/
-    border-style: inset;
-    color: white !important;
-    transition: background-color 0.25s linear, color 0.25s linear;
-  }
-  nav ul li .active a {
-    background-color: #1060f0 !important;
     color: white !important;
   }
 }

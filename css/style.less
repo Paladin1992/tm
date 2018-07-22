@@ -1,14 +1,8 @@
 @blue: #204080;
 @openSpeed: 0.4s;
 
-@font-face { font-family: 'Dancing Script', serif; src: url(../fonts/Dancing_Script/DancingScript-Regular.ttf); }
-@font-face { font-family: 'Italianno', cursive; src: url(../fonts/Italianno/Italianno-Regular.ttf); }
-@font-face { font-family: 'Lobster', cursive; src: url(../fonts/Lobster/Lobster-Regular.ttf); }
-@font-face { font-family: 'Petit Formal Script', cursive; src: url(../fonts/Petit_Formal_Script/PetitFormalScript-Regular.ttf); }
-@font-face { font-family: 'Sriracha', cursive; src: url(../fonts/Sriracha/Sriracha-Regular.ttf); }
 
 /*** Common ***/
-
 *, *::before, *::after {
     box-sizing: border-box;
     outline: none;
@@ -20,11 +14,11 @@ html {
 }
 
 body {
-    //background-image: url(../images/bgclouds.jpg);
-    background-image: url(../images/margaritas_flowers_bg_50.png);
+    background-image: url(../images/margareta_field_bg_75.jpg);
+    //background-image: url(../images/margaritas_flowers_bg_50.png);
     background-attachment: fixed;
     background-repeat: no-repeat;
-    background-position: center center;
+    background-position: center 60%;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -44,7 +38,17 @@ h2 {
     font-family: "Petit Formal Script";
     font-size: 28px;
     font-weight: bold;
-    margin: 10px 0 20px;
+    margin: 0 0 20px;
+}
+
+.portrait {
+    border: 2px solid @blue;
+    box-shadow: 5px 5px 20px 0px grey;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 20px auto;
+    height: 250px;
+    display: block;
 }
 
 .tm-container {
@@ -57,23 +61,16 @@ nav {
     margin-bottom: 0 !important;
 
     & .navbar-header {
-        background: @blue; /* Old browsers */
-        background: -moz-linear-gradient(top, @blue 15%, #2989d8 66%, #ffffff 100%); /* FF3.6-15 */
-        background: -webkit-linear-gradient(top, @blue 15%, #2989d8 66%,#ffffff 100%); /* Chrome10-25,Safari5.1-6 */
-        background: linear-gradient(to bottom, @blue 15%, #2989d8 66%,#ffffff 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#204080', endColorstr='#ffffff', GradientType=0); /* IE6-9 */
-        min-height: 80px;
+        background-color: @blue;
         padding: 10px 0;
         position: relative;
     }
 
     & button {
-        //background-color: white !important;
         background-color: transparent !important;
         border-color: white !important;
         border-radius: 4px !important;
         color: @blue;
-        //margin-right: 5px !important;
         margin-right: 0 !important;
         padding-bottom: 9px;
         position: absolute !important;
@@ -87,22 +84,45 @@ nav {
         &.opened {
             background-color: white !important;
             border-radius: 4px 4px 0 0 !important;
-            padding-bottom: 39px;
+            padding-bottom: 32px;
             transition:
                 background-color @openSpeed linear,
                 border-radius @openSpeed linear,
                 padding-bottom @openSpeed linear;
 
             & .icon-bar {
-                background-color: #888888 !important;
+                background-color: @blue !important;
+                position: relative;
                 transition: background-color @openSpeed linear;
+
+                &.bar1 {
+                    top: 6px;
+                    transform: rotateZ(45deg);
+                    transition: top @openSpeed linear, transform @openSpeed linear;
+                }
+
+                &.bar2 {
+                    transform: rotateZ(-45deg);
+                    transition: transform @openSpeed linear;
+                }
+
+                &.bar3 {
+                    background-color: white !important;
+                    opacity: 0;
+                    transition: background-color @openSpeed linear, opacity @openSpeed linear;
+                }
             }
         }
 
         & .icon-bar {
             background-color: white !important;
             display: block;
+            position: relative;
             transition: background-color @openSpeed linear;
+
+            &.bar1 { transition: top @openSpeed linear, transform @openSpeed linear; }
+            &.bar2 { transition: transform @openSpeed linear; }
+            &.bar3 { transition: background-color @openSpeed linear, opacity @openSpeed linear; }
         }
 
         & i {
@@ -117,28 +137,40 @@ nav {
     }
 }
 
+#tm-navbar-placeholder {
+    background: @blue; /* Old browsers */
+    background: -moz-linear-gradient(top, @blue 0%, #2989d8 50%, #ffffff 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, @blue 0%, #2989d8 50%,#ffffff 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, @blue 0%, #2989d8 50%,#ffffff 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#204080', endColorstr='#ffffff', GradientType=0); /* IE6-9 */
+    height: 25px;
+    margin: 0 -15px;
+}
+
 main {
     background-color: #ffffff;
-    background-image: url(../images/margareta_20.png);
-    background-repeat: no-repeat;
-    background-position: left bottom;
-    background-size: 200px;
+
+    /* margareta */
+    //background-image: url(../images/margareta_20.png);
+    //background-repeat: no-repeat;
+    //background-position: left bottom;
+    //background-size: 200px;
+
+    /* logo */
+    // background-image: url(../images/logo_bg.png);
+    // background-repeat: no-repeat;
+    // background-position: center center;
+    // background-size: 200px;
+
     border-radius: 0 0 25px 25px;
-    padding: 15px;
-    //min-height: 100%;
+    padding: 0 15px 15px;
     min-height: 200px;
 }
 
 footer {
-    //background-color: #FF9900;
-    //background-image: url(../images/margareta.png);
-    //background-repeat: no-repeat;
-    //background-position: left center;
-    //background-size: 80px;
     color: #ffffff;
-    font-size: 14px;
-    line-height: 40px;
-    //min-height: 80px;
+    font-size: 12px;
+    line-height: 35px;
     text-align: center;
 }
 /*** Common END ***/
@@ -146,9 +178,8 @@ footer {
 
 /*** xs ***/
 @media screen and (max-width: 767px) {
-    body {
-        font-size: 16px;
-    }
+
+    body { font-size: 16px; }
 
     header {
         display: none;
@@ -203,13 +234,14 @@ footer {
         & div {
             .navbar-collapse {
                 border-color: white !important;
+                border-top: none !important;
+                box-shadow: none !important;
 
-                &.collapse {
+                &.collapsing, &.collapse {
+                    background-color: @blue;
                     padding-bottom: 10px;
         
-                    &.in {
-                        background-color: @blue;
-                    }
+                    &.in { background-color: @blue; }
                 }
             }
         }
@@ -218,9 +250,9 @@ footer {
             margin: 0 -15px !important;
     
             & > .active > a {
-                background-color: #ffb600 !important; // ffaf00
+                background-color: #ffb600 !important;
                 box-shadow: 1px 1px 25px 0px #994422 inset;
-                color: #66270f !important; // 772200
+                color: #66270f !important;
             }
 
             & img {
@@ -243,12 +275,13 @@ footer {
             }
 
             & li {
-                &::after {
-                    clear: both;
-                }
+                &::after { clear: both; }
+
+                &:first-of-type a { border-radius: 4px 0 0 0; }
+
+                &:last-of-type a { border-radius: 0 0 4px 4px; }
 
                 & a {
-                    //background-color: #1060f0;
                     background-color: white;
                     color: @blue !important;
                     font-family: "Sriracha";
@@ -256,6 +289,12 @@ footer {
                     margin-bottom: 1px;
                     padding: 15px 5px !important;
                     text-align: center;
+
+                    &:hover {
+                        background-color: #ffb600 !important;
+                        box-shadow: 1px 1px 25px 0px #994422 inset;
+                        color: #66270f !important;
+                    }
                 }
             }
         }
@@ -308,60 +347,64 @@ footer {
     }
 
     nav {
-        & #menu-logo {
-            display: none;
-        }
-    
-        & h1 {
-            display: none;
-        }
+        border-top: 1px solid white !important;
+        border-radius: 4px 4px 0 0 !important;
+
+        & #menu-logo, & h1 { display: none; }
 
         & div {
-            .navbar-collapse.collapse {
-                padding-bottom: 10px;
+            .navbar-collapse.collapse, .collapsing {
+                //background-color: @blue;
+                background-color: purple;
+                //margin: 0 -15px; //kell?
+                //padding-bottom: 10px;
+                padding: 0;
     
-                &.in {
-                    background-color: @blue;
-                }
+                &.in { background-color: @blue; }
             }
         }
     
         & ul {
-            margin: 0 -15px !important;
+            //margin: 0 -15px !important;
 
-            & .menu-flower-left, & .menu-flower-right {
-                display: none;
+            & > .active > a {
+                background-color: #ffb600 !important;
+                box-shadow: 1px 1px 25px 0px #994422 inset;
+                color: #66270f !important;
+
+                &:hover {
+                    //background-color: white !important;
+                    background-color: #ffb600 !important;
+                    box-shadow: 1px 1px 25px 0px white inset;
+                    color: black !important;
+                }
             }
 
+            & .menu-flower-left, & .menu-flower-right { display: none; }
+
             & li {
-                &::after {
-                    clear: both;
-                }
+                &::after { clear: both; }
 
                 & a {
-                    //background-color: #1060f0;
                     background-color: white;
-                    border: 3px outset #ddd;
-                    border-radius: 10px;
+                    //border: 1px solid white;
+                    //border-radius: 10px;
                     color: @blue !important;
                     font-family: "Sriracha";
-                    margin: 2px 3px;
-                    padding: 10px 5px !important;
+                    //font-size: 1.2em;
+                    //margin: 0px 0px;
+                    //margin: 2px 3px;
+                    //padding: 10px 5px !important;
+                    //padding: 10px 10px !important;
                     text-align: center;
-                    transition: background-color 0.25s linear, color 0.25s linear;
-                    width: 120px;
+                    //transition: background-color 0.25s linear, color 0.25s linear;
+                    //width: 120px;
                 
                     &:hover {
-                        background-color: @blue !important; /*1040f0*/
-                        border-style: inset;
+                        background-color: @blue !important;
                         color: white !important;
-                        transition: background-color 0.25s linear, color 0.25s linear;
+                        //transition: background-color 0.25s linear, color 0.25s linear;
                     }
-                }
-
-                & .active a {
-                    background-color: #1060f0 !important;
-                    color: white !important;
                 }
             }
         }
