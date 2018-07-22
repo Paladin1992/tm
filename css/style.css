@@ -31,7 +31,7 @@ h2 {
   font-family: "Petit Formal Script";
   font-size: 28px;
   font-weight: bold;
-  margin: 0 0 20px;
+  margin: 10px 0 20px;
 }
 .portrait {
   border: 2px solid #204080;
@@ -126,6 +126,7 @@ nav button i.opened {
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#204080', endColorstr='#ffffff', GradientType=0);
   /* IE6-9 */
+  border-radius: 15px 15px 0 0;
   height: 25px;
   margin: 0 -15px;
 }
@@ -133,7 +134,7 @@ main {
   background-color: #ffffff;
   /* margareta */
   /* logo */
-  border-radius: 0 0 25px 25px;
+  border-radius: 15px 15px 25px 25px;
   padding: 0 15px 15px;
   min-height: 200px;
 }
@@ -291,7 +292,7 @@ footer {
     width: 100%;
   }
   nav {
-    border-top: 1px solid white !important;
+    background-color: #204080 !important;
     border-radius: 4px 4px 0 0 !important;
   }
   nav #menu-logo,
@@ -300,7 +301,6 @@ footer {
   }
   nav div .navbar-collapse.collapse,
   nav div .collapsing {
-    background-color: purple;
     padding: 0;
   }
   nav div .navbar-collapse.collapse.in,
@@ -333,6 +333,14 @@ footer {
   nav ul li a:hover {
     background-color: #204080 !important;
     color: white !important;
+  }
+  nav ul li:first-of-type a,
+  nav ul li:first-of-type .active > a {
+    border-radius: 10px 0 0 0;
+  }
+  nav ul li:last-of-type a,
+  nav ul li:last-of-type .active > a {
+    border-radius: 0 10px 0 0;
   }
 }
 /*** sm, md, lg END ***/

@@ -38,7 +38,7 @@ h2 {
     font-family: "Petit Formal Script";
     font-size: 28px;
     font-weight: bold;
-    margin: 0 0 20px;
+    margin: 10px 0 20px;
 }
 
 .portrait {
@@ -143,6 +143,7 @@ nav {
     background: -webkit-linear-gradient(top, @blue 0%, #2989d8 50%,#ffffff 100%); /* Chrome10-25,Safari5.1-6 */
     background: linear-gradient(to bottom, @blue 0%, #2989d8 50%,#ffffff 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#204080', endColorstr='#ffffff', GradientType=0); /* IE6-9 */
+    border-radius: 15px 15px 0 0;
     height: 25px;
     margin: 0 -15px;
 }
@@ -162,7 +163,7 @@ main {
     // background-position: center center;
     // background-size: 200px;
 
-    border-radius: 0 0 25px 25px;
+    border-radius: 15px 15px 25px 25px;
     padding: 0 15px 15px;
     min-height: 200px;
 }
@@ -347,7 +348,8 @@ footer {
     }
 
     nav {
-        border-top: 1px solid white !important;
+        background-color: @blue !important;
+        //border-top: 1px solid white !important;
         border-radius: 4px 4px 0 0 !important;
 
         & #menu-logo, & h1 { display: none; }
@@ -355,7 +357,7 @@ footer {
         & div {
             .navbar-collapse.collapse, .collapsing {
                 //background-color: @blue;
-                background-color: purple;
+                //background-color: purple;
                 //margin: 0 -15px; //kell?
                 //padding-bottom: 10px;
                 padding: 0;
@@ -404,6 +406,18 @@ footer {
                         background-color: @blue !important;
                         color: white !important;
                         //transition: background-color 0.25s linear, color 0.25s linear;
+                    }
+                }
+
+                &:first-of-type {
+                    & a, & .active > a {
+                        border-radius: 10px 0 0 0;
+                    }
+                }
+
+                &:last-of-type {
+                    & a, & .active > a {
+                        border-radius: 0 10px 0 0;
                     }
                 }
             }
