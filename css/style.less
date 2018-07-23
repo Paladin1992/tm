@@ -1,4 +1,5 @@
 @blue: #204080;
+@darkBlue: #103060;
 @openSpeed: 0.4s;
 
 
@@ -35,14 +36,17 @@ h1 {
 }
 
 h2 {
-    font-family: "Petit Formal Script";
-    font-size: 28px;
-    font-weight: bold;
+    //font-family: "Petit Formal Script", cursive;
+    //font-size: 28px;
+    //font-weight: bold;
+
+    font-family: "Dancing Script", cursive;
+    font-size: 40px;
     margin: 10px 0 20px;
 }
 
 .portrait {
-    border: 2px solid @blue;
+    //border: 2px solid @blue;
     box-shadow: 5px 5px 20px 0px grey;
     border-radius: 5px;
     padding: 10px;
@@ -139,11 +143,10 @@ nav {
 
 #tm-navbar-placeholder {
     background: @blue; /* Old browsers */
-    background: -moz-linear-gradient(top, @blue 0%, #2989d8 50%, #ffffff 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(top, @blue 0%, #2989d8 50%,#ffffff 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to bottom, @blue 0%, #2989d8 50%,#ffffff 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    background: -moz-linear-gradient(top, @blue 0%, #2989d8 45%, white 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, @blue 0%, #2989d8 45%, white 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, @blue 0%, #2989d8 45%, white 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#204080', endColorstr='#ffffff', GradientType=0); /* IE6-9 */
-    border-radius: 15px 15px 0 0;
     height: 25px;
     margin: 0 -15px;
 }
@@ -151,19 +154,19 @@ nav {
 main {
     background-color: #ffffff;
 
-    /* margareta */
+    /* margaréta vízjel */
     //background-image: url(../images/margareta_20.png);
     //background-repeat: no-repeat;
     //background-position: left bottom;
     //background-size: 200px;
 
-    /* logo */
+    /* logo vízjel */
     // background-image: url(../images/logo_bg.png);
     // background-repeat: no-repeat;
     // background-position: center center;
     // background-size: 200px;
 
-    border-radius: 15px 15px 25px 25px;
+    border-radius: 0 0 25px 25px;
     padding: 0 15px 15px;
     min-height: 200px;
 }
@@ -242,7 +245,10 @@ footer {
                     background-color: @blue;
                     padding-bottom: 10px;
         
-                    &.in { background-color: @blue; }
+                    &.in {
+                        background-color: @blue;
+                        overflow-y: visible !important;
+                    }
                 }
             }
         }
@@ -254,6 +260,11 @@ footer {
                 background-color: #ffb600 !important;
                 box-shadow: 1px 1px 25px 0px #994422 inset;
                 color: #66270f !important;
+
+                & .inner-caption {
+                    display: inline-block;
+                    max-width: 60vw;
+                }
             }
 
             & img {
@@ -348,38 +359,26 @@ footer {
     }
 
     nav {
-        background-color: @blue !important;
-        //border-top: 1px solid white !important;
-        border-radius: 4px 4px 0 0 !important;
+        background-color: @darkBlue !important;
+        border-radius: 12px 12px 0 0 !important;
 
         & #menu-logo, & h1 { display: none; }
 
         & div {
             .navbar-collapse.collapse, .collapsing {
-                //background-color: @blue;
-                //background-color: purple;
-                //margin: 0 -15px; //kell?
-                //padding-bottom: 10px;
                 padding: 0;
     
-                &.in { background-color: @blue; }
+                &.in { overflow-y: visible !important; }
             }
         }
     
         & ul {
-            //margin: 0 -15px !important;
 
-            & > .active > a {
+            & > .active > a, & > .active > a:hover {
                 background-color: #ffb600 !important;
+                border-radius: 0;
                 box-shadow: 1px 1px 25px 0px #994422 inset;
                 color: #66270f !important;
-
-                &:hover {
-                    //background-color: white !important;
-                    background-color: #ffb600 !important;
-                    box-shadow: 1px 1px 25px 0px white inset;
-                    color: black !important;
-                }
             }
 
             & .menu-flower-left, & .menu-flower-right { display: none; }
@@ -388,36 +387,18 @@ footer {
                 &::after { clear: both; }
 
                 & a {
-                    background-color: white;
-                    //border: 1px solid white;
-                    //border-radius: 10px;
-                    color: @blue !important;
+                    color: white !important;
                     font-family: "Sriracha";
-                    //font-size: 1.2em;
-                    //margin: 0px 0px;
-                    //margin: 2px 3px;
-                    //padding: 10px 5px !important;
-                    //padding: 10px 10px !important;
+                    font-size: 1.2em;
+                    padding: 15px 10px !important;
                     text-align: center;
-                    //transition: background-color 0.25s linear, color 0.25s linear;
-                    //width: 120px;
+                    transition: background-color 0.3s linear, color 0.3s linear;
                 
                     &:hover {
-                        background-color: @blue !important;
-                        color: white !important;
-                        //transition: background-color 0.25s linear, color 0.25s linear;
-                    }
-                }
-
-                &:first-of-type {
-                    & a, & .active > a {
-                        border-radius: 10px 0 0 0;
-                    }
-                }
-
-                &:last-of-type {
-                    & a, & .active > a {
-                        border-radius: 0 10px 0 0;
+                        background-color: white !important;
+                        box-shadow: 1px 1px 25px 0px #666 inset;
+                        color: @darkBlue !important;
+                        transition: background-color 0.3s linear, color 0.3s linear;
                     }
                 }
             }

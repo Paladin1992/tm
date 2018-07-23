@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <html lang="hu">
 <head>
-    <title>TM Mindenkinek</title>
+    <title><?=print_page_title($site, false);?> &bull; TM Mindenkinek</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 

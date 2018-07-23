@@ -57,7 +57,7 @@
         $img_left = '<img src="images/margareta.png" class="menu-flower-left">';
         $img_right = '<img src="images/margareta.png" class="menu-flower-right">';
         if ($active_class != '') {
-            $caption = $img_left.$caption.$img_right;
+            $caption = $img_left.'<span class="inner-caption">'.$caption.'</span>'.$img_right;
         }
         
         echo '<li'.$active_class.'><a href="index.php?p='.$url.'">'.$caption.'</a></li>';
@@ -72,7 +72,13 @@
         }
     }
 
-    function print_page_title($site) {
-        echo '<h2>'.get_menu_item_data($site)['caption'].'</h2>';
+    function print_page_title($site, $wrap_in_h2 = true) {
+        $title = get_menu_item_data($site)['caption'];
+        
+        if ($wrap_in_h2) {
+            echo '<h2>'.$title.'</h2>';
+        } else {
+            echo $title;
+        }
     }
 ?>
