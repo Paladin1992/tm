@@ -1,15 +1,15 @@
 "use strict";
 
-var $button = $('button');
+var menuButton;
 
 $(document).ready(function() {
 
-    $button.on('click', function() {
+    menuButton = $('button');
+    menuButton.on('click', function() {
         if ($('.navbar-collapse.collapse').hasClass('in')) { // open -> close
-            $button.removeClass('opened');
+            menuButton.removeClass('opened');
         } else { // closed -> open
-            $button.addClass('opened');
+            menuButton.addClass('opened');
         }
     });
-
 });

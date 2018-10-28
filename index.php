@@ -9,7 +9,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Dancing+Script|Italianno|Lobster|Petit+Formal+Script|Sriracha">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Dancing+Script|Sriracha|Rochester|Stalemate">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" href="images/favicon.png">
@@ -19,7 +19,7 @@
 </head>
 
 <body>
-    <div class="container <?=bs_col(12, 8, 8, 8, true);?> tm-container">
+    <div class="container <?=bs_col(12, 12, 8, 8, true);?> tm-container">
         <?php
             include("header.php");
             include("menu.php");
@@ -33,7 +33,7 @@
                 if (file_exists($file_path)) {
                     include($file_path);
                 } else {
-                    echo '<div class="alert alert-danger">A kért oldal tartalma még nem elérhet&odblac;. Addig nézz meg egy másik menüpontot! :)</div>'.PHP_EOL;
+                    echo '<div class="alert alert-danger">A kért oldal tartalma még nem elérhet&odblac;. Addig nézzen meg egy másik menüpontot! :)</div>'.PHP_EOL;
                 }
             ?>
         </main>

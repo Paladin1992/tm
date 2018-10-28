@@ -56,9 +56,9 @@
 
         $img_left = '<img src="images/margareta.png" class="menu-flower-left">';
         $img_right = '<img src="images/margareta.png" class="menu-flower-right">';
-        if ($active_class != '') {
+        //if ($active_class != '') {
             $caption = $img_left.'<span class="inner-caption">'.$caption.'</span>'.$img_right;
-        }
+        //}
         
         echo '<li'.$active_class.'><a href="index.php?p='.$url.'">'.$caption.'</a></li>';
     }

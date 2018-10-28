@@ -23,9 +23,17 @@ body {
   font-size: 14px;
 }
 h1 {
-  font-family: "Dancing Script", cursive;
+  font-family: "Rochester", cursive;
   font-size: 30px;
-  margin-top: 0;
+  font-style: italic;
+  margin: 0;
+}
+h1 .initial {
+  font-family: 'Stalemate', cursive;
+  font-weight: bold;
+  margin-right: 7px;
+  position: relative;
+  top: -2px;
 }
 h2 {
   font-family: "Dancing Script", cursive;
@@ -122,13 +130,13 @@ nav button i.opened {
   /* Chrome10-25,Safari5.1-6 */
   background: linear-gradient(to bottom, #204080 0%, #2989d8 45%, white 100%);
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#204080', endColorstr='#ffffff', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#2989d8', endColorstr='#ffffff', GradientType=0);
   /* IE6-9 */
   height: 25px;
   margin: 0 -15px;
 }
 main {
-  background-color: #ffffff;
+  background-color: white;
   /* margaréta vízjel */
   /* logo vízjel */
   border-radius: 0 0 25px 25px;
@@ -136,7 +144,7 @@ main {
   min-height: 200px;
 }
 footer {
-  color: #ffffff;
+  color: white;
   font-size: 12px;
   line-height: 35px;
   text-align: center;
@@ -150,29 +158,8 @@ footer {
   header {
     display: none;
     min-height: 100px;
-    text-align: center;
-  }
-  header #tm-logo-container {
-    padding: 5px 0;
-  }
-  header #tm-logo-container .tm-logo {
-    max-height: 100px;
-    max-width: 90px;
-    display: block;
-    margin: 0 auto;
-    width: 100%;
-  }
-  header #tm-title-container {
-    min-height: 70px;
     position: relative;
-  }
-  header #tm-title-container h1 {
-    color: white;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
+    text-align: center;
   }
   nav #menu-logo {
     display: initial;
@@ -184,7 +171,7 @@ footer {
     color: white;
     display: block;
     font-size: 6.5vw;
-    top: 50%;
+    top: 54%;
     left: 50%;
     position: absolute;
     transform: translate(-50%, -50%);
@@ -216,20 +203,22 @@ footer {
     display: inline-block;
     max-width: 60vw;
   }
-  nav ul img {
+  nav ul > .active > a img {
     height: 45px;
     position: absolute;
     top: 53%;
     transform: translateY(-50%);
   }
-  nav ul img.menu-flower-left {
+  nav ul > .active > a img.menu-flower-left {
     float: left;
     left: 5px;
+    opacity: 1;
     transform: translateY(-50%) rotateZ(-20deg);
   }
-  nav ul img.menu-flower-right {
+  nav ul > .active > a img.menu-flower-right {
     float: right;
     right: 5px;
+    opacity: 1;
     transform: translateY(-50%) scaleX(-1) rotateZ(-20deg);
   }
   nav ul li::after {
@@ -250,10 +239,24 @@ footer {
     padding: 15px 5px !important;
     text-align: center;
   }
+  nav ul li a img {
+    height: 45px;
+    position: absolute;
+    top: 53%;
+    transform: translateY(-50%);
+  }
+  nav ul li a img.menu-flower-left,
+  nav ul li a img.menu-flower-right {
+    opacity: 0;
+  }
   nav ul li a:hover {
     background-color: #ffb600 !important;
     box-shadow: 1px 1px 25px 0px #994422 inset;
     color: #66270f !important;
+  }
+  nav ul li a:hover img.menu-flower-left,
+  nav ul li a:hover img.menu-flower-right {
+    opacity: 1;
   }
 }
 /*** xs END ***/
@@ -266,36 +269,29 @@ footer {
     border-radius: 0 0 25px 25px;
   }
   header {
+    background-image: url(../images/logo.png);
+    background-repeat: no-repeat;
+    background-size: 90px;
+    background-position: left center;
     display: block;
-    min-height: 100px;
-    text-align: initial;
-  }
-  header #tm-logo-container {
-    min-height: 100px;
-    padding: 5px 0;
-  }
-  header #tm-logo-container .tm-logo {
-    max-height: 100px;
-    max-width: 90px;
-    display: block;
-    margin: 0 auto;
-    width: 100%;
-  }
-  header #tm-title-container {
     min-height: 100px;
     position: relative;
+    text-align: initial;
   }
-  header #tm-title-container h1 {
+  header h1 {
     color: white;
     font-size: 5vw;
     position: absolute;
+    text-align: center;
+    left: 50%;
     top: 50%;
-    transform: translateY(-50%);
+    transform: translate(-50%, -40%);
     width: 100%;
   }
   nav {
     background-color: #103060 !important;
     border-radius: 12px 12px 0 0 !important;
+    margin-top: 5px;
   }
   nav #menu-logo,
   nav h1 {
@@ -311,31 +307,70 @@ footer {
   }
   nav ul > .active > a,
   nav ul > .active > a:hover {
-    background-color: #ffb600 !important;
+    background-color: #103060 !important;
     border-radius: 0;
-    box-shadow: 1px 1px 25px 0px #994422 inset;
-    color: #66270f !important;
+    color: #ffb600 !important;
+    border-bottom: 3px solid #ffb600;
   }
-  nav ul .menu-flower-left,
-  nav ul .menu-flower-right {
+  nav ul > .active > a img,
+  nav ul > .active > a:hover img {
+    height: 35px;
+    position: absolute;
+  }
+  nav ul > .active > a img.menu-flower-left,
+  nav ul > .active > a:hover img.menu-flower-left {
+    opacity: 1;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%) rotateZ(-20deg);
+  }
+  nav ul > .active > a img.menu-flower-right,
+  nav ul > .active > a:hover img.menu-flower-right {
     display: none;
   }
   nav ul li::after {
     clear: both;
   }
   nav ul li a {
+    border-bottom: 3px solid #103060;
     color: white !important;
     font-family: "Sriracha";
-    font-size: 1.2em;
-    padding: 15px 10px !important;
+    font-size: 1.3em;
+    margin-right: 15px;
+    padding: 20px 10px 10px !important;
     text-align: center;
-    transition: background-color 0.3s linear, color 0.3s linear;
+    transition: border-bottom-color 0.5s linear;
+  }
+  nav ul li a img {
+    height: 35px;
+    position: absolute;
+  }
+  nav ul li a img.menu-flower-left {
+    opacity: 0;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%) rotateZ(-20deg);
+  }
+  nav ul li a img.menu-flower-right {
+    display: none;
   }
   nav ul li a:hover {
-    background-color: white !important;
-    box-shadow: 1px 1px 25px 0px #666 inset;
-    color: #103060 !important;
-    transition: background-color 0.3s linear, color 0.3s linear;
+    color: #ffb600 !important;
+    border-bottom: 3px solid #ffb600;
+    transition: border-bottom-color 0.5s linear;
+  }
+  nav ul li a:hover img {
+    height: 35px;
+    position: absolute;
+  }
+  nav ul li a:hover img.menu-flower-left {
+    opacity: 1;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%) rotateZ(-20deg);
+  }
+  nav ul li a:hover img.menu-flower-right {
+    display: none;
   }
 }
 /*** sm, md, lg END ***/

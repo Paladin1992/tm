@@ -3,7 +3,7 @@
         <div class="navbar-header">
             <img src="images/logo.png" id="menu-logo"/>
 
-            <h1>TM Mindenkinek</h1>
+            <h1><span class="initial">T</span>M &nbsp;Mindenkinek</h1>
 
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#tm-navbar" aria-expanded="false">
                 <span class="icon-bar bar1"></span>
