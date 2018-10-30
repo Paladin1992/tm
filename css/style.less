@@ -211,33 +211,6 @@ footer {
         min-height: 100px;
         position: relative;
         text-align: center;
-
-        // #tm-logo-container {
-        //     padding: 5px 0;
-        
-        //     .tm-logo {
-        //         max-height: 100px;
-        //         max-width: 90px;
-        //         display: block;
-        //         margin: 0 auto;
-        //         width: 100%;
-        //     }
-        // }
-
-        // #tm-title-container {
-        //     min-height: 70px;
-        //     padding-left: 25px;
-        //     position: relative;
-    
-        //     & h1 {
-        //         color: white;
-        //         position: absolute;
-        //         left: 50%;
-        //         top: 54%;
-        //         transform: translate(-50%, -50%);
-        //         width: 100%;
-        //     }
-        // }
     }
 
     nav {
@@ -346,9 +319,18 @@ footer {
                         color: @darkBrown !important;
 
                         & img {
-                            &.menu-flower-left,
-                            &.menu-flower-right {
+                            &.menu-flower-left {
+                                float: left;
+                                left: 5px;
                                 opacity: 1;
+                                transform: translateY(-50%) rotateZ(-20deg);
+                            }
+
+                            &.menu-flower-right {
+                                float: right;
+                                right: 5px;
+                                opacity: 1;
+                                transform: translateY(-50%) scaleX(-1) rotateZ(-20deg);
                             }
                         }
                     }
@@ -362,13 +344,9 @@ footer {
 
 /*** sm, md, lg ***/
 @media screen and (min-width: 768px) {
-    body {
-        font-size: 14px;
-    }
+    body { font-size: 14px; }
 
-    .tm-container {
-        border-radius: 0 0 25px 25px;
-    }
+    .tm-container { border-radius: 0 0 25px 25px; }
 
     header {
         background-image: url(../images/logo.png);
@@ -390,33 +368,6 @@ footer {
             transform: translate(-50%, -40%);
             width: 100%;
         }
-
-        // #tm-logo-container {
-        //     min-height: 100px;
-        //     padding: 5px 0;
-        
-        //     .tm-logo {
-        //         max-height: 100px;
-        //         max-width: 90px;
-        //         display: block;
-        //         margin: 0 auto;
-        //         width: 100%;
-        //     }
-        // }
-
-        // #tm-title-container {
-        //     min-height: 100px;
-        //     padding: 0 !important;
-        //     position: relative;
-    
-        //     & h1 {
-        //         color: white;
-        //         font-size: 5vw;
-        //         position: relative;
-        //         text-align: center;
-        //         transform: translate(-7.5%, 15%);
-        //     }
-        // }
     }
 
     nav {

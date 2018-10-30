@@ -254,9 +254,17 @@ footer {
     box-shadow: 1px 1px 25px 0px #994422 inset;
     color: #66270f !important;
   }
-  nav ul li a:hover img.menu-flower-left,
-  nav ul li a:hover img.menu-flower-right {
+  nav ul li a:hover img.menu-flower-left {
+    float: left;
+    left: 5px;
     opacity: 1;
+    transform: translateY(-50%) rotateZ(-20deg);
+  }
+  nav ul li a:hover img.menu-flower-right {
+    float: right;
+    right: 5px;
+    opacity: 1;
+    transform: translateY(-50%) scaleX(-1) rotateZ(-20deg);
   }
 }
 /*** xs END ***/
