@@ -76,9 +76,7 @@ h2 {
     display: block;
 }
 
-.tm-container {
-    background-color: @blue;
-}
+.tm-container { background-color: @blue; }
 
 nav {
     border-radius: 0 !important;
@@ -189,7 +187,7 @@ main {
 
     border-radius: 0 0 25px 25px;
     padding: 0 15px 15px;
-    min-height: 200px;
+    min-height: 300px;
 }
 
 footer {
@@ -313,7 +311,7 @@ footer {
                         }
                     }
 
-                    &:hover {
+                    &:hover, &:active {
                         background-color: @orange !important;
                         box-shadow: 1px 1px 25px 0px @brown inset;
                         color: @darkBrown !important;
@@ -373,7 +371,7 @@ footer {
     nav {
         background-color: @darkBlue !important;
         border-radius: 12px 12px 0 0 !important;
-        margin-top: 5px;
+        margin-top: 15px;
 
         & #menu-logo,
         & h1 { display: none; }
@@ -436,7 +434,7 @@ footer {
                         &.menu-flower-right { display: none; }
                     }
                 
-                    &:hover {
+                    &:hover, &:active {
                         color: @orange !important;
                         border-bottom: 3px solid @orange;
                         transition: border-bottom-color 0.5s linear;

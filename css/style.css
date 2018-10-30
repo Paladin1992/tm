@@ -141,7 +141,7 @@ main {
   /* logo vízjel */
   border-radius: 0 0 25px 25px;
   padding: 0 15px 15px;
-  min-height: 200px;
+  min-height: 300px;
 }
 footer {
   color: white;
@@ -249,18 +249,21 @@ footer {
   nav ul li a img.menu-flower-right {
     opacity: 0;
   }
-  nav ul li a:hover {
+  nav ul li a:hover,
+  nav ul li a:active {
     background-color: #ffb600 !important;
     box-shadow: 1px 1px 25px 0px #994422 inset;
     color: #66270f !important;
   }
-  nav ul li a:hover img.menu-flower-left {
+  nav ul li a:hover img.menu-flower-left,
+  nav ul li a:active img.menu-flower-left {
     float: left;
     left: 5px;
     opacity: 1;
     transform: translateY(-50%) rotateZ(-20deg);
   }
-  nav ul li a:hover img.menu-flower-right {
+  nav ul li a:hover img.menu-flower-right,
+  nav ul li a:active img.menu-flower-right {
     float: right;
     right: 5px;
     opacity: 1;
@@ -299,7 +302,7 @@ footer {
   nav {
     background-color: #103060 !important;
     border-radius: 12px 12px 0 0 !important;
-    margin-top: 5px;
+    margin-top: 15px;
   }
   nav #menu-logo,
   nav h1 {
@@ -362,22 +365,26 @@ footer {
   nav ul li a img.menu-flower-right {
     display: none;
   }
-  nav ul li a:hover {
+  nav ul li a:hover,
+  nav ul li a:active {
     color: #ffb600 !important;
     border-bottom: 3px solid #ffb600;
     transition: border-bottom-color 0.5s linear;
   }
-  nav ul li a:hover img {
+  nav ul li a:hover img,
+  nav ul li a:active img {
     height: 35px;
     position: absolute;
   }
-  nav ul li a:hover img.menu-flower-left {
+  nav ul li a:hover img.menu-flower-left,
+  nav ul li a:active img.menu-flower-left {
     opacity: 1;
     top: -15px;
     left: 50%;
     transform: translateX(-50%) rotateZ(-20deg);
   }
-  nav ul li a:hover img.menu-flower-right {
+  nav ul li a:hover img.menu-flower-right,
+  nav ul li a:active img.menu-flower-right {
     display: none;
   }
 }
