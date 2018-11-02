@@ -18,35 +18,15 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  color: #103060;
   margin: 0;
   padding: 0;
   font-size: 14px;
 }
-h1 {
-  font-family: "Rochester", cursive;
-  font-size: 30px;
-  font-style: italic;
-  margin: 0;
-}
-h1 .initial {
-  font-family: 'Stalemate', cursive;
-  font-weight: bold;
-  margin-right: 7px;
-  position: relative;
-  top: -2px;
-}
 h2 {
   font-family: "Dancing Script", cursive;
   font-size: 40px;
-  margin: 10px 0 20px;
-}
-.portrait {
-  box-shadow: 5px 5px 20px 0px grey;
-  border-radius: 5px;
-  padding: 10px;
-  margin: 20px auto;
-  height: 250px;
-  display: block;
+  margin: 0 0 20px;
 }
 .tm-container {
   background-color: #204080;
@@ -121,27 +101,71 @@ nav button i.opened {
   transform: rotateZ(180deg);
   transition: transform 0.4s linear;
 }
-#tm-navbar-placeholder {
-  background: #204080;
-  /* Old browsers */
-  background: -moz-linear-gradient(top, #204080 0%, #2989d8 45%, white 100%);
-  /* FF3.6-15 */
-  background: -webkit-linear-gradient(top, #204080 0%, #2989d8 45%, white 100%);
-  /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to bottom, #204080 0%, #2989d8 45%, white 100%);
-  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#2989d8', endColorstr='#ffffff', GradientType=0);
-  /* IE6-9 */
-  height: 25px;
-  margin: 0 -15px;
+blockquote {
+  background-color: #fff0d0;
+  border-color: #ffb600;
+  padding: 10px 25px 10px 40px;
+  position: relative;
+  font-size: 14px;
+  font-style: italic;
+  margin: 10px 0;
+  quotes: "\201C" "\201D";
+  text-align: justify;
+}
+blockquote::before {
+  color: #999;
+  content: open-quote;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 4em;
+  font-weight: bold;
+  position: absolute;
+  left: 0px;
+  top: -10px;
+}
+blockquote::after {
+  content: "";
+}
+blockquote p {
+  font-style: italic;
+}
+blockquote .author {
+  font-style: normal;
+  text-align: right;
+}
+.tm-thumbnail-link {
+  background-color: white;
+  border: 1px solid #204080;
+  border-radius: 5px;
+  box-shadow: 2px 2px 10px 0px #999;
+}
+.tm-thumbnail-link.left {
+  float: left;
+  margin-right: 20px;
+}
+.tm-thumbnail-link.right {
+  float: right;
+  margin-left: 20px;
+}
+.tm-thumbnail-link:hover {
+  background-color: #204080;
+}
+img.tm-thumbnail {
+  max-height: 250px;
+  padding: 5px;
 }
 main {
   background-color: white;
-  /* margaréta vízjel */
   /* logo vízjel */
+  background-image: url(../images/logo_bg.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 200px;
   border-radius: 0 0 25px 25px;
-  padding: 0 15px 15px;
+  padding: 10px 20px 15px;
   min-height: 300px;
+}
+main p {
+  text-align: justify;
 }
 footer {
   color: white;
@@ -149,7 +173,7 @@ footer {
   line-height: 35px;
   text-align: center;
 }
-/*** Common END ***/
+/*** END OF Common ***/
 /*** xs ***/
 @media screen and (max-width: 767px) {
   body {
@@ -167,14 +191,15 @@ footer {
     height: 50px;
     margin: 5px 0 0 5px;
   }
-  nav h1 {
-    color: white;
+  nav .tm-main-title {
     display: block;
-    font-size: 6.5vw;
-    top: 54%;
-    left: 50%;
     position: absolute;
+    top: 50%;
+    left: 50%;
     transform: translate(-50%, -50%);
+    width: 55%;
+    min-width: 165px;
+    max-width: 330px;
   }
   nav div .navbar-collapse {
     border-color: white !important;
@@ -269,8 +294,25 @@ footer {
     opacity: 1;
     transform: translateY(-50%) scaleX(-1) rotateZ(-20deg);
   }
+  #tm-navbar-placeholder {
+    background: #103060;
+    /* Old browsers */
+    background: -moz-linear-gradient(top, #204080 0%, #2989d8 45%, white 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #204080 0%, #2989d8 45%, white 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #204080 0%, #2989d8 45%, white 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#204080', endColorstr='#ffffff', GradientType=0);
+    /* IE6-9 */
+    height: 25px;
+  }
+  main,
+  main p {
+    text-align: left;
+  }
 }
-/*** xs END ***/
+/*** END OF xs ***/
 /*** sm, md, lg ***/
 @media screen and (min-width: 768px) {
   body {
@@ -280,7 +322,7 @@ footer {
     border-radius: 0 0 25px 25px;
   }
   header {
-    background-image: url(../images/logo.png);
+    background-image: url(../images/tmlogo.png);
     background-repeat: no-repeat;
     background-size: 90px;
     background-position: left center;
@@ -289,15 +331,15 @@ footer {
     position: relative;
     text-align: initial;
   }
-  header h1 {
-    color: white;
-    font-size: 5vw;
+  header .tm-main-title {
+    display: block;
     position: absolute;
-    text-align: center;
+    top: 58%;
     left: 50%;
-    top: 50%;
-    transform: translate(-50%, -40%);
-    width: 100%;
+    transform: translate(-50%, -50%);
+    width: 55%;
+    min-width: 400px;
+    max-width: 450px;
   }
   nav {
     background-color: #103060 !important;
@@ -305,7 +347,7 @@ footer {
     margin-top: 15px;
   }
   nav #menu-logo,
-  nav h1 {
+  nav .tm-main-title {
     display: none;
   }
   nav div .navbar-collapse.collapse,
@@ -387,5 +429,46 @@ footer {
   nav ul li a:active img.menu-flower-right {
     display: none;
   }
+  #tm-navbar-placeholder {
+    background: #103060;
+    /* Old browsers */
+    background: -moz-linear-gradient(top, #103060 0%, #2989d8 45%, white 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #103060 0%, #2989d8 45%, white 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #103060 0%, #2989d8 45%, white 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#103060', endColorstr='#ffffff', GradientType=0);
+    /* IE6-9 */
+    height: 25px;
+  }
 }
-/*** sm, md, lg END ***/
+/*** END OF sm, md, lg ***/
+/*** Content ***/
+#intro {
+  font-style: italic;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.portrait {
+  background-color: white;
+  box-shadow: 5px 5px 20px 0px grey;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 20px auto;
+  height: 250px;
+  display: block;
+}
+#card {
+  background-color: #103060;
+  border-radius: 3px;
+  color: white;
+  margin: 0 auto;
+  padding: 20px;
+  width: 400px;
+}
+#card .good-wish {
+  font-family: 'Dancing Script', cursive;
+}
+/*** END OF Content ***/

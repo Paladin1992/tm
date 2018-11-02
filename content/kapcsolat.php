@@ -1,15 +1,6 @@
-<?=print_page_title($site)?>
+<img src="images/margareta_tv_portrait.jpg" class="portrait">
 
-<p style="text-align: center">
-Az élet alapja a Tiszta Boldogság.<br>
-A béke, a nyugalom, a harmónia.<br>
-Ha bennünk ez az alap erős, akkor az életünk minden területe kivirágzik.<br>
-Öntözd a gyökeret és élvezd a gyümölcsöt!
-</p>
-
-<img src="images/self.jpg" class="portrait">
-
-<p>Mátyás Margaréta Transzcendentális Meditáció tanár vagyok, akit Maharishi Mahesh Yogi képzett ki. Ez teszi lehetővé, hogy a több mint 6000 éves hagyományt tisztán tovább tudjam adni.</p>
+<p><b>Mátyás Margaréta</b> Transzcendentális Meditáció tanár vagyok, akit Maharishi Mahesh Yogi képzett ki. Ez teszi lehetővé, hogy a több mint 6000 éves hagyományt tisztán tovább tudjam adni.</p>
 
 <p>
 Első diplomámat munkavállalási tanácsadóként szereztem, témája az <i>outplacement</i> rendszer hatékonysága volt.
@@ -23,12 +14,13 @@ Executive coachként, trénerként, képzési menedszerként sok emberrel talál
 Így jutottam el a Transzcendentális Meditációhoz, melynek mind saját, mind pedig mások életében való eredményességét látva a technika tanárává váltam. Azóta e csodálatos technika tanításával foglalkozom, mely az élet minden területét valóban sikeresebbé, gazdagabbá és boldogabbá teszi.
 </p>
 
-<p>
+<div id="card">
     <div>Mátyás Margaréta</div>
-    <div>Telefon: 06-70-554-3810</div>
-    <div>E-mail : margareta@tmoktatas.hu</div>
+    <div><i class="material-icons">phone</i> 06-70-554-3810</div>
+    <div><i class="material-icons">mail_outline</i> matyas.margareta@tm.org</div>
+    <p class="good-wish">Csodaszép napot!</p>
+</div>
+
+<p>
+    <a href="other/adatvedelmi_nyilatkozat.pdf" target="_blank">Adatvédelmi nyilatkozat megtekintése (PDF)</a>
 </p>
-
-Eseménynaptár (???)
-
-Adatvédelmi nyilatkozat link

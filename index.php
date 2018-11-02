@@ -9,7 +9,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Dancing+Script|Sriracha|Rochester|Stalemate">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Dancing+Script|Sriracha">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" href="images/favicon.png">
@@ -25,12 +26,14 @@
             include("menu.php");
         ?>
     
+        <div id="tm-navbar-placeholder"></div>
+
         <main>
-            <div id="tm-navbar-placeholder"></div>
 
             <?php
                 $file_path = "content/".$site.".php";
                 if (file_exists($file_path)) {
+                    print_page_title($site);
                     include($file_path);
                 } else {
                     echo '<div class="alert alert-danger">A kért oldal tartalma még nem elérhet&odblac;. Addig nézzen meg egy másik menüpontot! :)</div>'.PHP_EOL;

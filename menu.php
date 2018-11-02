@@ -1,9 +1,9 @@
 <nav class="navbar navbar-default">
     <div class="container-fluid">
         <div class="navbar-header">
-            <img src="images/logo.png" id="menu-logo"/>
+            <img src="images/tmlogo.png" id="menu-logo"/>
 
-            <h1><span class="initial">T</span>M &nbsp;Mindenkinek</h1>
+            <img src="images/tmfocim.png" class="tm-main-title">
 
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#tm-navbar" aria-expanded="false">
                 <span class="icon-bar bar1"></span>

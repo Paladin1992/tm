@@ -4,13 +4,15 @@
 @orange: #ffb600;
 @brown: #994422;
 @darkBrown: #66270f;
+@quote: #999;
+@quoteBg: #fff0d0;
 @openSpeed: 0.4s;
 
 // Fontname - used?
 // Dancing Script - YES
 // Sriracha - YES
-// Rochester - YES
-// Stalemate - YES
+// Rochester - NO
+// Stalemate - NO
 // Italianno - NO
 // Lobster - NO
 // Petit Formal Script - NO
@@ -36,24 +38,10 @@ body {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    color: @darkBlue;
     margin: 0;
     padding: 0;
     font-size: 14px;
-}
-
-h1 {
-    font-family: "Rochester", cursive;
-    font-size: 30px;
-    font-style: italic;
-    margin: 0;
-
-    .initial {
-        font-family: 'Stalemate', cursive;
-        font-weight: bold;
-        margin-right: 7px;
-        position: relative;
-        top: -2px;
-    }
 }
 
 h2 {
@@ -62,18 +50,9 @@ h2 {
     //font-weight: bold;
 
     font-family: "Dancing Script", cursive;
+    //font-family: "Monotype Corsiva", cursive;
     font-size: 40px;
-    margin: 10px 0 20px;
-}
-
-.portrait {
-    //border: 2px solid @blue;
-    box-shadow: 5px 5px 20px 0px grey;
-    border-radius: 5px;
-    padding: 10px;
-    margin: 20px auto;
-    height: 250px;
-    display: block;
+    margin: 0 0 20px;
 }
 
 .tm-container { background-color: @blue; }
@@ -121,7 +100,9 @@ nav {
                 &.bar1 {
                     top: 6px;
                     transform: rotateZ(45deg);
-                    transition: top @openSpeed linear, transform @openSpeed linear;
+                    transition:
+                        top @openSpeed linear,
+                        transform @openSpeed linear;
                 }
 
                 &.bar2 {
@@ -132,7 +113,9 @@ nav {
                 &.bar3 {
                     background-color: white !important;
                     opacity: 0;
-                    transition: background-color @openSpeed linear, opacity @openSpeed linear;
+                    transition:
+                        background-color @openSpeed linear,
+                        opacity @openSpeed linear;
                 }
             }
         }
@@ -143,9 +126,17 @@ nav {
             position: relative;
             transition: background-color @openSpeed linear;
 
-            &.bar1 { transition: top @openSpeed linear, transform @openSpeed linear; }
+            &.bar1 {
+                transition:
+                    top @openSpeed linear,
+                    transform @openSpeed linear;
+            }
             &.bar2 { transition: transform @openSpeed linear; }
-            &.bar3 { transition: background-color @openSpeed linear, opacity @openSpeed linear; }
+            &.bar3 {
+                transition:
+                    background-color @openSpeed linear,
+                    opacity @openSpeed linear;
+            }
         }
 
         & i {
@@ -160,34 +151,79 @@ nav {
     }
 }
 
-#tm-navbar-placeholder {
-    background: @blue; /* Old browsers */
-    background: -moz-linear-gradient(top, @blue 0%, @middleBlue 45%, white 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(top, @blue 0%, @middleBlue 45%, white 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to bottom, @blue 0%, @middleBlue 45%, white 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#2989d8', endColorstr='#ffffff', GradientType=0); /* IE6-9 */
-    height: 25px;
-    margin: 0 -15px;
+blockquote {
+    background-color: @quoteBg;
+    border-color: @orange;
+    padding: 10px 25px 10px 40px;
+    position: relative;
+    font-size: 14px;
+    font-style: italic;
+    margin: 10px 0;
+    quotes: "\201C""\201D";
+    text-align: justify;
+
+    &::before {
+        color: @quote;
+        content: open-quote;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: 4em;
+        font-weight: bold;
+
+        position: absolute;
+        left: 0px;
+        top: -10px;
+    }
+    
+    &::after { content: ""; }
+
+    & p { font-style: italic; }
+
+    & .author {
+        font-style: normal;
+        text-align: right;
+    }
+}
+
+.tm-thumbnail-link {
+    background-color: white;
+    border: 1px solid @blue;
+    border-radius: 5px;
+    box-shadow: 2px 2px 10px 0px #999;
+
+    &.left {
+        float: left;
+        margin-right: 20px;
+    }
+
+    &.right {
+        float: right;
+        margin-left: 20px;
+    }
+
+    &:hover {
+        background-color: @blue;
+    }
+}
+
+img.tm-thumbnail {
+    max-height: 250px;
+    padding: 5px;
 }
 
 main {
-    background-color: white;
-
-    /* margaréta vízjel */
-    //background-image: url(../images/margareta_20.png);
-    //background-repeat: no-repeat;
-    //background-position: left bottom;
-    //background-size: 200px;
+    background-color: white;    
 
     /* logo vízjel */
-    // background-image: url(../images/logo_bg.png);
-    // background-repeat: no-repeat;
-    // background-position: center center;
-    // background-size: 200px;
+    background-image: url(../images/logo_bg.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 200px;
 
     border-radius: 0 0 25px 25px;
-    padding: 0 15px 15px;
+    padding: 10px 20px 15px;
     min-height: 300px;
+
+    & p { text-align: justify; }
 }
 
 footer {
@@ -196,7 +232,7 @@ footer {
     line-height: 35px;
     text-align: center;
 }
-/*** Common END ***/
+/*** END OF Common ***/
 
 
 /*** xs ***/
@@ -218,15 +254,16 @@ footer {
             height: 50px;
             margin: 5px 0 0 5px;
         }
-    
-        & h1 {
-            color: white;
+
+        & .tm-main-title {
             display: block;
-            font-size: 6.5vw;
-            top: 54%;
-            left: 50%;
             position: absolute;
+            top: 50%;
+            left: 50%;
             transform: translate(-50%, -50%);
+            width: 55%;
+            min-width: 165px;
+            max-width: 330px;
         }
 
         & div {
@@ -336,8 +373,21 @@ footer {
             }
         }
     }
+
+    #tm-navbar-placeholder {
+        background: @darkBlue; /* Old browsers */
+        background: -moz-linear-gradient(top, @blue 0%, @middleBlue 45%, white 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(top, @blue 0%, @middleBlue 45%, white 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to bottom, @blue 0%, @middleBlue 45%, white 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#204080', endColorstr='#ffffff', GradientType=0); /* IE6-9 */
+        height: 25px;
+    }
+
+    main, main p {
+        text-align: left;
+    }
 }
-/*** xs END ***/
+/*** END OF xs ***/
 
 
 /*** sm, md, lg ***/
@@ -347,7 +397,7 @@ footer {
     .tm-container { border-radius: 0 0 25px 25px; }
 
     header {
-        background-image: url(../images/logo.png);
+        background-image: url(../images/tmlogo.png);
         background-repeat: no-repeat;
         background-size: 90px;
         background-position: left center;
@@ -356,15 +406,15 @@ footer {
         position: relative;
         text-align: initial;
 
-        & h1 {
-            color: white;
-            font-size: 5vw;
+        & .tm-main-title {
+            display: block;
             position: absolute;
-            text-align: center;
+            top: 58%;
             left: 50%;
-            top: 50%;
-            transform: translate(-50%, -40%);
-            width: 100%;
+            transform: translate(-50%, -50%);
+            width: 55%;
+            min-width: 400px;
+            max-width: 450px;
         }
     }
 
@@ -374,7 +424,7 @@ footer {
         margin-top: 15px;
 
         & #menu-logo,
-        & h1 { display: none; }
+        & .tm-main-title { display: none; }
 
         & div {
             .navbar-collapse.collapse,
@@ -456,5 +506,48 @@ footer {
             }
         }
     }
+
+    #tm-navbar-placeholder {
+        background: @darkBlue; /* Old browsers */
+        background: -moz-linear-gradient(top, @darkBlue 0%, @middleBlue 45%, white 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(top, @darkBlue 0%, @middleBlue 45%, white 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to bottom, @darkBlue 0%, @middleBlue 45%, white 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#103060', endColorstr='#ffffff', GradientType=0); /* IE6-9 */
+        height: 25px;
+    }
 }
-/*** sm, md, lg END ***/
+/*** END OF sm, md, lg ***/
+
+
+/*** Content ***/
+#intro {
+    font-style: italic;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.portrait {
+    background-color: white;
+    //border: 2px solid @blue;
+    box-shadow: 5px 5px 20px 0px grey;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 20px auto;
+    height: 250px;
+    display: block;
+}
+
+#card { // xs - sm, md, lg szétszedni!
+    background-color: @darkBlue;
+    border-radius: 3px;
+    color: white;
+    margin: 0 auto;
+    padding: 20px;
+    width: 400px;
+
+    & .good-wish {
+        font-family: 'Dancing Script', cursive;
+    }
+}
+/*** END OF Content ***/

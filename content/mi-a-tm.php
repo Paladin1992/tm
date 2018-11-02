@@ -1,4 +1,9 @@
-<?=print_page_title($site)?>
+<p id="intro">
+Az élet alapja a Tiszta Boldogság.<br>
+A béke, a nyugalom, a harmónia.<br>
+Ha bennünk ez az alap erős, akkor az életünk minden területe kivirágzik.<br>
+Öntözd a gyökeret, és élvezd a gyümölcsöt!
+</p>
 
 <p>
 A Transzcendentális Meditáció<sup>&reg;</sup> (röviden: TM<sup>&reg;</sup>) egy egyszerű, erőfeszítés nélküli, természetes mentális technika,
@@ -29,3 +34,5 @@ A TM<sup>&reg;</sup> nem hit, nem vallás és nem filozófia, hanem egy egyszer�
 amelyet bárki gyakorolhat, függetlenül nemétől, életkorától, iskolai végzettségétől,
 életmódjától, hitétől és vallásától.
 </p>
+
+<b style="color: red">!!! videók !!!</b>
