@@ -35,4 +35,19 @@ amelyet bárki gyakorolhat, függetlenül nemétől, életkorától, iskolai vé
 életmódjától, hitétől és vallásától.
 </p>
 
-<b style="color: red">!!! videók !!!</b>
+<?php
+    // Maharishi a TM működéséről
+    insert_video("https://www.youtube.com/embed/4Cj7Q72P6BI", "A TM működése");
+
+    // A TM eredete
+    insert_video("https://www.youtube.com/embed/YqZX6NcR4LA", "A TM eredete");
+
+    // David Lynch, filmrendező beszél a TM-ről
+    //insert_video("https://www.youtube.com/embed/R6KO-V7UgxU", "David Lynch, filmrendező beszél a TM-ről");
+
+    // Életek változnak meg
+    insert_video("https://www.youtube.com/embed/StnHoFyk8bg", "Életek változnak meg");
+
+    // Befektetés önmagunkba
+    //insert_video("https://www.youtube.com/embed/5UIS3RCSgnk", "Befektetés önmagunkba");
+?>

@@ -1,8 +1,12 @@
-<p>
-<a href="images/veer_ajanlasa.jpg" target="_blank" class="tm-thumbnail-link right">
-    <img src="images/veer_ajanlasa.jpg" class="tm-thumbnail">
-</a>
+<figure class="portrait right">
+    <a href="images/veer_ajanlasa.jpg" target="_blank">
+        <img src="images/veer_ajanlasa.jpg" class="tm-thumbnail"
+             alt="Dr. Veér András ajánlása" title="Dr. Veér András ajánlása (új lapon nyílik meg)">
+    </a>
+    <figcaption>Dr. Veér András ajánlása</figcaption>
+</figure>
 
+<p>
 A huszadik században vezető szaktekintélynek tartották a stressz emberi egészségre gyakorolt hatása terén.
 Selye János gyakorolta a Transzcendentális Meditáció technikát.
 1955-ben Dr. Veér András a Népjóléti Minisztérium Mentálhygiéne miniszteri biztosa,
@@ -20,8 +24,7 @@ bevezette a modern orvostudományba a stressz fogalmát,
 43 alkalommal választották díszdoktorrá, 39 könyvet írt, és több mint 1700 szakcikket publikált a stresszről,
 valamint a vele összefüggő problémákról, ill. tíz alkalommal jelölték a Nobel-díjra &ndash; készült egy interjú,
 melyben a Transzcendentális Meditációról nyilatkozik.
-Ez az interjú megtalálható Robert Oates <i>"Celebrating the Dawn"</i> című könyvében.
-Alább ebből a könyvből olvasható egy részlet:
+Ez az interjú megtalálható Robert Oates <i>"Celebrating the Dawn"</i> című könyvében, ebből következik most egy részlet:
 </p>
 
 <blockquote>

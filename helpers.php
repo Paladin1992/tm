@@ -81,4 +81,12 @@
             echo $title;
         }
     }
+
+    function insert_video($url, $title = "") {
+        echo '<div class="video-container">';
+            echo '<h3 class="video-title">'.$title.'</h3>';
+            echo '<iframe class="video" width="560" height="315" src="'.$url.'?rel=0"'.
+                 'frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+        echo '</div>';
+    }
 ?>
