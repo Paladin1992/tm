@@ -52,15 +52,13 @@
         $menu_item_data = get_menu_item_data($current_site);
         $caption = $menu_item_data['caption'];
         $url = $menu_item_data['url'];
-        $active_class = ($is_active ? ' class="active"' : '');
+        $active_class = ($is_active ? 'active' : '');
 
         $img_left = '<img src="images/margareta.png" class="menu-flower-left">';
         $img_right = '<img src="images/margareta.png" class="menu-flower-right">';
-        //if ($active_class != '') {
-            $caption = $img_left.'<span class="inner-caption">'.$caption.'</span>'.$img_right;
-        //}
+        $caption = $img_left.'<span class="inner-caption">'.$caption.'</span>'.$img_right;
         
-        echo '<li'.$active_class.'><a href="index.php?p='.$url.'">'.$caption.'</a></li>';
+        echo '<li class="menu '.$active_class.'"><a href="index.php?p='.$url.'">'.$caption.'</a></li>';
     }
 
     function get_menu($current_site) {
@@ -80,6 +78,17 @@
         } else {
             echo $title;
         }
+    }
+
+    // $orientation : "portrait" | "landscape"
+    // $float       : "none" | "left" | "right"
+    function insert_figure($src, $orientation, $float, $alt, $title, $figcaption) {
+        echo '<figure class="'.$orientation.' '.$float.' clearfix">';
+            echo '<a href="'.$src.'" target="_blank">';
+                echo '<img src="'.$src.'" class="tm-thumbnail '.$orientation.'" alt="'.$alt.'" title="'.$title.'">';
+            echo '</a>';
+            echo '<figcaption>'.$figcaption.'</figcaption>';
+        echo '</figure>';
     }
 
     function insert_video($url, $title = "") {

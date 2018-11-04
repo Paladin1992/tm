@@ -26,7 +26,6 @@ body {
 h2 {
   font-family: "Dancing Script", cursive;
   font-size: 45px;
-  font-weight: bold;
   margin: 0 0 20px;
 }
 .tm-container {
@@ -134,11 +133,26 @@ blockquote .author {
   font-style: normal;
   text-align: right;
 }
+ul {
+  padding-left: 0;
+}
+ul li:not(.menu) {
+  margin: 0;
+  padding: 3px 0 3px 40px;
+  list-style: none;
+  background-image: url("../images/margareta.png");
+  background-repeat: no-repeat;
+  background-position: left 10px;
+  background-size: 30px;
+}
 figure {
   text-align: center;
 }
 figure.portrait {
   max-width: 250px;
+}
+figure.portrait.none {
+  float: none;
 }
 figure.portrait.left {
   float: left;
@@ -151,6 +165,9 @@ figure.portrait.right {
 figure.landscape {
   max-height: 250px;
 }
+figure.landscape.none {
+  float: none;
+}
 figure.landscape.left {
   float: left;
   margin-right: 15px;
@@ -161,7 +178,7 @@ figure.landscape.right {
 }
 figure figcaption {
   font-size: 12px;
-  margin: 5px 0;
+  margin: 5px 0 5px;
   width: 100%;
 }
 .video {
@@ -182,6 +199,27 @@ figure figcaption {
   text-align: left;
   margin: 0;
   padding-bottom: 5px;
+}
+button.button-link {
+  background-color: #204080;
+  border-color: #204080;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 16px;
+  margin: 10px 0;
+  padding: 12px 15px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: background-color 0.2s linear;
+}
+button.button-link:hover {
+  background-color: #0070b0;
+  border-color: #0070b0;
+  text-decoration: none;
+  transition: background-color 0.2s linear;
 }
 img.tm-thumbnail {
   background-color: white;
@@ -204,6 +242,7 @@ main {
   background-size: 200px;
   border-radius: 0 0 25px 25px;
   padding: 10px 20px 15px;
+  position: relative;
   min-height: 300px;
 }
 main p {
@@ -248,6 +287,7 @@ footer {
     border-color: white !important;
     border-top: none !important;
     box-shadow: none !important;
+    overflow: hidden;
   }
   nav div .navbar-collapse.collapsing,
   nav div .navbar-collapse.collapse {
@@ -257,7 +297,7 @@ footer {
   nav div .navbar-collapse.collapsing.in,
   nav div .navbar-collapse.collapse.in {
     background-color: #204080;
-    overflow-y: visible !important;
+    overflow-y: hidden !important;
   }
   nav ul {
     margin: 0 -15px !important;
@@ -337,6 +377,44 @@ footer {
     right: 5px;
     transform: translateY(-50%) scaleX(-1) rotateZ(-20deg);
   }
+  figure.portrait {
+    max-width: 100%;
+  }
+  figure.portrait.left {
+    float: none;
+    margin-right: 0;
+  }
+  figure.portrait.right {
+    float: none;
+    margin-left: 0;
+  }
+  figure.landscape {
+    max-height: 100%;
+  }
+  figure.landscape.left {
+    float: none;
+    margin-right: 0;
+  }
+  figure.landscape.right {
+    float: none;
+    margin-left: 0;
+  }
+  figure figcaption {
+    margin: 5px 0 10px;
+  }
+  .video-container {
+    width: 100%;
+  }
+  img.tm-thumbnail.landscape {
+    max-width: 100%;
+  }
+  img.tm-thumbnail.portrait {
+    max-width: 250px;
+  }
+  img.tm-thumbnail:hover {
+    background-color: #204080;
+    cursor: pointer;
+  }
   #tm-navbar-placeholder {
     background: #103060;
     /* Old browsers */
@@ -356,6 +434,13 @@ footer {
   }
 }
 /*** END OF xs ***/
+/*** sm only ***/
+@media screen and (max-width: 992px) {
+  .tm-container {
+    border-radius: 0 !important;
+  }
+}
+/*** END OF sm only ***/
 /*** sm, md, lg ***/
 @media screen and (min-width: 768px) {
   body {

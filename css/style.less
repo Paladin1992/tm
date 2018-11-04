@@ -1,5 +1,6 @@
 @blue: #204080;
 @middleBlue: #2989d8;
+@bluntBlue: #0070b0;
 @darkBlue: #103060;
 @orange: #ffb600;
 @brown: #994422;
@@ -64,7 +65,7 @@ h2 {
     // font-family: "Parisienne", cursive;
     // font-family: "Stalemate", cursive;
     font-size: 45px;
-    font-weight: bold;
+    //font-weight: bold;
 
     margin: 0 0 20px;
 }
@@ -215,11 +216,27 @@ blockquote {
     }
 }
 
+ul {
+    padding-left: 0;
+
+    li:not(.menu) {
+        margin: 0;
+        padding: 3px 0 3px 40px;
+        list-style: none;
+        background-image: url("../images/margareta.png");
+        background-repeat: no-repeat;
+        background-position: left 10px;
+        background-size: 30px;
+    }
+}
+
 figure {
     text-align: center;
 
     &.portrait {
         max-width: 250px;
+
+        &.none { float: none; }
 
         &.left {
             float: left;
@@ -235,6 +252,8 @@ figure {
     &.landscape {
         max-height: 250px;
 
+        &.none { float: none; }
+
         &.left {
             float: left;
             margin-right: 15px;
@@ -248,7 +267,7 @@ figure {
 
     & figcaption {
         font-size: 12px;
-        margin: 5px 0;
+        margin: 5px 0 5px;
 
         width: 100%;
     }
@@ -280,6 +299,34 @@ figure {
     }
 }
 
+button.button-link {
+    background-color: @blue;
+    border-color: @blue;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    display: inline-block;
+
+    font-size: 16px;
+
+    margin: 10px 0;
+    padding: 12px 15px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+
+    transition: background-color 0.2s linear;
+
+    &:hover {
+        background-color: @bluntBlue;
+        border-color: @bluntBlue;
+
+        text-decoration: none;
+
+        transition: background-color 0.2s linear;
+    }
+}
+
 img.tm-thumbnail {
     background-color: white;
     border: 1px solid @blue;
@@ -305,6 +352,7 @@ main {
     border-radius: 0 0 25px 25px;
 
     padding: 10px 20px 15px;
+    position: relative;
     min-height: 300px;
 
     & p {
@@ -363,6 +411,7 @@ footer {
                 border-color: white !important;
                 border-top: none !important;
                 box-shadow: none !important;
+                overflow: hidden;
 
                 &.collapsing,
                 &.collapse {
@@ -372,7 +421,7 @@ footer {
         
                     &.in {
                         background-color: @blue;
-                        overflow-y: visible !important;
+                        overflow-y: hidden !important;
                     }
                 }
             }
@@ -472,6 +521,59 @@ footer {
         }
     }
 
+    figure {
+        &.portrait {
+            max-width: 100%;
+    
+            &.left {                
+                float: none;
+                margin-right: 0;
+            }
+        
+            &.right {
+                float: none;
+                margin-left: 0;
+            }
+        }
+    
+        &.landscape {
+            max-height: 100%;
+    
+            &.left {
+                float: none;
+                margin-right: 0;
+            }
+        
+            &.right {
+                float: none;
+                margin-left: 0;
+            }
+        }
+
+        & figcaption { margin: 5px 0 10px; }
+    }
+
+    .video {
+        &-container {
+            width: 100%;
+        }
+    }
+
+    img.tm-thumbnail {
+        &.landscape {
+            max-width: 100%;
+        }
+
+        &.portrait {
+            max-width: 250px;
+        }
+    
+        &:hover {
+            background-color: @blue;
+            cursor: pointer;
+        }
+    }
+
     #tm-navbar-placeholder {
         background: @darkBlue; /* Old browsers */
         background: -moz-linear-gradient(top, @blue 0%, @middleBlue 45%, white 100%); /* FF3.6-15 */
@@ -485,6 +587,13 @@ footer {
     main, main p { text-align: left; }
 }
 /*** END OF xs ***/
+
+
+/*** sm only ***/
+@media screen and (max-width: 992px) {
+    .tm-container { border-radius: 0 !important; }
+}
+/*** END OF sm only ***/
 
 
 /*** sm, md, lg ***/

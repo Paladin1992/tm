@@ -5,7 +5,7 @@
 
             <img src="images/tmfocim.png" class="tm-main-title">
 
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#tm-navbar" aria-expanded="false">
+            <button id="btn-menu" type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#tm-navbar" aria-expanded="false">
                 <span class="icon-bar bar1"></span>
                 <span class="icon-bar bar2"></span>
                 <span class="icon-bar bar3"></span>

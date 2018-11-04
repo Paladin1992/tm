@@ -1,10 +1,12 @@
-<figure class="portrait right">
-    <a href="images/veer_ajanlasa.jpg" target="_blank">
-        <img src="images/veer_ajanlasa.jpg" class="tm-thumbnail"
-             alt="Dr. Veér András ajánlása" title="Dr. Veér András ajánlása (új lapon nyílik meg)">
-    </a>
-    <figcaption>Dr. Veér András ajánlása</figcaption>
-</figure>
+<?php
+    insert_figure(
+        "images/veer_ajanlasa.jpg", // src
+        "portrait", // orientation
+        "right", // float
+        "Dr. Veér András ajánlása", // alt
+        "Dr. Veér András ajánlása (új lapon nyílik meg)", // title
+        "Dr. Veér András ajánlása"); // figcaption
+?>
 
 <p>
 A huszadik században vezető szaktekintélynek tartották a stressz emberi egészségre gyakorolt hatása terén.
