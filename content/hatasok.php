@@ -10,7 +10,7 @@
         "MRI felvétel"); // figcaption
 ?>
 
-<p>
+<p class="clearfix">
 Az ember homloklebenye az agy vezérigazgatója. Ő irányít és hozza meg a végső döntéseket.
 Ha az ember homloklebenyében úgynevezett funkcionális lyukak alakulnak ki (lásd MRI felvétel),
 akkor az megakadályozza abban, hogy erkölcsileg, morálisan megfelelő döntést tudjon hozni.
@@ -23,7 +23,7 @@ mely az agykoherenciát növeli, ezáltal az idegrendszerünket normalizálja (m
 
 <?php
     insert_video("https://www.youtube.com/embed/YAWJFJ5Fadw", "A TM hatása az agyműködésre");
-    insert_video("https://www.youtube.com/embed/FA6rktf6OuU", "Agyhullámkoherencia a TM közben");
+    //insert_video("https://www.youtube.com/embed/FA6rktf6OuU", "Agyhullámkoherencia a TM közben");
 ?>
 
 <h3>Egyéb pozitív hatások</h3>

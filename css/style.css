@@ -28,6 +28,12 @@ h2 {
   font-size: 45px;
   margin: 0 0 20px;
 }
+h3 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0 0 10px;
+}
 .tm-container {
   background-color: #204080;
 }
