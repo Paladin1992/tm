@@ -1,31 +1,53 @@
+// #region [ Declaration ]
+// Colors
 @blue: #204080;
 @middleBlue: #2989d8;
 @bluntBlue: #0070b0;
-@darkBlue: #103060;
+@darkBlue: #002050;
+
 @orange: #ffb600;
 @brown: #994422;
 @darkBrown: #66270f;
-@quote: #103060;
+
+@quote: #002050;
 @quoteBg: #fff0d0;
+
+@alertSuccessBg: #99ee55;
+@alertSuccess: #006600;
+@alertErrorBg: #ff8080;
+@alertError: #990000;
+
 @shadow: #999999;
-@openSpeed: 0.4s;
+
+// Fonts
+@font_body: Arial, Helvetica, sans-serif;
+@font_h2: "Dancing Script", cursive;
+@font_h3: 'Book Antiqua', cursive;
+@font_menu: 'Book Antiqua', cursive;
+@font_button: Arial, Helvetica, sans-serif;
+@font_quot: Georgia, 'Times New Roman', Times, serif;
+@font_card: 'Rochester', cursive;
+
+// Other
+@speed: 0.4s;
+// #endregion
 
 // Font                     Used?
 // ------------------------------
+// Book Antiqua             YES (given)
 // Dancing Script           YES
-// Sriracha                 YES
-// Rochester                NO
-// Stalemate                NO
+// Rochester                YES
+// Sriracha                 NO
 // Italianno                NO
 // Lobster                  NO
 // Petit Formal Script      NO
 // Allura                   NO
 // Courgette                NO
-// Marck Script             NO
 // Parisienne               NO
+// Pinyon Script            NO
 
 
-/*** Common ***/
+// #region [ Structure ]
 *, *::before, *::after {
     box-sizing: border-box;
     outline: none;
@@ -47,34 +69,11 @@ body {
     background-size: cover;
     color: @darkBlue;
 
+    font-family: @font_body;
     font-size: 14px;
 
     margin: 0;
     padding: 0;
-}
-
-h2 {
-    //font-family: "Petit Formal Script", cursive;
-    //font-size: 28px;
-
-    font-family: "Dancing Script", cursive;
-    // font-family: "Rochester", cursive;
-    // font-family: "Allura", cursive;
-    // font-family: "Courgette", cursive;
-    // font-family: "Marck Script", cursive;
-    // font-family: "Parisienne", cursive;
-    // font-family: "Stalemate", cursive;
-    font-size: 45px;
-    //font-weight: bold;
-
-    margin: 0 0 20px;
-}
-
-h3 {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 24px;
-    font-weight: bold;
-    margin: 0 0 10px;
 }
 
 .tm-container { background-color: @blue; }
@@ -105,41 +104,41 @@ nav {
         top: 10px;
 
         transition:
-            background-color @openSpeed linear,
-            border-radius @openSpeed linear,
-            padding-bottom @openSpeed linear;
+            background-color @speed linear,
+            border-radius @speed linear,
+            padding-bottom @speed linear;
 
         &.opened {
             background-color: white !important;
             border-radius: 4px 4px 0 0 !important;
             
-            padding-bottom: 32px;
+            padding-bottom: 35px;
 
             transition:
-                background-color @openSpeed linear,
-                border-radius @openSpeed linear,
-                padding-bottom @openSpeed linear;
+                background-color @speed linear,
+                border-radius @speed linear,
+                padding-bottom @speed linear;
 
             & .icon-bar {
                 background-color: @blue !important;
 
                 position: relative;
 
-                transition: background-color @openSpeed linear;
+                transition: background-color @speed linear;
 
                 &.bar1 {
                     top: 6px;
                     transform: rotateZ(45deg);
 
                     transition:
-                        top @openSpeed linear,
-                        transform @openSpeed linear;
+                        top @speed linear,
+                        transform @speed linear;
                 }
 
                 &.bar2 {
                     transform: rotateZ(-45deg);
 
-                    transition: transform @openSpeed linear;
+                    transition: transform @speed linear;
                 }
 
                 &.bar3 {
@@ -147,8 +146,8 @@ nav {
                     opacity: 0;
 
                     transition:
-                        background-color @openSpeed linear,
-                        opacity @openSpeed linear;
+                        background-color @speed linear,
+                        opacity @speed linear;
                 }
             }
         }
@@ -159,41 +158,181 @@ nav {
 
             position: relative;
             
-            transition: background-color @openSpeed linear;
+            transition: background-color @speed linear;
 
             &.bar1 {
                 transition:
-                    top @openSpeed linear,
-                    transform @openSpeed linear;
+                    top @speed linear,
+                    transform @speed linear;
             }
-            &.bar2 { transition: transform @openSpeed linear; }
+            &.bar2 { transition: transform @speed linear; }
             &.bar3 {
                 transition:
-                    background-color @openSpeed linear,
-                    opacity @openSpeed linear;
+                    background-color @speed linear,
+                    opacity @speed linear;
             }
         }
 
         & i {
             transform: rotateZ(0deg);
 
-            transition: transform @openSpeed linear;
+            transition: transform @speed linear;
 
             &.opened {
                 transform: rotateZ(180deg);
-                transition: transform @openSpeed linear;
+                transition: transform @speed linear;
             }
         }
     }
 }
 
+main {
+    /* logo watermark */
+    background-color: white;
+    background-image: url(../images/bg_logo_watermark.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: 50% 50%;
+    background-size: 250px;
+    border-radius: 0 0 25px 25px;
+
+    padding: 10px 20px 15px;
+    position: relative;
+    min-height: 300px;
+
+    & p {
+        text-align: justify;
+
+        margin: 0 0 15px;
+    }
+}
+
+footer {
+    color: white;
+    font-size: 12px;
+    line-height: 35px;
+    text-align: center;
+}
+// #endregion
+
+// #region [ Common ]
+h2 {
+    font-family: @font_h2;
+    //font-family: "Rochester", cursive; // ő és ű nem mindig jó; a nagy "A" és "T" betűk furcsák
+    //font-family: "Allura", cursive; // "Mi a TM?" csúnya
+    //font-family: "Courgette", cursive; // "Mi a TM?" csúnya
+    //font-family: "Parisienne", cursive; // túl kunkoros
+    font-size: 45px;
+    //font-weight: bold;
+
+    margin: 0 0 20px;
+}
+
+h3 {
+    font-family: @font_h3;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0 0 10px;
+}
+
+a {
+    color: @darkBlue;
+
+    font-weight: normal;
+    text-decoration: none;
+
+    &:hover { color: @darkBlue; }
+
+    &.link {
+        font-weight: bold;
+
+        &:hover { text-decoration: underline; }
+    }
+}
+
+.button-link {
+    background-color: @blue;
+    border: 1px solid white;
+    border-radius: 3px;
+    color: white;
+    cursor: pointer;
+    display: inline-block;
+
+    font-family: @font_button;
+    font-size: 16px;
+    //font-weight: bold;
+
+    margin: 0;
+    min-width: 100px;
+    padding: 8px 15px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    vertical-align: top;
+
+    transition: background-color 0.2s linear;
+
+    &.left {
+        left: 0;
+        right: initial;
+        float: left;
+        transform: translateX(0%);
+    }
+
+    &.center {
+        left: 50%;
+        right: initial;
+        transform: translateX(-50%);
+    }
+
+    &.right {
+        left: initial;
+        right: 0;
+        float: right;
+        transform: translateX(0%);
+    }
+
+    &:hover,
+    &.left:hover,
+    &.center:hover,
+    &.right:hover {
+        background-color: @darkBlue;
+        border-color: @orange;
+        box-shadow: 0px 0px 10px 0px @shadow;
+        color: @orange;
+
+        text-decoration: none;
+
+        transition: background-color 0.2s linear;
+    }
+
+    &:disabled,
+    &.left:disabled,
+    &.right:disabled,
+    &:disabled:hover,
+    &.left:disabled:hover,
+    &.right:disabled:hover {
+        background-color: #999;
+        border-color: #333;
+        color: #333;
+    }
+}
+
+input, textarea {
+    border: 2px inset white;
+    border-radius: 5px;
+
+    &:focus { box-shadow: 0 0 5px 2px @middleBlue; }
+}
+
 blockquote {
     background-color: @quoteBg;
     border-color: @orange;
+    border-radius: 0 5px 5px 0;
     box-shadow: 2px 2px 10px 0px @shadow;
     
     margin: 10px 0;
-    padding: 15px 25px 15px 40px;
+    padding: 25px 25px 25px 40px;
     position: relative;
     
     font-size: 14px;
@@ -204,7 +343,7 @@ blockquote {
     &::before {
         color: @quote;
         content: open-quote;
-        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-family: @font_quot;
         font-size: 4em;
         font-weight: bold;
 
@@ -280,6 +419,21 @@ figure {
     }
 }
 
+img.tm-thumbnail {
+    background-color: @blue;
+    border: 4px solid @blue;
+    border-radius: 2px;
+
+    max-height: 250px;
+    padding: 1px;
+
+    &:hover {
+        border-color: @orange;
+        box-shadow: 0px 0px 10px 5px @shadow;
+        cursor: pointer;
+    }
+}
+
 .video {
     display: block;
 
@@ -314,79 +468,174 @@ figure {
     }
 }
 
-button.button-link {
-    background-color: @blue;
-    border-color: @blue;
-    border-radius: 5px;
+.alert {
+    display: none;
+    margin: 0 10px;
+    padding: 9px;
+
+    &.alert-success {
+        background-color: @alertSuccessBg;
+        color: @alertSuccess;
+        display: inline-block;
+    }
+
+    &.alert-error {
+        background-color: @alertErrorBg;
+        color: @alertError;
+        display: inline-block;
+    }
+}
+// #endregion
+
+// #region [ Content ]
+.intro {
+    font-style: italic;
+    font-weight: bold;
+    text-align: center;
+    
+    margin-bottom: 30px;
+}
+
+.card {
+    background-color: @darkBlue;
+    background-image: url(../images/margareta.png);
+    background-repeat: no-repeat;
+    background-position: 15px 25px;
+    background-size: 160px;
+    border: 4px solid white;
+    border-radius: 3px;
     color: white;
     cursor: pointer;
-    display: inline-block;
+    overflow: hidden;
 
     font-size: 16px;
+    text-align: right;
 
-    margin: 10px 0;
-    padding: 12px 15px;
+    margin: 0 auto 20px;
+    padding: 10px 20px;
     position: relative;
-    left: 50%;
-    transform: translateX(-50%);
+    width: 400px;
+    height: 190px;
 
-    transition: background-color 0.2s linear;
+    transition: width @speed linear;
 
     &:hover {
-        background-color: @bluntBlue;
-        border-color: @bluntBlue;
+        border-color: @orange;
+        box-shadow: 0px 0px 10px 5px @shadow;
+    }
 
-        text-decoration: none;
+    & .bg-line {
+        border-radius: 50%;
+        box-shadow: 5px 25px 80px 30px white inset;
+        opacity: 0.15;
 
-        transition: background-color 0.2s linear;
+        position: absolute;
+        left: 30px;
+        top: -88%;
+        width: 140%;
+        height: 165%;
+    }
+
+    & .card-name {
+        font-family: @font_card;
+        font-size: 24px;
+        font-style: italic;
+
+        margin-bottom: 10px;
+    }
+
+    & .card-job,
+    & .card-phone,
+    & .card-email {
+        font-size: 14px;
+
+        margin-bottom: 3px;
+    }
+
+    & .card-good-wish {
+        font-family: @font_card;
+        font-size: 24px;
+        font-style: italic;
+
+        margin-top: 16px;
+    }
+
+    &.open {
+        border: 0;
+        border-radius: 3px 3px 0 0;
+
+        margin-bottom: 0;
+        width: 80%;
+
+        transition:
+            width @speed linear,
+            border-radius @speed linear;
+
+        & .bg-line {
+            top: -85%;
+            width: 150%;
+        }
+
+        & .card-name {
+            font-size: 30px;
+
+            margin-bottom: 14px;
+        }
+
+        & .card-good-wish {
+            margin-top: 24px;
+        }
+
+        &:hover {
+            border: 0;
+            box-shadow: none;
+        }
     }
 }
 
-img.tm-thumbnail {
-    background-color: white;
-    border: 1px solid @blue;
-    border-radius: 5px;
-    box-shadow: 2px 2px 10px 0px @shadow;
+.form-container { 
+    display: none;
 
-    max-height: 250px;
-    padding: 5px;
-
-    &:hover {
-        background-color: @blue;
-        cursor: pointer;
-    }
-}
-
-main {
-    /* logo vízjel */
-    background-color: white;
-    background-image: url(../images/logo_bg.png);
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: 200px;
-    border-radius: 0 0 25px 25px;
-
-    padding: 10px 20px 15px;
     position: relative;
-    min-height: 300px;
-
-    & p {
-        text-align: justify;
-
-        margin: 0 0 15px;
-    }
 }
 
-footer {
+form {
+    background-color: @darkBlue;
+    border-radius: 0 0 5px 5px;
     color: white;
-    font-size: 12px;
-    line-height: 35px;
-    text-align: center;
+
+    margin: 0 auto 20px;
+    padding: 10px;
+    width: 80%;
+
+    transition: width @speed linear;
+
+    & input {
+        color: @darkBlue;
+
+        margin: 5px 0;
+        padding: 5px;
+        width: 100%;
+    }
+
+    & textarea {
+        color: @darkBlue;
+        overflow: auto;
+        resize: none;
+
+        margin: 5px 0;
+        padding: 5px;
+        width: 100%;
+        height: 12em;
+    }
+
+    & button {
+        right: 0;
+    }
 }
-/*** END OF Common ***/
+// #endregion
 
-
-/*** xs ***/
+// #region [ xs only ]
 @media screen and (max-width: 767px) {
 
     body { font-size: 16px; }
@@ -491,8 +740,10 @@ footer {
                     background-color: white;
                     color: @blue !important;
 
-                    font-family: "Sriracha";
+                    font-family: @font_menu;
                     font-size: 1.5em;
+                    font-style: italic;
+                    font-weight: bold;
                     text-align: center;
 
                     margin-bottom: 1px;
@@ -591,29 +842,144 @@ footer {
 
     #tm-navbar-placeholder {
         background: @darkBlue; /* Old browsers */
-        background: -moz-linear-gradient(top, @blue 0%, @middleBlue 45%, white 100%); /* FF3.6-15 */
-        background: -webkit-linear-gradient(top, @blue 0%, @middleBlue 45%, white 100%); /* Chrome10-25,Safari5.1-6 */
-        background: linear-gradient(to bottom, @blue 0%, @middleBlue 45%, white 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#204080', endColorstr='#ffffff', GradientType=0); /* IE6-9 */
+        background: -moz-linear-gradient(top, @blue 0%, @bluntBlue 45%, white 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(top, @blue 0%, @bluntBlue 45%, white 100%); /* Chrome10-25, Safari5.1-6 */
+        background: linear-gradient(to bottom, @blue 0%, @bluntBlue 45%, white 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0070b0', endColorstr='#ffffff', GradientType=0); /* IE6-9 */
         
         height: 25px;
     }
 
     main, main p { text-align: left; }
+
+    .card {
+        background-position: 5px 100%;
+        background-size: 23vw;
+        border: none;
+    
+        margin: 0 auto 20px;
+        padding: 10px 15px;
+        width: 100%;
+        height: 190px;
+    
+        transition: width @speed linear;        
+    
+        & .bg-line {
+            border-radius: 50%;
+            box-shadow: 5px 25px 80px 30px white inset;
+            opacity: 0.15;
+    
+            position: absolute;
+            left: -17%;
+            top: -82%;
+            width: 230%;
+            height: 160%;
+        }
+    
+        & .card-name {
+            font-size: 30px;
+    
+            margin-bottom: 10px;
+        }
+    
+        & .card-job,
+        & .card-phone,
+        & .card-email {
+            font-size: 14px;
+    
+            margin-bottom: 3px;
+        }
+    
+        & .card-good-wish {
+            font-size: 24px;
+    
+            margin-top: 20px;
+        }
+    
+        &.open {
+            margin-bottom: 0;
+            width: 100%;
+    
+            transition:
+                width @speed linear,
+                border-radius @speed linear;
+    
+            & .bg-line {
+                left: -17%;
+                top: -82%;
+                width: 230%;
+                height: 160%;
+            }
+    
+            & .card-name {
+                font-size: 30px;
+    
+                margin-bottom: 10px;
+            }
+    
+            & .card-good-wish {
+                margin-top: 24px;
+            }
+    
+            &:hover {
+                border: 0;
+                box-shadow: none;
+            }
+        }
+    }
+
+    form {
+        background-color: @darkBlue;
+        border-radius: 0 0 5px 5px;
+        color: white;
+    
+        margin: 0 auto 20px;
+        padding: 10px;
+        width: 100%;
+
+        transition: width @speed linear;
+    
+        & input {
+            color: @darkBlue;
+    
+            margin: 5px 0;
+            padding: 5px;
+            width: 100%;
+        }
+    
+        & textarea {
+            color: @darkBlue;
+            overflow: auto;
+            resize: none;
+    
+            margin: 5px 0;
+            padding: 5px;
+            width: 100%;
+            height: 12em;
+        }
+    
+        & button {
+            //right: 0;
+            margin-bottom: 10px;
+            width: 100%;
+        }
+    }
+
+    .alert {
+        margin: 10px 0 0;
+    }
 }
-/*** END OF xs ***/
+// #endregion
 
-
-/*** sm only ***/
+// #region [ sm only ]
 @media screen and (max-width: 992px) {
     .tm-container { border-radius: 0 !important; }
 }
-/*** END OF sm only ***/
+// #endregion
 
-
-/*** sm, md, lg ***/
+// #region [ sm, md, lg ]
 @media screen and (min-width: 768px) {
-    body { font-size: 14px; }
+    //body { font-size: 14px; }
 
     .tm-container { border-radius: 0 0 25px 25px; }
 
@@ -690,11 +1056,13 @@ footer {
                     border-bottom: 3px solid @darkBlue;
                     color: white !important;
 
-                    font-family: "Sriracha";
+                    font-family: @font_menu;
                     font-size: 1.3em;
+                    //font-style: italic;
+                    //font-weight: bold;
                     text-align: center;
                     
-                    margin-right: 15px;
+                    margin-right: 10px;
                     padding: 20px 10px 10px !important;
 
                     transition: border-bottom-color 0.5s linear;
@@ -740,47 +1108,12 @@ footer {
 
     #tm-navbar-placeholder {
         background: @darkBlue; /* Old browsers */
-        background: -moz-linear-gradient(top, @darkBlue 0%, @middleBlue 45%, white 100%); /* FF3.6-15 */
-        background: -webkit-linear-gradient(top, @darkBlue 0%, @middleBlue 45%, white 100%); /* Chrome10-25,Safari5.1-6 */
-        background: linear-gradient(to bottom, @darkBlue 0%, @middleBlue 45%, white 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#103060', endColorstr='#ffffff', GradientType=0); /* IE6-9 */
+        background: -moz-linear-gradient(top, @darkBlue 0%, @bluntBlue 45%, white 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(top, @darkBlue 0%, @bluntBlue 45%, white 100%); /* Chrome10-25, Safari5.1-6 */
+        background: linear-gradient(to bottom, @darkBlue 0%, @bluntBlue 45%, white 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#002050', endColorstr='#ffffff', GradientType=0); /* IE6-9 */
         
         height: 25px;
     }
 }
-/*** END OF sm, md, lg ***/
-
-
-/*** Content ***/
-#intro {
-    font-style: italic;
-    font-weight: bold;
-    text-align: center;
-    
-    margin-bottom: 30px;
-}
-
-#selfie {
-    background-color: white;
-    //border: 2px solid @blue;
-    box-shadow: 5px 5px 20px 0px grey;
-    border-radius: 5px;
-    display: block;
-
-    margin: 20px auto;
-    padding: 10px;
-    height: 250px;
-}
-
-#card { // xs - sm, md, lg szétszedni!
-    background-color: @darkBlue;
-    border-radius: 3px;
-    color: white;
-
-    margin: 0 auto;
-    padding: 20px;
-    width: 400px;
-
-    & .good-wish { font-family: 'Dancing Script', cursive; }
-}
-/*** END OF Content ***/
+// #endregion

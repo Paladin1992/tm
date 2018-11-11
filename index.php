@@ -1,3 +1,13 @@
+<!-- remove after 2019-01-12 -->
+<?php
+    $today = new DateTime();
+    $startDate = new DateTime('2018-01-12');
+    if ($today < $startDate) {
+        header('Location: trial.php');
+    }
+?>
+<!-- END OF remove after 2019-01-12 -->
+
 <?php
     include_once("helpers.php");
     $site = (isset($_GET['p']) ? $_GET['p'] : 'kezdo');
@@ -9,7 +19,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Dancing+Script|Sriracha|Allura|Courgette|Marck+Script|Parisienne">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Dancing+Script|Sriracha|Allura|Courgette|Parisienne|Pinyon+Script|Rochester">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">

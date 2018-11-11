@@ -1,4 +1,4 @@
-<p id="intro">
+<p class="intro">
 Az élet alapja a Tiszta Boldogság.<br>
 A béke, a nyugalom, a harmónia.<br>
 Ha bennünk ez az alap erős, akkor az életünk minden területe kivirágzik.<br>

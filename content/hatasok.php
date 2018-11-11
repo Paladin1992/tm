@@ -79,7 +79,7 @@ mely az agykoherenciát növeli, ezáltal az idegrendszerünket normalizálja (m
     </li>
 </ul>
 
-<button onclick="loadVideos('hatasok', 'additional-videos'); this.style.display = 'none'" class="button-link">
+<button id="btn-load-videos" onclick="load()" class="button-link center">
     További videók betöltéséhez kattintson ide!
 </button>
 
