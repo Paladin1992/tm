@@ -58,15 +58,17 @@ Executive coachként, trénerként, képzési menedszerként sok emberrel talál
                 </div>
             
                 <div class="captcha-container">
-                    <img class="captcha-img" src="<?=captcha::image();?>" onclick="refreshCaptcha(this)" title="Új képhez kattints ide"/>
-                    <span style="font-size:12px;">Írd be a képen látható karaktereket:</span>
-                    <div class="captcha-info">(A képre kattintva újat kérhetsz.)</div>
-                    <div id="captcha-code"><?=captcha::get_code();?></div>
-                    <input class="captcha-text" type="text" name="code" placeholder="6 karakter" maxlength="6" onkeyup="gombAktivizal()"/>
+                    <div style="font-size:12px;">Írja be a képen látható karaktereket:</div>
+                    <img class="captcha-img" src="<?=captcha::image();?>" alt="CAPTCHA kép"/>
+                    <button type="button" onclick="refreshCaptcha()" class="btn btn-primary ">
+                        <span class="glyphicon glyphicon-refresh"></span> Új kép
+                    </button>
+                    
+                    <input class="captcha-text" type="text" name="captcha" placeholder="6 karakter" maxlength="6"/>
                 </div>
 
                 <div class="clearfix">
-                    <button id="btn-send-email" type="submit" onclick="sendEmail()" class="button-link left" disabled>Küldés</button>
+                    <button id="btn-send-email" type="submit" onclick="sendEmail()" class="btn btn-primary button-link left" disabled>Küldés</button>
                     <div class="mail-response alert"></div>
                 </div>
             </fieldset>

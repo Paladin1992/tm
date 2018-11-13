@@ -86,13 +86,13 @@ function showContact(card) {
     }, 800);
 }
 
-function refreshCaptcha(destinationElement) {
-    $.get('captcha.php', function(response, status) {
-        var tempObj = JSON.parse(response);
+function refreshCaptcha() {
+    $.get({
+        url: 'captcha.php?func=image',
+        cache: false
+    }, function(response, status) {
+        console.log(response);
         var result = (status === 'success' ? response : ERROR_LOAD_CAPTCHA);
-        //var result = (status === 'success' ? tempObj.image : ERROR_LOAD_CAPTCHA);
-        $(destinationElement).attr('src', result);
-
-        //$('#captcha-code').html(tempObj.code);
+        $('.captcha-img').attr('src', result);        
     });
 }

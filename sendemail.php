@@ -1,11 +1,16 @@
 <?php
+    $ERROR_CAPTCHA_NO_MATCH = 'A kód nem egyezik.';
     $response = [];
 
-    try {
-        //throw new Exception('Test Error');
+    try {        
         $fullName = $_POST['fullName'];
         $email = $_POST['email'];
         $message = $_POST['message'];
+        $clientCaptcha = $_POST['captcha'];
+
+        if (isset($_SESSION['__captcha__'])){ //&& strtolower($_SESSION['__captcha__']) != strtolower($clientCaptcha)) {
+            throw new Exception($ERROR_CAPTCHA_NO_MATCH);
+        }
 
         $message =
             '<b>E-mail cím:</b> '.$email.'<br><br>'.
@@ -19,7 +24,7 @@
         $headers .= "Content-type:text/html;charset=UTF-8"."\r\n";
         $headers .= "From: ".$email;
         
-        mail($to, $subject, $message, $headers);
+        //mail($to, $subject, $message, $headers);
 
         $response['status'] = 'success';
         $response['message'] = 'Az e-mail küldése sikeres volt.';
