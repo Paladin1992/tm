@@ -31,10 +31,10 @@ class captcha {
 		for ($i = 0; $i < $length; $i++) {
 			$code .= self::get_random();
 		}
-		if (self::session_exists()) {
-			$_SESSION[self::$captcha] = $code;
-		}
+
+		$_SESSION[self::$captcha] = $code;
 		self::$width = $length * self::$character_width;
+
 		return $code;
 	}
 	
@@ -51,9 +51,12 @@ class captcha {
 		$code = self::generate_code($length);
 		self::set_font();
 		ob_start();
+
 		$image = imagecreatetruecolor(self::get_width(), self::get_height());
 		$white = imagecolorallocate($image, 255, 255, 255);
 		imagefilledrectangle($image, 0, 0, self::get_width(), self::get_height(), $white);
+
+		// random dots (short lines)
 		for ($dot = 0; $dot < 100; $dot++) {
 			$r = rand(0, 255);
 			$g = rand(0, 255);
@@ -65,18 +68,21 @@ class captcha {
 			$y2 = $y1 + 1;
 			imageline($image, $x1, $y1, $x2, $y2, $dot_color);
 		}
+
+		// random characters
 		for ($start = -$length; $start < 0; $start++) {
 			$color = imagecolorallocate($image, rand(0, 177), rand(0, 177), rand(0, 177));
 			$character = substr($code, $start, 1);
-			$x = ($start+7) * self::$character_width + (abs($start+6) - abs($start))*2;
+			$x = ($start + 7) * self::$character_width + (abs($start + 6) - abs($start)) * 2;
 			$y = rand(self::get_height() - 20, self::get_height() - 10) + 5;
 			imagettftext($image, self::$font_size, 0, $x, $y, $color, self::$font, $character);
 		}
+
 		imagepng($image);
 		imagedestroy($image);
 		$source = ob_get_contents();
 		ob_end_clean();
-//		unlink(self::$font);
+
 		return "data:image/png;base64,".base64_encode($source);
 	}
 	
@@ -84,6 +90,13 @@ class captcha {
 		if (self::session_exists()) {
 			return $_SESSION[self::$captcha];
 		}
+
 		return rand();
 	}
 }
+
+//$response['image'] = captcha::image();
+//$response['code'] = captcha::get_code();
+//echo json_encode($response);
+echo captcha::image();
+?>

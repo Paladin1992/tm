@@ -1,5 +1,8 @@
 "use strict";
 
+const ERROR_LOAD_VIDEOS = 'Hiba történt a videók betöltésekor. Frissítse az oldalt, és próbálja újra.';
+const ERROR_LOAD_CAPTCHA = 'Az új captcha betöltése sikertelen.';
+
 var menuButton;
 
 $(document).ready(function() {
@@ -23,8 +26,9 @@ $(document).ready(function() {
 });
 
 function loadVideos(page, destinationId) {
-    $.get("loadvideos.php?p=" + page, function(response, status) {
-        $('#' + destinationId).html(response);
+    $.get('loadvideos.php?p=' + page, function(response, status) {
+        var result = (status === 'success' ? response : ERROR_LOAD_VIDEOS);
+        $('#' + destinationId).html(result);
     });
 }
 
@@ -41,7 +45,7 @@ function sendEmail() {
         form.find('fieldset').prop('disabled', true);
 
         // post data to server to send as an e-mail
-        $.post("sendemail.php", data, function(response, status) {
+        $.post('sendemail.php', data, function(response, status) {
             var result = JSON.parse(response);
 
             if (result.status === 'success') {
@@ -80,4 +84,15 @@ function showContact(card) {
     $('html, body').animate({
         scrollTop: offsetTop
     }, 800);
+}
+
+function refreshCaptcha(destinationElement) {
+    $.get('captcha.php', function(response, status) {
+        var tempObj = JSON.parse(response);
+        var result = (status === 'success' ? response : ERROR_LOAD_CAPTCHA);
+        //var result = (status === 'success' ? tempObj.image : ERROR_LOAD_CAPTCHA);
+        $(destinationElement).attr('src', result);
+
+        //$('#captcha-code').html(tempObj.code);
+    });
 }

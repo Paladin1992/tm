@@ -455,6 +455,9 @@ form textarea {
 form button {
   right: 0;
 }
+.captcha-container .captcha-img {
+  cursor: pointer;
+}
 @media screen and (max-width: 767px) {
   body {
     font-size: 16px;

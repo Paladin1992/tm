@@ -58,10 +58,11 @@ Executive coachként, trénerként, képzési menedszerként sok emberrel talál
                 </div>
             
                 <div class="captcha-container">
-                    <img id="captcha" src="<?=captcha::image();?>" onclick="refreshCaptcha(this)" title="Új képhez kattints ide"/>
+                    <img class="captcha-img" src="<?=captcha::image();?>" onclick="refreshCaptcha(this)" title="Új képhez kattints ide"/>
                     <span style="font-size:12px;">Írd be a képen látható karaktereket:</span>
-                    <div class="infocaptcha">(A képre kattintva újat kérhetsz.)</div>
-                    <input id="captchatext" type="text" name="code" placeholder="6 karakter" maxlength="6" onkeyup="gombAktivizal()"/>
+                    <div class="captcha-info">(A képre kattintva újat kérhetsz.)</div>
+                    <div id="captcha-code"><?=captcha::get_code();?></div>
+                    <input class="captcha-text" type="text" name="code" placeholder="6 karakter" maxlength="6" onkeyup="gombAktivizal()"/>
                 </div>
 
                 <div class="clearfix">
