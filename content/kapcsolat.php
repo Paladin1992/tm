@@ -1,3 +1,5 @@
+<?php include("captcha.php"); ?>
+
 <?php
     insert_figure(
         "images/margareta_tv_portrait.jpg", // src
@@ -55,6 +57,13 @@ Executive coachként, trénerként, képzési menedszerként sok emberrel talál
                     <textarea name="message" placeholder="Ide írhatja az üzenetet"></textarea>
                 </div>
             
+                <div class="captcha-container">
+                    <img id="captcha" src="<?=captcha::image();?>" onclick="refreshCaptcha(this)" title="Új képhez kattints ide"/>
+                    <span style="font-size:12px;">Írd be a képen látható karaktereket:</span>
+                    <div class="infocaptcha">(A képre kattintva újat kérhetsz.)</div>
+                    <input id="captchatext" type="text" name="code" placeholder="6 karakter" maxlength="6" onkeyup="gombAktivizal()"/>
+                </div>
+
                 <div class="clearfix">
                     <button id="btn-send-email" type="submit" onclick="sendEmail()" class="button-link left" disabled>Küldés</button>
                     <div class="mail-response alert"></div>
