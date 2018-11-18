@@ -20,8 +20,7 @@
 @shadow: #999999;
 
 // Fonts
-@font_body: Arial, Helvetica, sans-serif;
-@font_h2: "Dancing Script", cursive;
+@font_body: 'Book Antiqua', cursive;
 @font_h3: 'Book Antiqua', cursive;
 @font_menu: 'Book Antiqua', cursive;
 @font_button: Arial, Helvetica, sans-serif;
@@ -32,25 +31,11 @@
 @speed: 0.4s;
 // #endregion
 
-// Font                     Used?
-// ------------------------------
-// Book Antiqua             YES (given)
-// Dancing Script           YES
-// Rochester                YES
-// Sriracha                 NO
-// Italianno                NO
-// Lobster                  NO
-// Petit Formal Script      NO
-// Allura                   NO
-// Courgette                NO
-// Parisienne               NO
-// Pinyon Script            NO
-
 
 // #region [ Structure ]
 *, *::before, *::after {
     box-sizing: border-box;
-    outline: none;
+    outline: none !important;
 }
 
 html {
@@ -70,7 +55,7 @@ body {
     color: @darkBlue;
 
     font-family: @font_body;
-    font-size: 14px;
+    font-size: 16px;
 
     margin: 0;
     padding: 0;
@@ -83,6 +68,8 @@ nav {
     border: none !important;
 
     margin-bottom: 0 !important;
+
+    & .container-fluid { padding: 0 12px; }
 
     & .navbar-header {
         background-color: @blue;
@@ -196,7 +183,7 @@ main {
     background-size: 250px;
     border-radius: 0 0 25px 25px;
 
-    padding: 10px 20px 15px;
+    padding: 20px 20px 15px;
     position: relative;
     min-height: 300px;
 
@@ -216,37 +203,25 @@ footer {
 // #endregion
 
 // #region [ Common ]
-h2 {
-    font-family: @font_h2;
-    //font-family: "Rochester", cursive; // ő és ű nem mindig jó; a nagy "A" és "T" betűk furcsák
-    //font-family: "Allura", cursive; // "Mi a TM?" csúnya
-    //font-family: "Courgette", cursive; // "Mi a TM?" csúnya
-    //font-family: "Parisienne", cursive; // túl kunkoros
-    font-size: 45px;
-    //font-weight: bold;
-
-    margin: 0 0 20px;
-}
-
 h3 {
     font-family: @font_h3;
-    font-size: 24px;
+    font-size: 18px;
     font-weight: bold;
     margin: 0 0 10px;
 }
 
 a {
-    color: @darkBlue;
+    color: @orange;
 
     font-weight: normal;
     text-decoration: none;
 
-    &:hover { color: @darkBlue; }
-
     &.link {
-        font-weight: bold;
+        &:visited, &:hover, &:active {
+            color: @orange;
 
-        &:hover { text-decoration: underline; }
+            text-decoration: underline;
+        }
     }
 }
 
@@ -260,7 +235,6 @@ a {
 
     font-family: @font_button;
     font-size: 16px;
-    //font-weight: bold;
 
     margin: 0;
     min-width: 100px;
@@ -292,10 +266,10 @@ a {
         transform: translateX(0%);
     }
 
-    &:hover,
-    &.left:hover,
-    &.center:hover,
-    &.right:hover {
+    &:active, &:focus, &:active:focus, &:hover,
+    &.left:active, &.left:active:focus, &.left:focus, &.left:hover,
+    &.center:active, &.center:active:focus, &.center:focus, &.center:hover,
+    &.right:active, &.right:active:focus, &.right:focus, &.right:hover {
         background-color: @darkBlue;
         border-color: @orange;
         box-shadow: 0px 0px 10px 0px @shadow;
@@ -318,7 +292,7 @@ a {
     }
 }
 
-input, textarea {
+input:not([type="checkbox"]), textarea {
     border: 2px inset white;
     border-radius: 5px;
 
@@ -332,33 +306,60 @@ blockquote {
     box-shadow: 2px 2px 10px 0px @shadow;
     
     margin: 10px 0;
-    padding: 25px 25px 25px 40px;
+    padding: 25px;
     position: relative;
     
-    font-size: 14px;
+    font-size: 17px;
     font-style: italic;
     quotes: "\201C""\201D";
     text-align: justify;
 
-    &::before {
-        color: @quote;
-        content: open-quote;
-        font-family: @font_quot;
-        font-size: 4em;
-        font-weight: bold;
+    &.short {
+        overflow: hidden;
 
-        position: absolute;
-        left: 0px;
-        top: -10px;
+        height: 200px;
+
+        &.open { padding-bottom: 40px; }
     }
-    
-    &::after { content: ""; }
 
     & p { font-style: italic; }
 
     & .author {
         font-style: normal;
         text-align: right;
+    }
+
+    & .quot-show-toggle {
+        margin-left: -25px;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+
+        & .quot-link-container {
+            background-color: @orange;
+            text-align: center;
+
+            & a {
+                color: @darkBlue;
+
+                font-weight: bold;
+
+                position: relative;
+                top: -5px;
+
+                &:hover { cursor: pointer; }
+            }
+        }
+
+        & .quot-gradient {
+            background: #fff0d0; /* Old browsers */
+            background: -moz-linear-gradient(top, #fff0d0 0%, #ffb600 100%); /* FF3.6-15 */
+            background: -webkit-linear-gradient(top, #fff0d0 0%,#ffb600 100%); /* Chrome10-25,Safari5.1-6 */
+            background: linear-gradient(to bottom, #fff0d0 0%,#ffb600 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff0d0', endColorstr='#ffb600', GradientType=0); /* IE6-9 */
+
+            height: 20px;
+        }
     }
 }
 
@@ -470,7 +471,9 @@ img.tm-thumbnail {
 
 .alert {
     display: none;
+
     margin: 0 10px;
+    max-width: 60%;
     padding: 9px;
 
     &.alert-success {
@@ -485,15 +488,66 @@ img.tm-thumbnail {
         display: inline-block;
     }
 }
+
+.tooltip {
+    &.in { opacity: 0.95; }
+
+    & > .tooltip-inner {
+        background-color: #ff8080; 
+        color: #990000; 
+        border: 1px solid #990000; 
+        
+        font-size: 14px;
+
+        max-width: 240px;
+        padding: 5px;
+    }
+
+    &.bottom > .tooltip-arrow { border-bottom: 5px solid #990000; }
+}
 // #endregion
 
 // #region [ Content ]
 .intro {
-    font-style: italic;
-    font-weight: bold;
+    font-family: 'Parisienne', cursive;
+    font-size: 35px;
     text-align: center;
     
     margin-bottom: 30px;
+}
+
+#btn-load-videos {
+    display: block;
+    margin: 0 auto;
+}
+
+// @keyframes arrow-pulsing {
+//     0% { font-size: 2.5em; }
+//     100% { font-size: 3em; }
+// }
+
+@keyframes arrow-levitating {
+    0% { top: 0px; }
+    100% { top: 10px; }
+}
+
+.contact-arrow {
+    &-container {
+        height: 50px;
+    }
+
+    display: block;
+
+    font-size: 2.5em;
+    text-align: center;
+
+    margin: 0 auto;
+    position: relative;
+    width: 50px;
+    z-index: 100;
+
+    //animation: arrow-pulsing 0.7s linear infinite alternate;
+    animation: arrow-levitating 0.5s linear infinite alternate;
 }
 
 .card {
@@ -565,11 +619,8 @@ img.tm-thumbnail {
         border-radius: 3px 3px 0 0;
 
         margin-bottom: 0;
-        width: 80%;
 
-        transition:
-            width @speed linear,
-            border-radius @speed linear;
+        transition: border-radius @speed linear;
 
         & .bg-line {
             top: -85%;
@@ -606,11 +657,11 @@ form {
 
     margin: 0 auto 20px;
     padding: 10px;
-    width: 80%;
+    width: 100%;
 
     transition: width @speed linear;
 
-    & input {
+    & input:not([type="checkbox"]) {
         color: @darkBlue;
 
         margin: 5px 0;
@@ -635,8 +686,65 @@ form {
 }
 
 .captcha-container {
+    & .captcha-info {
+        font-size: 12px;
+    }
+
     & .captcha-img {
+        border-radius: 3px;
+        display: inline-block;
+
+        margin: 0px auto 5px;
+    }
+
+    & .captcha-text {
+        font-size: 20px;
+
+        width: auto;
+        height: 50px;
+    }
+
+    & .btn-refresh-captcha {
+        font-size: 1.5em;
+        line-height: 1;
+
+        left: 0;
+        margin: 5px auto 5px;
+        min-width: initial;
+        padding: initial;
+        width: 50px;
+        height: 50px;
+
+        transform: none;
+    }
+}
+
+.gdpr-container {
+    margin: 10px -2px;
+    position: relative;
+    
+    & .gdpr-real-checkbox {
+        display: none;
+    }
+
+    & .gdpr-fake-checkbox {
+        color: white;
         cursor: pointer;
+        display: table-cell;
+
+        font-size: 26px;
+
+        margin-right: 3px;
+        vertical-align: top;
+
+        transition: font-size @speed linear;
+    }
+
+    & .gdpr-caption {
+        display: table-cell;
+
+        height: 26px;
+        vertical-align: middle;
     }
 }
 // #endregion
@@ -973,6 +1081,24 @@ form {
     .alert {
         margin: 10px 0 0;
     }
+
+    .captcha-container {
+        & .captcha-img {
+            margin: 5px auto 5px;
+        }
+
+        & .captcha-text {
+            width: 100%;
+        }
+    }
+
+    .gdpr-container {
+        & .gdpr-fake-checkbox {
+            font-size: 32px;
+
+            transition: font-size @speed linear;
+        }
+    }
 }
 // #endregion
 
@@ -984,8 +1110,6 @@ form {
 
 // #region [ sm, md, lg ]
 @media screen and (min-width: 768px) {
-    //body { font-size: 14px; }
-
     .tm-container { border-radius: 0 0 25px 25px; }
 
     header {
@@ -1062,13 +1186,12 @@ form {
                     color: white !important;
 
                     font-family: @font_menu;
-                    font-size: 1.3em;
-                    //font-style: italic;
-                    //font-weight: bold;
+                    font-size: 18px;
+                    font-weight: bold;
                     text-align: center;
                     
-                    margin-right: 10px;
-                    padding: 20px 10px 10px !important;
+                    margin-right: 9px;
+                    padding: 20px 9px 10px !important;
 
                     transition: border-bottom-color 0.5s linear;
 

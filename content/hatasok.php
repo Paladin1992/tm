@@ -38,6 +38,12 @@ mely az agykoherenciát növeli, ezáltal az idegrendszerünket normalizálja (m
             osztályzatok (az iskolában); erősebb figyelem; kiterjedtebb
             tudatosság.
         </p>
+        <?php
+            insert_video('https://www.youtube.com/embed/zLxEdaRYHQ8', 'Hiperaktivitás és a TM'); // ez az a videó?
+            insert_video('https://www.youtube.com/embed/82VZunyYWZ0', 'A TM hatása az autizmusra');
+            //insert_video('https://www.youtube.com/embed/XfjUJ4Gx4Y4', 'Egy iskolaigazgató beszél a TM hatásáról az oktatásban');
+        ?>
+        <b style="color: red">MÁSIK ISKOLÁS VIDEÓ</b>
     </li>
     <li>
         <b>a testre:</b>
@@ -49,6 +55,9 @@ mely az agykoherenciát növeli, ezáltal az idegrendszerünket normalizálja (m
             mérséklődése; alacsonyabb koleszterinszint; csökkenő
             reakcióidő; egy hosszabb, egészségesebb élet.
         </p>
+        <?php
+            insert_video('https://www.youtube.com/embed/bRyL5gQhdCE', 'Szív- és érrendszeri betegségek és a TM');
+        ?>
     </li>
     <li>
         <b>a kapcsolatokban:</b>
@@ -58,6 +67,10 @@ mely az agykoherenciát növeli, ezáltal az idegrendszerünket normalizálja (m
             mások növekvő becsülése; kevesebb idegesség, düh és
             depresszió.
         </p>
+        <b style="color: red">VETERÁNOS VIDEÓ</b>
+        <?php
+        
+        ?>
     </li>
     <li>
         <b>a szakmai életben:</b>
@@ -68,6 +81,10 @@ mely az agykoherenciát növeli, ezáltal az idegrendszerünket normalizálja (m
             hatékony vezetői képesség kifejlődése; kevesebb cselekvés, több eredmény;
             a munkatársakkal való jobb kapcsolat; kevesebb stressz a munka során.
         </p>
+        <?php
+            insert_video('https://www.youtube.com/embed/WbU67boq958', 'TM a cégvezetésben');
+            insert_video('https://www.youtube.com/embed/Mjm73GYEBOM', 'TM mint versenyelőny');
+        ?>
     </li>
     <li>
         <b>a világban:</b>
@@ -79,8 +96,8 @@ mely az agykoherenciát növeli, ezáltal az idegrendszerünket normalizálja (m
     </li>
 </ul>
 
-<button id="btn-load-videos" onclick="load()" class="btn btn-primary">
+<!-- <button id="btn-load-videos" onclick="load()" class="btn btn-primary">
     További videók betöltéséhez kattintson ide!
 </button>
 
-<div id="additional-videos"></div>
+<div id="additional-videos"></div> -->

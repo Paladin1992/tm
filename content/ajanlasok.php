@@ -1,23 +1,7 @@
-<?php
-    insert_figure(
-        "images/veer_ajanlasa.jpg", // src
-        "portrait", // orientation
-        "right", // float
-        "Dr. Veér András ajánlása", // alt
-        "Dr. Veér András ajánlása (új lapon nyílik meg)", // title
-        "Dr. Veér András ajánlása"); // figcaption
-?>
+<h3>A stresszkutatás atyjának ajánlása</h3>
 
 <p>
-A huszadik században vezető szaktekintélynek tartották a stressz emberi egészségre gyakorolt hatása terén.
-Selye János gyakorolta a Transzcendentális Meditáció technikát.
-1955-ben Dr. Veér András a Népjóléti Minisztérium Mentálhygiéne miniszteri biztosa,
-aki az Országos Pszichiátriai és Neurológiai Intézet Főigazgató Főorvosa is,
-írt egy ajánló levelet, melyben a Transzcendentális Meditációt ajánlja.
-</p>
-
-<p>
-    Selye János (Hans Hugo Bruno Selye, 1907-1982) osztrák-magyar származású kanadai orvos és vegyész, akit sokszor neveznek a "stresszkutatás atyjának". Már 1926-ban, másodéves orvostanhallgatóként elkezdett dolgozni később híressé vált stressz-elméletén. Ez azt írja le, hogy az emberek miként képesek megbirkózni a sérülések és az intenzív élmények okozta terhekkel. Egész életén át folytatott kutatásai nyomán arra a következtetésre jutott, hogy a stressz minden betegség kifejlődésében szerepet játszik. Ha valaki nem képes megbirkózni a stresszekkel, az alkalmazkodási betegségekhez vezethet, mint amilyenek a fekélyek, a magas vérnyomás és számos egyéb probléma, amelyet a stressz okoz vagy súlyosbít.
+    Selye János (Hans Hugo Bruno Selye, 1907-1982) az osztrák-magyar származású kanadai orvos és vegyész, akit sokszor neveznek a "stresszkutatás atyjának". Már 1926-ban, másodéves orvostanhallgatóként elkezdett dolgozni később híressé vált stressz-elméletén. Ez azt írja le, hogy az emberek miként képesek megbirkózni a sérülések és az intenzív élmények okozta terhekkel. Egész életén át folytatott kutatásai nyomán arra a következtetésre jutott, hogy a stressz minden betegség kifejlődésében szerepet játszik. Ha valaki nem képes megbirkózni a stresszekkel, az alkalmazkodási betegségekhez vezethet, mint amilyenek a fekélyek, a magas vérnyomás és számos egyéb probléma, amelyet a stressz okoz vagy súlyosbít.
 </p>
 
 <p>
@@ -29,7 +13,7 @@ melyben a Transzcendentális Meditációról nyilatkozik.
 Ez az interjú megtalálható Robert Oates <i>"Celebrating the Dawn"</i> című könyvében, ebből következik most egy részlet:
 </p>
 
-<blockquote>
+<blockquote class="short">
     Dr. Selye János:<br>
     <p>&ndash; Nagy szerencsém volt, hogy egyik nemzetközi szimpóziumán majdnem egy teljes napot tölthettem Maharishi Mahesh Yogival. Azóta úgy érzem, hogy rendkívül gyümölcsöző lenne részletes kutatásokat végezni azzal kapcsolatban, hogy a Transzcendentális Meditáció milyen hatással van a stresszre az emberi szervezetben.</p>
     <p>A kutatások már rávilágítottak arra, hogy a Transzcendentális Meditáció fiziológiai hatásai pontosan ellenkezői azoknak, amelyeket a modern orvostudomány leír, amikor a testnek a stresszek kihívásaival való megküzdését jellemzi.</p>
@@ -63,4 +47,28 @@ Ez az interjú megtalálható Robert Oates <i>"Celebrating the Dawn"</i> című 
         <b>&ndash; Akkor e fogalmakat használva miként határozná meg a Transzcendentális Meditáció hasznát?<br></b>
         &ndash; Olyan módszerként utalnék rá, amely ellazítja az ember központi idegrendszerét, és az így könnyebben él együtt a stresszekkel, nem szenved annyit a stressztől, és nem veszíti el annak összes hasznos, ösztönző hatását. A Transzcendentális Meditáció mindenfajta tevékenységre felkészíti az idegrendszert. Végső soron ugyanis az idegrendszernek van a legfőbb szerepe abban, hogy kellemes vagy kellemetlen stresszt élünk át, hogy elégedettek vagyunk vagy elégedetlenek. És úgy gondolom, ha képesek vagyunk oly módon hatást gyakorolni az idegrendszerre a Transzcendentális Meditáción keresztül, hogy az valóban lenyugodjon, valóban a legjobbat nyújtsa abban, hogy nem ad specifikus választ semmilyen igénybevételre, akkor az egy ideális megoldás.<br>
     </p>
+
+    <div class="quot-show-toggle">
+        <div class="quot-gradient"></div>
+        <div class="quot-link-container">
+            <a>Tovább olvasom &raquo;</a>
+        </div>
+    </div>
 </blockquote>
+
+<h3>Szakmai ajánlás</h3>
+<?php
+    insert_figure(
+        "images/veer_ajanlasa.jpg", // src
+        "portrait", // orientation
+        "left", // float
+        "Dr. Veér András ajánlása", // alt
+        "Dr. Veér András ajánlása (új lapon nyílik meg)", // title
+        "Dr. Veér András ajánlása"); // figcaption
+?>
+
+<p class="clearfix">
+1955-ben Dr. Veér András a Népjóléti Minisztérium Mentálhygiéne miniszteri biztosa,
+aki az <b>Országos Pszichiátriai és Neurológiai Intézet Főigazgató Főorvosa</b> is,
+írt egy ajánló levelet, melyben a Transzcendentális Meditációt ajánlja.
+</p>

@@ -1,20 +1,26 @@
 <?php
-    $ERROR_CAPTCHA_NO_MATCH = 'A kód nem egyezik.';
+    include('captcha.php');
+
+    $ERROR_CAPTCHA_NO_MATCH = 'A beírt összeg helytelen. Ha nem tudja elolvasni, a gombra kattintva kérjen új képet.';
     $response = [];
 
-    try {        
+    try {
         $fullName = $_POST['fullName'];
         $email = $_POST['email'];
         $message = $_POST['message'];
-        $clientCaptcha = $_POST['captcha'];
+        $userInput = $_POST['captcha'];
+        $hash = $_POST['hash'];
 
-        if (isset($_SESSION['__captcha__'])){ //&& strtolower($_SESSION['__captcha__']) != strtolower($clientCaptcha)) {
+        $token = captcha::map($hash[2]).captcha::map($hash[4]).captcha::map($hash[8]).captcha::map($hash[16]);
+        $sum = captcha::calculate_sum($token);
+
+        if ($userInput != $sum) {
             throw new Exception($ERROR_CAPTCHA_NO_MATCH);
         }
 
         $message =
             '<b>E-mail cím:</b> '.$email.'<br><br>'.
-            '<b>Üzenet:</b><br>'.wordwrap($message, 80);
+            '<b>Üzenet:</b><br>'.wordwrap(nl2br($message), 80);
 
         //$to = 'matyas.margareta@tm.org';
         $to = 'marosvolgyi.gergely@gmail.com';
@@ -24,13 +30,13 @@
         $headers .= "Content-type:text/html;charset=UTF-8"."\r\n";
         $headers .= "From: ".$email;
         
-        //mail($to, $subject, $message, $headers);
+        mail($to, $subject, $message, $headers);
 
         $response['status'] = 'success';
         $response['message'] = 'Az e-mail küldése sikeres volt.';
     } catch (Exception $ex) {
         $response['status'] = 'error';
-        $response['message'] = 'Az e-mail küldése közben hiba történt. Hibaüzenet: '.$ex->getMessage();
+        $response['message'] = 'Hiba: '.$ex->getMessage();
     }
 
     echo json_encode($response);

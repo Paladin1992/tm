@@ -1,10 +1,3 @@
-<p class="intro">
-Az élet alapja a Tiszta Boldogság.<br>
-A béke, a nyugalom, a harmónia.<br>
-Ha bennünk ez az alap erős, akkor az életünk minden területe kivirágzik.<br>
-Öntözd a gyökeret, és élvezd a gyümölcsöt!
-</p>
-
 <p>
 A Transzcendentális Meditáció<sup>&reg;</sup> (röviden: TM<sup>&reg;</sup>) egy egyszerű, erőfeszítés nélküli, természetes mentális technika,
 amelyet naponta kétszer, kb. 20 percen át gyakorlunk kényelmes, ülő helyzetben.
@@ -34,6 +27,27 @@ A TM<sup>&reg;</sup> nem hit, nem vallás és nem filozófia, hanem egy egyszer�
 amelyet bárki gyakorolhat, függetlenül nemétől, életkorától, iskolai végzettségétől,
 életmódjától, hitétől és vallásától.
 </p>
+
+<h3>Mi történik a TM alatt?</h3>
+<blockquote>
+    <p>
+        „Ülünk és meditálunk. Elérjük a tiszta boldogság területét. Boldoggá válunk...
+        Olyan mértékben ébredünk rá a tiszta boldogságra, hogy azzá válunk. Azok vagyunk.
+        Mivel azzá váltunk, ezért amikor kijövünk onnan,
+        akkor is azok vagyunk és így semmilyen külső tényezőnek nem lesz esélye arra,
+        hogy az elme tiszta boldogsággal teli állapotát félbeszakítsa.
+        Az elme természetes módon nyugalommal teli. Ekkor a világon minden dolog,
+        ez, az vagy amaz, magától megoldódik. Voltak dolgok,
+        amelyek korábban nagyon bosszantották az embert, amelyek próbára tették a türelmét.
+        Voltak olyan problémák, amelyeket nagynak és fárasztónak érzékeltünk,
+        amelyekre úgy tűnt, mintha nem lenne megoldás. Ezek most egyszerű dolgoknak tűnnek.
+        Úgy tűnik ekkor, mintha ezek a dolgok maguktól oldódnának meg.
+        Ez a technika ahhoz, hogy az ember ne csak a nyugalomra tegyen szert a mindennapi életben,
+        hanem a tiszta boldogságra is.”
+    
+        <div class="author">&mdash; Maharashi Mahesh Yogi</div>
+    </p>
+</blockquote>
 
 <?php
     // Maharishi a TM működéséről

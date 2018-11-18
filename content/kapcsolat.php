@@ -1,4 +1,4 @@
-<?php include("captcha.php"); ?>
+
 
 <?php
     insert_figure(
@@ -27,8 +27,12 @@ Executive coachként, trénerként, képzési menedszerként sok emberrel talál
 Így jutottam el a Transzcendentális Meditációhoz, melynek mind saját, mind pedig mások életében való eredményességét látva a technika tanárává váltam. Azóta e csodálatos technika tanításával foglalkozom, mely az élet minden területét valóban sikeresebbé, gazdagabbá és boldogabbá teszi.
 </p>
 
+<div class="contact-arrow-container">
+    <div class="glyphicon glyphicon-arrow-down contact-arrow"></div>
+</div>
+
 <div id="contact" class="contact-container">
-    <div class="card" onclick="showContact(this)">
+    <div class="card" onclick="showContact(this)" title="Kattintson a névjegykártyára!">
         <div class="bg-line"></div>
 
         <div class="card-name">Mátyás &nbsp;Margaréta</div>
@@ -58,13 +62,20 @@ Executive coachként, trénerként, képzési menedszerként sok emberrel talál
                 </div>
             
                 <div class="captcha-container">
-                    <div style="font-size:12px;">Írja be a képen látható karaktereket:</div>
-                    <img class="captcha-img" src="<?=captcha::image();?>" alt="CAPTCHA kép"/>
-                    <button type="button" onclick="refreshCaptcha()" class="btn btn-primary ">
-                        <span class="glyphicon glyphicon-refresh"></span> Új kép
+                    <div class="captcha-info">Írja be számjegyekkel a képen látható művelet eredményét:</div>
+                    <img class="captcha-img" src="" alt="CAPTCHA kép"/>
+                    <button type="button" onclick="refreshCaptcha()" class="btn btn-primary button-link btn-refresh-captcha" title="Új képet kérek!">
+                        <span class="glyphicon glyphicon-refresh"></span>
                     </button>
                     
-                    <input class="captcha-text" type="text" name="captcha" placeholder="6 karakter" maxlength="6"/>
+                    <input class="captcha-text" type="text" name="captcha" placeholder="Írja be az összeget" data-toggle="tooltip" data-placement="bottom" title="A mezőbe csak számot lehet beírni."/>
+                    <input type="hidden" name="hash" class="captcha-hash">
+                </div>
+
+                <div class="gdpr-container">
+                    <input type="checkbox" name="gdpr-rules" class="gdpr-real-checkbox">
+                    <div class="material-icons gdpr-fake-checkbox">check_box_outline_blank</div>
+                    <div class="gdpr-caption">Az <a href="other/adatvedelmi_nyilatkozat.pdf" target="_blank" class="link" title="Adatvédelmi nyilatkozat megtekintése (PDF)">adatvédelmi nyilatkozatot</a> megismertem és elfogadom.</div>
                 </div>
 
                 <div class="clearfix">
@@ -75,7 +86,3 @@ Executive coachként, trénerként, képzési menedszerként sok emberrel talál
         </form>
     </div>
 </div>
-
-<p style="text-align: center">
-    <a href="other/adatvedelmi_nyilatkozat.pdf" target="_blank" class="link">Adatvédelmi nyilatkozat megtekintése (PDF)</a>
-</p>
