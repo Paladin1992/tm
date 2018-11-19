@@ -49,7 +49,7 @@ Ez az interjú megtalálható Robert Oates <i>"Celebrating the Dawn"</i> című 
     </p>
 
     <div class="quot-show-toggle">
-        <div class="quot-gradient"></div>
+        <!-- <div class="quot-gradient"></div> -->
         <div class="quot-link-container">
             <a>Tovább olvasom &raquo;</a>
         </div>

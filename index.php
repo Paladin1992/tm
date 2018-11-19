@@ -1,4 +1,4 @@
-<!-- remove after 2019-01-12 -->
+﻿<!-- remove after 2019-01-12 -->
 <?php
     $today = new DateTime();
     $startDate = new DateTime('2018-01-12');
@@ -18,9 +18,8 @@
     <title><?=print_page_title($site, false);?> &bull; TM Mindenkinek</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="img-src 'self' data:">
 
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Parisienne|Rochester">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" href="images/favicon.png">
