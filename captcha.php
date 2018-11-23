@@ -118,10 +118,11 @@
 			imagefilledrectangle($image, 0, 0, self::get_width(), self::get_height(), $white);
 
 			// random dots (short lines)
+			$min = 220;
 			for ($dot = 0; $dot < 100; $dot++) {
-				$r = rand(150, 255);
-				$g = rand(150, 255);
-				$b = rand(150, 255);
+				$r = rand($min, 255);
+				$g = rand($min, 255);
+				$b = rand($min, 255);
 				$dot_color = imagecolorallocate($image, $r, $g, $b);
 
 				// spots

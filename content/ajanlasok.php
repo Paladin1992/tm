@@ -56,19 +56,25 @@ Ez az interjú megtalálható Robert Oates <i>"Celebrating the Dawn"</i> című 
     </div>
 </blockquote>
 
-<h3>Szakmai ajánlás</h3>
+<h3 class="inter">Szakmai ajánlás</h3>
 <?php
     insert_figure(
         "images/veer_ajanlasa.jpg", // src
         "portrait", // orientation
-        "left", // float
+        "right", // float
         "Dr. Veér András ajánlása", // alt
         "Dr. Veér András ajánlása (új lapon nyílik meg)", // title
         "Dr. Veér András ajánlása"); // figcaption
 ?>
 
 <p class="clearfix">
-1955-ben Dr. Veér András a Népjóléti Minisztérium Mentálhygiéne miniszteri biztosa,
+1955-ben Dr. Veér András, a Népjóléti Minisztérium Mentálhygiéne miniszteri biztosa,
 aki az <b>Országos Pszichiátriai és Neurológiai Intézet Főigazgató Főorvosa</b> is,
 írt egy ajánló levelet, melyben a Transzcendentális Meditációt ajánlja.
 </p>
+
+<h3>Híres TM-esek</h3>
+
+hírességek_kép
+
+videó_gomb (felirat: TM-et gyakorló hírességek)

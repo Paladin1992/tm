@@ -6,6 +6,7 @@
     @darkBlue: #002050;
 
     @orange: #ffb600;
+    @darkOrange: #ff7700;
     @brown: #994422;
     @darkBrown: #66270f;
 
@@ -21,20 +22,20 @@
     // #endregion
 
     // #region [ Fonts ]
-    @font-face { /* latin-ext */
-        font-family: 'Parisienne';
-        font-style: normal;
-        font-weight: 400;
-        src: local('Parisienne'), local('Parisienne-Regular'), url(../fonts/parisienne1.woff2) format('woff2');
-        unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
-    }
-    @font-face { /* latin */
-        font-family: 'Parisienne';
-        font-style: normal;
-        font-weight: 400;
-        src: local('Parisienne'), local('Parisienne-Regular'), url(../fonts/parisienne2.woff2) format('woff2');
-        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-    }
+    // @font-face { /* latin-ext */
+    //     font-family: 'Parisienne';
+    //     font-style: normal;
+    //     font-weight: 400;
+    //     src: local('Parisienne'), local('Parisienne-Regular'), url(../fonts/parisienne1.woff2) format('woff2');
+    //     unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+    // }
+    // @font-face { /* latin */
+    //     font-family: 'Parisienne';
+    //     font-style: normal;
+    //     font-weight: 400;
+    //     src: local('Parisienne'), local('Parisienne-Regular'), url(../fonts/parisienne2.woff2) format('woff2');
+    //     unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    // }
     
     @font-face { /* latin */
         font-family: 'Rochester';
@@ -72,7 +73,6 @@
         white-space: nowrap;
         word-wrap: normal;
         direction: ltr;
-        -webkit-font-feature-settings: 'liga';
         -webkit-font-smoothing: antialiased;
     }
     // #endregion
@@ -225,7 +225,6 @@ nav {
 }
 
 main {
-    /* logo watermark */
     background-color: white;
     background-image: url(../images/bg_logo_watermark.png);
     background-repeat: no-repeat;
@@ -256,9 +255,12 @@ footer {
 // #region [ Common ]
 h3 {
     font-family: @font_h3;
-    font-size: 18px;
+    font-size: 16px;
+    font-style: italic;
     font-weight: bold;
     margin: 0 0 10px;
+
+    &.inter { margin: 30px 0 15px; }
 }
 
 a {
@@ -272,6 +274,16 @@ a {
             color: @orange;
 
             text-decoration: underline;
+        }
+    }
+
+    &.dark-orange {
+        color: @darkOrange;
+
+        font-weight: bold;
+
+        &:visited, &:hover, &:active {
+            color: @darkOrange;
         }
     }
 }
@@ -357,28 +369,31 @@ blockquote {
     box-shadow: 2px 2px 10px 0px @shadow;
     
     margin: 10px 0;
-    padding: 25px;
+    padding: 15px 25px;
     position: relative;
     
-    font-size: 17px;
+    font-size: 16px;
     font-style: italic;
     quotes: "\201C""\201D";
     text-align: justify;
+
+    &.main {
+        font-size: 17px;
+
+        & p { margin: 0; }
+    }
 
     &.short {
         overflow: hidden;
 
         height: 200px;
 
-        &.open { padding-bottom: 40px; }
+        &.open { padding-bottom: 25px; }
     }
 
     & p { font-style: italic; }
 
-    & .author {
-        font-style: normal;
-        text-align: right;
-    }
+    & .author { text-align: right; }
 
     & .quot-show-toggle {
         margin-left: -25px;
@@ -387,53 +402,45 @@ blockquote {
         width: 100%;
 
         & .quot-link-container {
-            //background-color: @orange;
-            background: transparent; /* Old browsers */
-            background: -moz-linear-gradient(top, transparent 0%, #ffb600 75%); /* FF3.6-15 */
-            background: -webkit-linear-gradient(top, transparent 0%,#ffb600 75%); /* Chrome10-25,Safari5.1-6 */
-            background: linear-gradient(to bottom, transparent 0%,#ffb600 75%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='transparent', endColorstr='#ffb600', GradientType=0); /* IE6-9 */
-            
+            background-color: @orange;
+            box-shadow: 0 0 10px 0 @shadow;
+
             text-align: center;
 
-            height: 50px;
-            position: relative;
+            height: 25px;
 
             & a {
                 color: @darkBlue;
 
                 font-weight: bold;
 
-                position: relative;
-                top: 25px;
-
                 &:hover { cursor: pointer; }
             }
         }
-
-        // & .quot-gradient {
-        //     // background: transparent; /* Old browsers */
-        //     // background: -moz-linear-gradient(top, transparent 0%, #ffb600 80%); /* FF3.6-15 */
-        //     // background: -webkit-linear-gradient(top, transparent 0%,#ffb600 80%); /* Chrome10-25,Safari5.1-6 */
-        //     // background: linear-gradient(to bottom, transparent 0%,#ffb600 80%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-        //     // filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='transparent', endColorstr='#ffb600', GradientType=0); /* IE6-9 */
-
-        //     height: 20px;
-        // }
     }
 }
 
 ul {
     padding-left: 0;
 
-    li:not(.menu) {
-        margin: 0;
-        padding: 3px 0 3px 40px;
-        list-style: none;
+    & li:not(.menu) {
         background-image: url("../images/margareta.png");
         background-repeat: no-repeat;
         background-position: left 10px;
         background-size: 30px;
+        list-style: none;
+
+        margin: 0;
+        padding: 3px 0 3px 40px;
+    }
+
+    &.tm-contact {
+        & li:not(.menu) {
+            background-position: 0px 0px;
+            background-size: 25px;
+
+            padding-left: 35px;
+        }
     }
 }
 
@@ -510,7 +517,7 @@ img.tm-thumbnail {
         background-color: @blue;
         border-radius: 5px;
         
-        margin: 0 auto 30px;
+        margin: 30px auto;
         padding: 10px;
         padding-bottom: 56.25%;
         position: relative;
@@ -569,8 +576,8 @@ img.tm-thumbnail {
 
 // #region [ Content ]
 .intro {
-    font-family: 'Parisienne', cursive;
-    font-size: 35px;
+    font-size: 20px;
+    font-style: italic;
     text-align: center;
     
     margin-bottom: 30px;
@@ -580,11 +587,6 @@ img.tm-thumbnail {
     display: block;
     margin: 0 auto;
 }
-
-// @keyframes arrow-pulsing {
-//     0% { font-size: 2.5em; }
-//     100% { font-size: 3em; }
-// }
 
 @keyframes arrow-levitating {
     0% { top: 0px; }
@@ -1246,12 +1248,12 @@ form {
                     color: white !important;
 
                     font-family: @font_menu;
-                    font-size: 18px;
+                    font-size: 16px;
                     font-weight: bold;
                     text-align: center;
                     
                     margin-right: 9px;
-                    padding: 20px 9px 10px !important;
+                    padding: 20px 6px 10px !important;
 
                     transition: border-bottom-color 0.5s linear;
 

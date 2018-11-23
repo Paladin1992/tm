@@ -1,20 +1,4 @@
 @font-face {
-  /* latin-ext */
-  font-family: 'Parisienne';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Parisienne'), local('Parisienne-Regular'), url(../fonts/parisienne1.woff2) format('woff2');
-  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-@font-face {
-  /* latin */
-  font-family: 'Parisienne';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Parisienne'), local('Parisienne-Regular'), url(../fonts/parisienne2.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-@font-face {
   /* latin */
   font-family: 'Rochester';
   font-style: normal;
@@ -41,7 +25,6 @@
   white-space: nowrap;
   word-wrap: normal;
   direction: ltr;
-  -webkit-font-feature-settings: 'liga';
   -webkit-font-smoothing: antialiased;
 }
 *,
@@ -146,7 +129,6 @@ nav button i.opened {
   transition: transform 0.4s linear;
 }
 main {
-  /* logo watermark */
   background-color: white;
   background-image: url(../images/bg_logo_watermark.png);
   background-repeat: no-repeat;
@@ -170,9 +152,13 @@ footer {
 }
 h3 {
   font-family: 'Book Antiqua', cursive;
-  font-size: 18px;
+  font-size: 16px;
+  font-style: italic;
   font-weight: bold;
   margin: 0 0 10px;
+}
+h3.inter {
+  margin: 30px 0 15px;
 }
 a {
   color: #ffb600;
@@ -184,6 +170,15 @@ a.link:hover,
 a.link:active {
   color: #ffb600;
   text-decoration: underline;
+}
+a.dark-orange {
+  color: #ff7700;
+  font-weight: bold;
+}
+a.dark-orange:visited,
+a.dark-orange:hover,
+a.dark-orange:active {
+  color: #ff7700;
 }
 .button-link {
   background-color: #204080;
@@ -268,25 +263,30 @@ blockquote {
   border-radius: 0 5px 5px 0;
   box-shadow: 2px 2px 10px 0px #999999;
   margin: 10px 0;
-  padding: 25px;
+  padding: 15px 25px;
   position: relative;
-  font-size: 17px;
+  font-size: 16px;
   font-style: italic;
   quotes: "\201C" "\201D";
   text-align: justify;
+}
+blockquote.main {
+  font-size: 17px;
+}
+blockquote.main p {
+  margin: 0;
 }
 blockquote.short {
   overflow: hidden;
   height: 200px;
 }
 blockquote.short.open {
-  padding-bottom: 40px;
+  padding-bottom: 25px;
 }
 blockquote p {
   font-style: italic;
 }
 blockquote .author {
-  font-style: normal;
   text-align: right;
 }
 blockquote .quot-show-toggle {
@@ -296,25 +296,14 @@ blockquote .quot-show-toggle {
   width: 100%;
 }
 blockquote .quot-show-toggle .quot-link-container {
-  background: transparent;
-  /* Old browsers */
-  background: -moz-linear-gradient(top, transparent 0%, #ffb600 75%);
-  /* FF3.6-15 */
-  background: -webkit-linear-gradient(top, transparent 0%, #ffb600 75%);
-  /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to bottom, transparent 0%, #ffb600 75%);
-  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='transparent', endColorstr='#ffb600', GradientType=0);
-  /* IE6-9 */
+  background-color: #ffb600;
+  box-shadow: 0 0 10px 0 #999999;
   text-align: center;
-  height: 50px;
-  position: relative;
+  height: 25px;
 }
 blockquote .quot-show-toggle .quot-link-container a {
   color: #002050;
   font-weight: bold;
-  position: relative;
-  top: 25px;
 }
 blockquote .quot-show-toggle .quot-link-container a:hover {
   cursor: pointer;
@@ -323,13 +312,18 @@ ul {
   padding-left: 0;
 }
 ul li:not(.menu) {
-  margin: 0;
-  padding: 3px 0 3px 40px;
-  list-style: none;
   background-image: url("../images/margareta.png");
   background-repeat: no-repeat;
   background-position: left 10px;
   background-size: 30px;
+  list-style: none;
+  margin: 0;
+  padding: 3px 0 3px 40px;
+}
+ul.tm-contact li:not(.menu) {
+  background-position: 0px 0px;
+  background-size: 25px;
+  padding-left: 35px;
 }
 figure {
   text-align: center;
@@ -392,7 +386,7 @@ img.tm-thumbnail:hover {
 .video-container {
   background-color: #204080;
   border-radius: 5px;
-  margin: 0 auto 30px;
+  margin: 30px auto;
   padding: 10px;
   padding-bottom: 56.25%;
   position: relative;
@@ -437,8 +431,8 @@ img.tm-thumbnail:hover {
   border-bottom: 5px solid #990000;
 }
 .intro {
-  font-family: 'Parisienne', cursive;
-  font-size: 35px;
+  font-size: 20px;
+  font-style: italic;
   text-align: center;
   margin-bottom: 30px;
 }
@@ -967,11 +961,11 @@ form button {
     border-bottom: 3px solid #002050;
     color: white !important;
     font-family: 'Book Antiqua', cursive;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: bold;
     text-align: center;
     margin-right: 9px;
-    padding: 20px 9px 10px !important;
+    padding: 20px 6px 10px !important;
     transition: border-bottom-color 0.5s linear;
   }
   nav ul li a img {

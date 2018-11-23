@@ -10,7 +10,7 @@
 
 <?php
     include_once("helpers.php");
-    $site = (isset($_GET['p']) ? $_GET['p'] : 'kezdo');
+    $site = (isset($_GET['p']) ? $_GET['p'] : 'fooldal');
 ?>
 <!DOCTYPE html>
 <html lang="hu">

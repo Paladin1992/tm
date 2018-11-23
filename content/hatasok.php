@@ -1,4 +1,4 @@
-<h3>A TM hatása az emberi agy működésére</h3>
+<h3>A TM<sup>&reg;</sup> hatása az emberi agy működésére</h3>
 
 <?php
     insert_figure(
@@ -16,14 +16,14 @@ Ha az ember homloklebenyében úgynevezett funkcionális lyukak alakulnak ki (l�
 akkor az megakadályozza abban, hogy erkölcsileg, morálisan megfelelő döntést tudjon hozni.
 A funkcionális lyukak kialakulásának oka a nem megfelelő idejű és minőségű alvás, illetve a stressz.
 A nem megfelelő minőségű alvás oka a stressz. Így ha eleget alszunk, és stresszmentes életet élünk, az agyunk megfelelően fog működni.
-A TM egy olyan egyszerű, természetes, erőfeszítésmentes stresszoldó mentális technika,
+A TM<sup>&reg;</sup> egy olyan egyszerű, természetes, erőfeszítésmentes stresszoldó mentális technika,
 mely az agykoherenciát növeli, ezáltal az idegrendszerünket normalizálja (melynek központja az agy),
 így segíti elő a megfelelő döntések meghozatalát.
 </p>
 
 <?php
-    insert_video("https://www.youtube.com/embed/YAWJFJ5Fadw", "A TM hatása az agyműködésre");
-    //insert_video("https://www.youtube.com/embed/FA6rktf6OuU", "Agyhullámkoherencia a TM közben");
+    insert_video("https://www.youtube.com/embed/YAWJFJ5Fadw", "A TM<sup>&reg;</sup> hatása az agyműködésre");
+    //insert_video("https://www.youtube.com/embed/FA6rktf6OuU", "Agyhullámkoherencia a TM<sup>&reg;</sup> közben");
 ?>
 
 <h3>Egyéb pozitív hatások</h3>
@@ -39,11 +39,9 @@ mely az agykoherenciát növeli, ezáltal az idegrendszerünket normalizálja (m
             tudatosság.
         </p>
         <?php
-            insert_video('https://www.youtube.com/embed/zLxEdaRYHQ8', 'Hiperaktivitás és a TM'); // ez az a videó?
-            insert_video('https://www.youtube.com/embed/82VZunyYWZ0', 'A TM hatása az autizmusra');
-            //insert_video('https://www.youtube.com/embed/XfjUJ4Gx4Y4', 'Egy iskolaigazgató beszél a TM hatásáról az oktatásban');
+            insert_video('https://www.youtube.com/embed/zLxEdaRYHQ8', 'A TM<sup>&reg;</sup> hatása a hiperaktivitásra'); // ez az a videó?
+            insert_video('https://www.youtube.com/embed/82VZunyYWZ0', 'A TM<sup>&reg;</sup> hatása az autizmusra');
         ?>
-        <b style="color: red">MÁSIK ISKOLÁS VIDEÓ</b>
     </li>
     <li>
         <b>a testre:</b>
@@ -56,7 +54,8 @@ mely az agykoherenciát növeli, ezáltal az idegrendszerünket normalizálja (m
             reakcióidő; egy hosszabb, egészségesebb élet.
         </p>
         <?php
-            insert_video('https://www.youtube.com/embed/bRyL5gQhdCE', 'Szív- és érrendszeri betegségek és a TM');
+            insert_video('https://www.youtube.com/embed/bRyL5gQhdCE', 'A TM<sup>&reg;</sup> hatása a szív- és érrendszeri betegségekre');
+            insert_video('https://www.youtube.com/embed/8adXncuC91k', 'A TM<sup>&reg;</sup> hatása egy gyógyíthatatlan betegségre</sup>');
         ?>
     </li>
     <li>
@@ -67,9 +66,10 @@ mely az agykoherenciát növeli, ezáltal az idegrendszerünket normalizálja (m
             mások növekvő becsülése; kevesebb idegesség, düh és
             depresszió.
         </p>
-        <b style="color: red">VETERÁNOS VIDEÓ</b>
+
         <?php
-        
+            insert_video('https://www.youtube.com/embed/d7BnveKaFdY', 'A TM<sup>&reg;</sup> hatása az énképre');
+            insert_video('https://www.youtube.com/embed/Ap3vEVnv9-8', 'A TM<sup>&reg;</sup> hatása a magaviseletre');
         ?>
     </li>
     <li>
@@ -82,8 +82,8 @@ mely az agykoherenciát növeli, ezáltal az idegrendszerünket normalizálja (m
             a munkatársakkal való jobb kapcsolat; kevesebb stressz a munka során.
         </p>
         <?php
-            insert_video('https://www.youtube.com/embed/WbU67boq958', 'TM a cégvezetésben');
-            insert_video('https://www.youtube.com/embed/Mjm73GYEBOM', 'TM mint versenyelőny');
+            insert_video('https://www.youtube.com/embed/SrVWDAStbqg', 'A TM<sup>&reg;</sup> hatása a munkabírásra');
+            insert_video('https://www.youtube.com/embed/Mjm73GYEBOM', 'A TM<sup>&reg;</sup> mint versenyelőny');
         ?>
     </li>
     <li>
@@ -93,11 +93,9 @@ mely az agykoherenciát növeli, ezáltal az idegrendszerünket normalizálja (m
             közlekedési baleset; kevesebb gyilkosság; csökkenő terrorizmus;
             kevesebb nemzetközi konfliktus; a nemzetek közötti növekvő harmónia; világbéke.
         </p>
+        <?php
+            insert_video('https://www.youtube.com/embed/BGFWSc1FPTc', 'A TM<sup>&reg;</sup> egyesítő ereje');
+            insert_video('https://www.youtube.com/embed/B0nwJnmbslc', 'A TM<sup>&reg;</sup> hatása a világ jövőjére');
+        ?>
     </li>
 </ul>
-
-<!-- <button id="btn-load-videos" onclick="load()" class="btn btn-primary">
-    További videók betöltéséhez kattintson ide!
-</button>
-
-<div id="additional-videos"></div> -->

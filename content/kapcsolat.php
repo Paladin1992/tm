@@ -1,31 +1,50 @@
-
-
-<?php
-    insert_figure(
-        "images/margareta_tv_portrait.jpg", // src
-        "portrait", // orientation
-        "right", // float
-        "Mátyás Margaréta fotó", // alt
-        "Mátyás Margaréta", // title
-        "") // figcaption
-?>
-
 <p>
-<b>Mátyás Margaréta</b> Transzcendentális Meditáció tanár vagyok, akit Maharishi Mahesh Yogi képzett ki.
-Ez teszi lehetővé, hogy a több mint 6000 éves hagyományt tisztán tovább tudjam adni.
+<b>Mátyás Margaréta</b> TM<sup>&reg;</sup>-tanár vagyok, akit Maharishi Mahesh Yogi képzett ki arra,
+hogy a technikát tovább tudjam adni egy tanfolyam keretében, az alábbiak szerint:
+
+    <ul class="tm-contact">
+        <li>Bevezető és előkészítő előadás</li>
+        <li>Személyes interjú</li>
+        <li>Személyes tanulás</li>
+        <li>1. ellenőrzési nap</li>
+        <li>2. ellenőrzési nap</li>
+        <li>3. ellenőrzési nap</li>
+    </ul>
 </p>
 
 <p>
-Első diplomámat munkavállalási tanácsadóként szereztem, témája az <i>outplacement</i> rendszer hatékonysága volt.
-Álláskeresési, pályaorientációs tanácsadóként és trénerként segítettem az embereknek eligazodni a munka világában.
+A TM tanfolyam elvégzése után azt önállóan tudjuk gyakorolni,
+de a TM tanártól bármikor kérhetünk segítséget, útmutatást.
 </p>
 
-<p class="clearfix">
-A mesterképesítést vezetés és szervezés szakon, emberierőforrás-menedzsment és szervezetfejlesztés specializációval végeztem,
-ahol a diplomám a <i>coaching</i> és az üzletviteli tanácsadás közös együttműködő munkájának eredményességéről szólt.
-Executive coachként, trénerként, képzési menedszerként sok emberrel találkozva egy tartós és hathatós megoldást kerestem mindenki számára.
-Így jutottam el a Transzcendentális Meditációhoz, melynek mind saját, mind pedig mások életében való eredményességét látva a technika tanárává váltam. Azóta e csodálatos technika tanításával foglalkozom, mely az élet minden területét valóban sikeresebbé, gazdagabbá és boldogabbá teszi.
+<p>
+A bevezető és előkészítő előadás <b>díjtalan</b>, melyre elérhetőségeimen jelentkezhet.
+Ezen való részvétel semmilyen kötelezettséggel nem jár.
 </p>
+
+<blockquote>
+    <?php
+        insert_figure(
+            "images/margareta_tv_portrait.jpg", // src
+            "portrait", // orientation
+            "right", // float
+            "Mátyás Margaréta fotó", // alt
+            "Mátyás Margaréta", // title
+            "") // figcaption
+    ?>
+
+    <p>
+    Első diplomámat munkavállalási tanácsadóként szereztem, témája az <i>outplacement</i> rendszer hatékonysága volt.
+    Álláskeresési, pályaorientációs tanácsadóként és trénerként segítettem az embereknek eligazodni a munka világában.
+    </p>
+
+    <p class="clearfix">
+    A mesterképesítést vezetés és szervezés szakon, emberierőforrás-menedzsment és szervezetfejlesztés specializációval végeztem,
+    ahol a diplomám a <i>coaching</i> és az üzletviteli tanácsadás közös együttműködő munkájának eredményességéről szólt.
+    Executive coachként, trénerként, képzési menedszerként sok emberrel találkozva egy tartós és hathatós megoldást kerestem mindenki számára.
+    Így jutottam el a Transzcendentális Meditációhoz, melynek mind saját, mind pedig mások életében való eredményességét látva a technika tanárává váltam. Azóta e csodálatos technika tanításával foglalkozom, mely az élet minden területét valóban sikeresebbé, gazdagabbá és boldogabbá teszi.
+    </p>
+</blockquote>
 
 <div class="contact-arrow-container">
     <div class="glyphicon glyphicon-arrow-down contact-arrow"></div>

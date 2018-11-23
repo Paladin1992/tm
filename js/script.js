@@ -26,7 +26,7 @@ $(document).ready(function() {
         if (container.hasClass('open')) { // close
             container.removeClass('open')
                      .animate({ height: '200px' }, 1000, () => {
-                        scrollToItem(container);
+                        scrollToItem(container); // kell?
                      });
 
             $(this).html('Tovább olvasom &raquo;');
@@ -107,6 +107,10 @@ function load() {
 function showMessage(message, type) {
     var alertBox = $('.mail-response');
 
+    if (alertBox.is(':visible')) {
+        alertBox.finish();
+    }
+
     if (type === 'success') {
         alertBox.html(message)
                 .removeClass('alert-success alert-error')
@@ -114,13 +118,6 @@ function showMessage(message, type) {
                 .show()
                 .delay(ALERT_SHOW_DELAY_MS)
                 .fadeOut(ALERT_FADE_OUT_MS);
-
-        if (alertBox.is(':visible')) {
-            alertBox.finish()
-                    .show()
-                    .delay(ALERT_SHOW_DELAY_MS)
-                    .fadeOut(ALERT_FADE_OUT_MS);
-        }
     } else if (type === 'error') {
         alertBox.html(message)
                 .removeClass('alert-success alert-error')
