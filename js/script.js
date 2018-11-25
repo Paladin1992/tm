@@ -2,39 +2,37 @@
 
 const ALERT_SHOW_DELAY_MS = 8000;
 const ALERT_FADE_OUT_MS = 500;
-const ERROR_LOAD_VIDEOS = 'Hiba történt a videók betöltésekor. Frissítse az oldalt, és próbálja újra.';
+const QUOT_READ_MORE_TOGGLE_MS = 1000;
+const SCROLL_SPEED_MS = 800;
+const SLIDE_SPEED_MS = 500;
 const ERROR_LOAD_CAPTCHA = 'Az új captcha betöltése sikertelen.';
 
-var menuButton;
-
 $(document).ready(function() {
-
     // menu
-    menuButton = $('#btn-menu');
-    menuButton.on('click', function() {
+    $('#btn-menu').on('click', function() {
         if ($('.navbar-collapse.collapse').hasClass('in')) { // open -> close
-            menuButton.removeClass('opened');
+            $(this).removeClass('opened');
         } else { // closed -> open
-            menuButton.addClass('opened');
+            $(this).addClass('opened');
         }
     });
 
     // blockquote show toggle
     $('.quot-show-toggle a').on('click', function() {
-        var container = $('blockquote.short');
+        var $container = $('blockquote.short');
 
-        if (container.hasClass('open')) { // close
-            container.removeClass('open')
-                     .animate({ height: '200px' }, 1000, () => {
-                        scrollToItem(container); // kell?
-                     });
+        if ($container.hasClass('open')) { // close
+            $container.removeClass('open')
+                      .animate({ height: '200px' }, QUOT_READ_MORE_TOGGLE_MS, () => {
+                         scrollToItem($container); // kell?
+                      });
 
             $(this).html('Tovább olvasom &raquo;');
         } else { // open
-            container.addClass('open')
-                     .animate({ height: container.get(0).scrollHeight }, 1000, () => {
-                        scrollToItem(container);
-                     });
+            $container.addClass('open')
+                      .animate({ height: $container.get(0).scrollHeight }, QUOT_READ_MORE_TOGGLE_MS, () => {
+                         scrollToItem($container);
+                      });
 
             $(this).html('&laquo; Kis méret');
         }
@@ -45,14 +43,14 @@ $(document).ready(function() {
 
     // GDPR checkbox
     $('.gdpr-fake-checkbox').on('click', function(e) {
-        var checkbox = $('.gdpr-real-checkbox');
+        var $checkbox = $('.gdpr-real-checkbox');
 
-        if (checkbox.prop('checked')) {
+        if ($checkbox.prop('checked')) {
             $(this).html('check_box_outline_blank');
-            checkbox.prop('checked', false);
+            $checkbox.prop('checked', false);
         } else {
             $(this).html('check_box');
-            checkbox.prop('checked', true);
+            $checkbox.prop('checked', true);
         }
 
         checkSendButtonConditions();
@@ -78,7 +76,7 @@ $(document).ready(function() {
 function scrollToItem($item) {
     $('html, body').animate({
         scrollTop: $item.offset().top
-    }, 800);
+    }, SCROLL_SPEED_MS);
 }
 
 function checkSendButtonConditions() {
@@ -90,81 +88,98 @@ function checkSendButtonConditions() {
     $('#btn-send-email').prop('disabled', emptyFields.length > 0 || !gdprRulesChecked);
 }
 
-function loadVideos(page, destinationId) {
-    $.get('loadvideos.php?p=' + page, function(response, status) {
-        var result = (status === 'success' ? response : ERROR_LOAD_VIDEOS);
-        $('#' + destinationId).html(result);
+function getVideo(url, button) {
+    var $button = $(button);
+    var $videoContainer = $button.next('.video-container');
+    var $iframe = $videoContainer.find('iframe');
+
+    if ($iframe.attr('src') === '') { // no video has been loaded yet
+        $iframe.attr('src', url + '?rel=0');
+    }
+
+    // hide button
+    $button.slideUp(SLIDE_SPEED_MS);
+
+    // show video
+    $videoContainer.slideDown(SLIDE_SPEED_MS, function() {
+        scrollToItem($videoContainer);
     });
 }
 
-function load() {
-    loadVideos('hatasok', 'additional-videos');
-    $('#btn-load-videos').slideUp(500);
+function closeVideo(closeButton) {
+    var $closeButton = $(closeButton);
+    var $videoContainer = $closeButton.parents('.video-container');
+    var $button = $videoContainer.prev('.video-button');
+
+    // hide video
+    $videoContainer.slideUp(SLIDE_SPEED_MS);
+
+    // show button
+    $button.slideDown(SLIDE_SPEED_MS);
 }
 
 // type: success | error
-// TODO
 function showMessage(message, type) {
-    var alertBox = $('.mail-response');
+    var $alertBox = $('.mail-response');
 
-    if (alertBox.is(':visible')) {
-        alertBox.finish();
+    if ($alertBox.is(':visible')) {
+        $alertBox.finish();
     }
 
     if (type === 'success') {
-        alertBox.html(message)
-                .removeClass('alert-success alert-error')
-                .addClass('alert-success')
-                .show()
-                .delay(ALERT_SHOW_DELAY_MS)
-                .fadeOut(ALERT_FADE_OUT_MS);
+        $alertBox.html(message)
+                 .removeClass('alert-success alert-error')
+                 .addClass('alert-success')
+                 .show()
+                 .delay(ALERT_SHOW_DELAY_MS)
+                 .fadeOut(ALERT_FADE_OUT_MS);
     } else if (type === 'error') {
-        alertBox.html(message)
-                .removeClass('alert-success alert-error')
-                .addClass('alert-error')
-                .show()
-                .delay(ALERT_SHOW_DELAY_MS)
-                .fadeOut(ALERT_FADE_OUT_MS);
+        $alertBox.html(message)
+                 .removeClass('alert-success alert-error')
+                 .addClass('alert-error')
+                 .show()
+                 .delay(ALERT_SHOW_DELAY_MS)
+                 .fadeOut(ALERT_FADE_OUT_MS);
     }
 }
 
 function sendEmail() {
     try {
         // get form data
-        var form = $('form[name="form-email"]');
-        var data = form.serializeArray();
-        form.find('fieldset').prop('disabled', true);
+        var $form = $('form[name="form-email"]');
+        var data = $form.serializeArray();
+        $form.find('fieldset').prop('disabled', true);
 
         // post data to server to send as an e-mail
         $.post('sendemail.php', data, function(response, status) {
             var result = JSON.parse(response);
             showMessage(result.message, result.status);
-            form.find('fieldset').prop('disabled', false);
+            $form.find('fieldset').prop('disabled', false);
         });
     } catch (ex) {
         throw new Error(ex.message);
     }    
 }
 
-function showContact(card) {
+function showContact($card) {
     //return false; // may be used for trial period
     
     // hide arrow
-    $('.contact-arrow-container').slideUp(500);
+    $('.contact-arrow-container').slideUp(SLIDE_SPEED_MS);
 
-    var card = $(card);
+    var $card = $($card);
 
     var showForm = function showForm() {
         // show form
-        card.siblings('.form-container').slideDown(500);
+        $card.siblings('.form-container').slideDown(SLIDE_SPEED_MS);
 
         // scroll to card top
-        scrollToItem(card);
+        scrollToItem($card);
     };
 
-    card.addClass('open');
-    if (card.outerWidth() !== $('main').width()) { // width is not 100%
-        card.animate({ width: '100%' }, 500, showForm);
+    $card.addClass('open');
+    if ($card.outerWidth() !== $('main').width()) { // width is not 100%
+        $card.animate({ width: '100%' }, SLIDE_SPEED_MS, showForm);
     } else {
         showForm();
     }

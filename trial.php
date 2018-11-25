@@ -4,8 +4,8 @@
     <title>Türelem, Barátom...</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Courgette">
+    
+    <link rel="shortcut icon" href="images/favicon.png">
 
     <style>
         body {
@@ -23,8 +23,9 @@
         }
 
         #jumbotron {
-            font-family: "Courgette", cursive;
+            font-family: "Book Antiqua", cursive;
             font-size: 2.5em;
+            font-style: italic;
             text-align: center;
 
             margin-top: 100px;

@@ -1,16 +1,22 @@
 <h3>A stresszkutatás atyjának ajánlása</h3>
 
 <p>
-    Selye János (Hans Hugo Bruno Selye, 1907-1982) az osztrák-magyar származású kanadai orvos és vegyész, akit sokszor neveznek a "stresszkutatás atyjának". Már 1926-ban, másodéves orvostanhallgatóként elkezdett dolgozni később híressé vált stressz-elméletén. Ez azt írja le, hogy az emberek miként képesek megbirkózni a sérülések és az intenzív élmények okozta terhekkel. Egész életén át folytatott kutatásai nyomán arra a következtetésre jutott, hogy a stressz minden betegség kifejlődésében szerepet játszik. Ha valaki nem képes megbirkózni a stresszekkel, az alkalmazkodási betegségekhez vezethet, mint amilyenek a fekélyek, a magas vérnyomás és számos egyéb probléma, amelyet a stressz okoz vagy súlyosbít.
+    Selye János (Hans Hugo Bruno Selye, 1907-1982) az osztrák-magyar származású kanadai orvos és vegyész,
+    akit sokszor neveznek a "stresszkutatás atyjának", már 1926-ban, másodéves orvostanhallgatóként elkezdett dolgozni
+    később híressé vált stressz-elméletén. Ez azt írja le, hogy az emberek miként képesek megbirkózni
+    a sérülések és az intenzív élmények okozta terhekkel. Egész életén át folytatott kutatásai nyomán
+    arra a következtetésre jutott, hogy a stressz minden betegség kifejlődésében szerepet játszik.
+    Ha valaki nem képes megbirkózni a stresszekkel, az alkalmazkodási betegségekhez vezethet,
+    mint amilyenek a fekélyek, a magas vérnyomás és számos egyéb probléma, amelyet a stressz okoz vagy súlyosbít.
 </p>
 
 <p>
-Az 1970-es évek közepén Dr. Selye Jánossal &ndash; aki három doktorátussal rendelkezett (MD, PhD és DSc),
-bevezette a modern orvostudományba a stressz fogalmát,
-43 alkalommal választották díszdoktorrá, 39 könyvet írt, és több mint 1700 szakcikket publikált a stresszről,
-valamint a vele összefüggő problémákról, ill. tíz alkalommal jelölték a Nobel-díjra &ndash; készült egy interjú,
-melyben a Transzcendentális Meditációról nyilatkozik.
-Ez az interjú megtalálható Robert Oates <i>"Celebrating the Dawn"</i> című könyvében, ebből következik most egy részlet:
+    Az 1970-es évek közepén Dr. Selye Jánossal &ndash; aki három doktorátussal rendelkezett (MD, PhD és DSc),
+    bevezette a modern orvostudományba a stressz fogalmát,
+    43 alkalommal választották díszdoktorrá, 39 könyvet írt, és több mint 1700 szakcikket publikált a stresszről,
+    valamint a vele összefüggő problémákról, ill. tíz alkalommal jelölték a Nobel-díjra &ndash; készült egy interjú,
+    melyben a Transzcendentális Meditációról nyilatkozik.
+    Ez az interjú megtalálható Robert Oates <i>"Celebrating the Dawn"</i> című könyvében, ebből következik most egy részlet:
 </p>
 
 <blockquote class="short">
@@ -49,7 +55,6 @@ Ez az interjú megtalálható Robert Oates <i>"Celebrating the Dawn"</i> című 
     </p>
 
     <div class="quot-show-toggle">
-        <!-- <div class="quot-gradient"></div> -->
         <div class="quot-link-container">
             <a>Tovább olvasom &raquo;</a>
         </div>
@@ -77,4 +82,6 @@ aki az <b>Országos Pszichiátriai és Neurológiai Intézet Főigazgató Főorv
 
 hírességek_kép
 
-videó_gomb (felirat: TM-et gyakorló hírességek)
+<?php
+    insert_video('https://www.youtube.com/embed/6Gkrls0f-ns', 'TM-et gyakorló hírességek', true);
+?>

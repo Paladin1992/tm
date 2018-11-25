@@ -1,6 +1,6 @@
 <p>
-<b>Mátyás Margaréta</b> TM<sup>&reg;</sup>-tanár vagyok, akit Maharishi Mahesh Yogi képzett ki arra,
-hogy a technikát tovább tudjam adni egy tanfolyam keretében, az alábbiak szerint:
+    <b>Mátyás Margaréta</b> TM<sup>&reg;</sup>-tanár vagyok, akit Maharishi Mahesh Yogi képzett ki arra,
+    hogy a technikát tovább tudjam adni egy tanfolyam keretében, az alábbiak szerint:
 
     <ul class="tm-contact">
         <li>Bevezető és előkészítő előadás</li>
@@ -13,19 +13,19 @@ hogy a technikát tovább tudjam adni egy tanfolyam keretében, az alábbiak sze
 </p>
 
 <p>
-A TM tanfolyam elvégzése után azt önállóan tudjuk gyakorolni,
-de a TM tanártól bármikor kérhetünk segítséget, útmutatást.
+    A TM tanfolyam elvégzése után azt önállóan tudjuk gyakorolni,
+    de a TM tanártól bármikor kérhetünk segítséget, útmutatást.
 </p>
 
 <p>
-A bevezető és előkészítő előadás <b>díjtalan</b>, melyre elérhetőségeimen jelentkezhet.
-Ezen való részvétel semmilyen kötelezettséggel nem jár.
+    A bevezető és előkészítő előadás <b>díjtalan</b>, melyre elérhetőségeimen jelentkezhet.
+    Ezen való részvétel semmilyen kötelezettséggel nem jár.
 </p>
 
 <blockquote>
     <?php
         insert_figure(
-            "images/margareta_tv_portrait.jpg", // src
+            "images/portrait.jpg", // src
             "portrait", // orientation
             "right", // float
             "Mátyás Margaréta fotó", // alt
@@ -34,15 +34,16 @@ Ezen való részvétel semmilyen kötelezettséggel nem jár.
     ?>
 
     <p>
-    Első diplomámat munkavállalási tanácsadóként szereztem, témája az <i>outplacement</i> rendszer hatékonysága volt.
-    Álláskeresési, pályaorientációs tanácsadóként és trénerként segítettem az embereknek eligazodni a munka világában.
+        Első diplomámat munkavállalási tanácsadóként szereztem, témája az <i>outplacement</i> rendszer hatékonysága volt.
+        Álláskeresési, pályaorientációs tanácsadóként és trénerként segítettem az embereknek eligazodni a munka világában.
     </p>
 
     <p class="clearfix">
-    A mesterképesítést vezetés és szervezés szakon, emberierőforrás-menedzsment és szervezetfejlesztés specializációval végeztem,
-    ahol a diplomám a <i>coaching</i> és az üzletviteli tanácsadás közös együttműködő munkájának eredményességéről szólt.
-    Executive coachként, trénerként, képzési menedszerként sok emberrel találkozva egy tartós és hathatós megoldást kerestem mindenki számára.
-    Így jutottam el a Transzcendentális Meditációhoz, melynek mind saját, mind pedig mások életében való eredményességét látva a technika tanárává váltam. Azóta e csodálatos technika tanításával foglalkozom, mely az élet minden területét valóban sikeresebbé, gazdagabbá és boldogabbá teszi.
+        A mesterképesítést vezetés és szervezés szakon, emberierőforrás-menedzsment és szervezetfejlesztés specializációval végeztem,
+        ahol a diplomám a <i>coaching</i> és az üzletviteli tanácsadás közös együttműködő munkájának eredményességéről szólt.
+        Executive coachként, trénerként, képzési menedzserként sok emberrel találkoztam, és egy tartós, hathatós megoldást kerestem mindenki számára.
+        Így jutottam el a Transzcendentális Meditációhoz, melynek mind saját, mind pedig mások életében való eredményességét látva a technika tanárává váltam.
+        Azóta e csodálatos technika tanításával foglalkozom, mely az élet minden területét valóban sikeresebbé, gazdagabbá és boldogabbá teszi.
     </p>
 </blockquote>
 
@@ -56,14 +57,8 @@ Ezen való részvétel semmilyen kötelezettséggel nem jár.
 
         <div class="card-name">Mátyás &nbsp;Margaréta</div>
         <div class="card-job">Transzcendentális Meditáció tanár</div>
-        <div class="card-email">
-            <!-- <i class="material-icons">mail_outline</i> -->
-            matyas.margareta@tm.org
-        </div>
-        <div class="card-phone">
-            <!-- <i class="material-icons">phone</i> -->
-            +36 70 554 3810
-        </div>
+        <div class="card-email">matyas.margareta@tm.org</div>
+        <div class="card-phone">+36 70 554 3810</div>
         <div class="card-good-wish">Csodaszép napot!</div>
     </div>
 
@@ -83,7 +78,7 @@ Ezen való részvétel semmilyen kötelezettséggel nem jár.
                 <div class="captcha-container">
                     <div class="captcha-info">Írja be számjegyekkel a képen látható művelet eredményét:</div>
                     <img class="captcha-img" src="" alt="CAPTCHA kép"/>
-                    <button type="button" onclick="refreshCaptcha()" class="btn btn-primary button-link btn-refresh-captcha" title="Új képet kérek!">
+                    <button type="button" onclick="refreshCaptcha()" class="btn btn-primary button btn-refresh-captcha" title="Új képet kérek!">
                         <span class="glyphicon glyphicon-refresh"></span>
                     </button>
                     
@@ -98,7 +93,7 @@ Ezen való részvétel semmilyen kötelezettséggel nem jár.
                 </div>
 
                 <div class="clearfix">
-                    <button id="btn-send-email" type="submit" onclick="sendEmail()" class="btn btn-primary button-link left" disabled>Küldés</button>
+                    <button id="btn-send-email" type="submit" onclick="sendEmail()" class="btn btn-primary button left" disabled>Küldés</button>
                     <div class="mail-response alert"></div>
                 </div>
             </fieldset>

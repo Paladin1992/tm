@@ -44,7 +44,7 @@
                 if (file_exists($file_path)) {
                     include($file_path);
                 } else {
-                    echo '<div class="alert alert-danger">A kért oldal tartalma még nem elérhet&odblac;. Addig nézzen meg egy másik menüpontot! :)</div>'.PHP_EOL;
+                    echo '<div class="alert alert-danger" style="display: block;">A kért oldal tartalma még nem elérhet&odblac;. Addig nézzen meg egy másik menüpontot! :)</div>'.PHP_EOL;
                 }
             ?>
         </main>

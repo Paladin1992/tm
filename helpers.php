@@ -91,11 +91,33 @@
         echo '</figure>';
     }
 
-    function insert_video($url, $title = "") {
-        echo '<div class="video-container">';
-            echo '<h4 class="video-title">'.$title.'</h4>';
-            echo '<iframe class="video" width="560" height="315" src="'.$url.'?rel=0"'.
-                 'frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
-        echo '</div>';
+    function insert_video($url, $title = "", $closable = false) {
+        if ($closable) {
+            echo '<div class="video-group">';
+                echo '<button class="video-button button" onclick="getVideo(\''.$url.'\', this)">';
+                    echo '<i class="material-icons">ondemand_video</i> '.$title;
+                echo '</button>';
+
+                echo '<div class="video-container">';
+                    echo '<div class="video-header">';
+                        echo '<div class="video-title">'.$title.'</div>';
+                        echo '<div class="video-close" onclick="closeVideo(this)">&times;</div>';
+                    echo '</div>';
+                    echo '<div class="video-content">';
+                        echo '<iframe class="video" width="560" height="315" src="" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+                    echo '</div>';
+                echo '</div>';
+            echo '</div>';
+        } else {
+            echo '<div class="video-container">';
+                echo '<div class="video-header">';
+                    echo '<div class="video-title">'.$title.'</div>';
+                echo '</div>';
+                echo '<div class="video-content visible">';
+                     echo '<iframe class="video" width="560" height="315" src="'.$url.'?rel=0"'.
+                          'frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+                echo '</div>';
+            echo '</div>';
+        }
     }
 ?>
