@@ -1,4 +1,5 @@
 <?php
+    include('helpers.php');
     include('captcha.php');
 
     $ERROR_CAPTCHA_NO_MATCH = 'A beírt összeg helytelen. Ha nem tudja elolvasni, a gombra kattintva kérjen új képet.';
@@ -18,13 +19,15 @@
             throw new Exception($ERROR_CAPTCHA_NO_MATCH);
         }
 
-        $message =
-            '<b>E-mail cím:</b> '.$email.'<br><br>'.
-            '<b>Üzenet:</b><br>'.wordwrap(nl2br($message), 80);
+        $message = get_email_from_template('emailtemplate.html', array(
+            'email' => $email,
+            'message' => wordwrap(nl2br($message), 80)
+        ));
 
         //$to = 'matyas.margareta@tm.org';
         $to = 'marosvolgyi.gergely@gmail.com';
         $subject = $fullName.' írt a weblapon keresztül';
+        $subject = '=?UTF-8?B?'.base64_encode($subject).'?=';
 
         $headers = "MIME-Version: 1.0"."\r\n";
         $headers .= "Content-type:text/html;charset=UTF-8"."\r\n";

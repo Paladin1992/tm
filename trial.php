@@ -9,7 +9,7 @@
 
     <style>
         body {
-            background-image: url(images/margareta_field_bg_75.jpg);
+            background-image: url(images/margareta_bg_75.jpg);
             background-attachment: fixed;
             background-repeat: no-repeat;
             background-position: center 60%;
@@ -34,7 +34,7 @@
 </head>
 <body>
     <div id="jumbotron">
-        A lap tartalma<br>csak 2019. január 12-től<br>lesz elérhető.
+        Az oldal tartalma<br>csak 2019. január 12-től<br>lesz elérhető.
 
         <p>Csodaszép napot! :)</p>
     </div>

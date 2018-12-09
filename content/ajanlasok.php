@@ -80,7 +80,17 @@ aki az <b>Országos Pszichiátriai és Neurológiai Intézet Főigazgató Főorv
 
 <h3>Híres TM-esek</h3>
 
-hírességek_kép
+<?php
+    insert_figure(
+        "images/hiressegek.jpg", // src
+        "portrait", // orientation
+        "none", // float
+        "Híres TM-esek", // alt
+        "Híres TM-esek (új lapon nyílik meg)", // title
+        "", // figcaption
+        "famous-people", // classes
+        "max-width: none"); // inline styles
+?>
 
 <?php
     insert_video('https://www.youtube.com/embed/6Gkrls0f-ns', 'TM-et gyakorló hírességek', true);

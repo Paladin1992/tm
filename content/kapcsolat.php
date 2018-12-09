@@ -25,7 +25,7 @@
 <blockquote>
     <?php
         insert_figure(
-            "images/portrait.jpg", // src
+            "images/portre.jpg", // src
             "portrait", // orientation
             "right", // float
             "Mátyás Margaréta fotó", // alt
@@ -48,7 +48,7 @@
 </blockquote>
 
 <div class="contact-arrow-container">
-    <div class="glyphicon glyphicon-arrow-down contact-arrow"></div>
+    <img src="images/nyil.png" alt="nyíl" class="contact-arrow">
 </div>
 
 <div id="contact" class="contact-container">

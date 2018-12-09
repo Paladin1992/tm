@@ -64,12 +64,8 @@ $(document).ready(function() {
 
     $('input.captcha-text').on('input', function() {
         var userInput = $(this).val();
-
-        if (/\D/.test(userInput)) { // input contains a non-digit character
-            $('[data-toggle="tooltip"]').tooltip('show');
-        } else {
-            $('[data-toggle="tooltip"]').tooltip('hide');
-        }
+        var action = /\D/.test(userInput) ? 'show' : 'hide';
+        $('[data-toggle="tooltip"]').tooltip(action);
     });
 });
 

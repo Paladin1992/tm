@@ -38,7 +38,7 @@ html {
   padding: 0;
 }
 body {
-  background-image: url(../images/margareta_field_bg_75.jpg);
+  background-image: url(../images/margareta_bg_75.jpg);
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-position: center 60%;
@@ -130,7 +130,7 @@ nav button i.opened {
 }
 main {
   background-color: white;
-  background-image: url(../images/bg_logo_watermark.png);
+  background-image: url(../images/bg_logo_vizjel.png);
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: 50% 50%;
@@ -138,7 +138,7 @@ main {
   border-radius: 0 0 25px 25px;
   padding: 20px 20px 15px;
   position: relative;
-  min-height: 300px;
+  min-height: 345px;
 }
 main p {
   text-align: justify;
@@ -333,6 +333,7 @@ figure.portrait {
 }
 figure.portrait.none {
   float: none;
+  margin: 0 auto;
 }
 figure.portrait.left {
   float: left;
@@ -347,6 +348,7 @@ figure.landscape {
 }
 figure.landscape.none {
   float: none;
+  margin: 0 auto;
 }
 figure.landscape.left {
   float: left;
@@ -360,6 +362,10 @@ figure figcaption {
   font-size: 12px;
   margin: 5px 0 5px;
   width: 100%;
+}
+figure.famous-people img {
+  max-height: none;
+  width: 80%;
 }
 img.tm-thumbnail {
   background-color: #204080;
@@ -400,6 +406,7 @@ img.tm-thumbnail:hover {
   position: relative;
 }
 .video-button {
+  text-align: left;
   margin: 0 auto;
   width: 80%;
 }
@@ -499,7 +506,7 @@ img.tm-thumbnail:hover {
   animation: arrow-levitating 0.5s linear infinite alternate;
 }
 .contact-arrow-container {
-  height: 50px;
+  height: 60px;
 }
 .card {
   background-color: #002050;
@@ -804,14 +811,14 @@ form button {
     max-width: 100%;
   }
   img.tm-thumbnail.portrait {
-    max-width: 250px;
+    max-width: 200px;
   }
   img.tm-thumbnail:hover {
     background-color: #204080;
     cursor: pointer;
   }
   #tm-navbar-placeholder {
-    background: #002050;
+    background: #204080;
     /* Old browsers */
     background: -moz-linear-gradient(top, #204080 0%, #0070b0 45%, white 100%);
     /* FF3.6-15 */

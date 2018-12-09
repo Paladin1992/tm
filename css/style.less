@@ -83,7 +83,7 @@ html {
 }
 
 body {
-    background-image: url(../images/margareta_field_bg_75.jpg);
+    background-image: url(../images/margareta_bg_75.jpg);
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-position: center 60%;
@@ -214,7 +214,7 @@ nav {
 
 main {
     background-color: white;
-    background-image: url(../images/bg_logo_watermark.png);
+    background-image: url(../images/bg_logo_vizjel.png);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: 50% 50%;
@@ -223,7 +223,7 @@ main {
 
     padding: 20px 20px 15px;
     position: relative;
-    min-height: 300px;
+    min-height: 345px; // fills the smallest screen size (320x480) vertically
 
     & p {
         text-align: justify;
@@ -438,7 +438,10 @@ figure {
     &.portrait {
         max-width: 250px;
 
-        &.none { float: none; }
+        &.none {
+            float: none;
+            margin: 0 auto;
+        }
 
         &.left {
             float: left;
@@ -454,7 +457,10 @@ figure {
     &.landscape {
         max-height: 250px;
 
-        &.none { float: none; }
+        &.none {
+            float: none;
+            margin: 0 auto;
+        }
 
         &.left {
             float: left;
@@ -472,6 +478,13 @@ figure {
         margin: 5px 0 5px;
 
         width: 100%;
+    }
+
+    &.famous-people {
+        & img {
+            max-height: none;
+            width: 80%;
+        }
     }
 }
 
@@ -522,6 +535,8 @@ img.tm-thumbnail {
     }
 
     &-button {
+        text-align: left;
+
         margin: 0 auto;
         width: 80%;
 
@@ -634,7 +649,7 @@ img.tm-thumbnail {
 
 .contact-arrow {
     &-container {
-        height: 50px;
+        height: 60px;
     }
 
     display: block;
@@ -647,7 +662,6 @@ img.tm-thumbnail {
     width: 50px;
     z-index: 100;
 
-    //animation: arrow-pulsing 0.7s linear infinite alternate;
     animation: arrow-levitating 0.5s linear infinite alternate;
 }
 
@@ -1046,7 +1060,7 @@ form {
         }
 
         &.portrait {
-            max-width: 250px;
+            max-width: 200px;
         }
     
         &:hover {
@@ -1056,7 +1070,7 @@ form {
     }
 
     #tm-navbar-placeholder {
-        background: @darkBlue; /* Old browsers */
+        background: @blue; /* Old browsers */
         background: -moz-linear-gradient(top, @blue 0%, @bluntBlue 45%, white 100%); /* FF3.6-15 */
         background: -webkit-linear-gradient(top, @blue 0%, @bluntBlue 45%, white 100%); /* Chrome10-25, Safari5.1-6 */
         background: linear-gradient(to bottom, @blue 0%, @bluntBlue 45%, white 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */

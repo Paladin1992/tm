@@ -82,8 +82,11 @@
 
     // $orientation : "portrait" | "landscape"
     // $float       : "none" | "left" | "right"
-    function insert_figure($src, $orientation, $float, $alt, $title, $figcaption) {
-        echo '<figure class="'.$orientation.' '.$float.' clearfix">';
+    function insert_figure($src, $orientation, $float, $alt, $title, $figcaption, $classes = "", $styles = "") {
+        $class = $classes == '' ? '' : ' '.$classes;
+        $style = $styles == '' ? '' : ' style="'.$styles.'"';
+
+        echo '<figure class="'.$orientation.' '.$float.' clearfix'.$class.'"'.$style.'>';
             echo '<a href="'.$src.'" target="_blank">';
                 echo '<img src="'.$src.'" class="tm-thumbnail '.$orientation.'" alt="'.$alt.'" title="'.$title.'">';
             echo '</a>';
@@ -91,10 +94,10 @@
         echo '</figure>';
     }
 
-    function insert_video($url, $title = "", $closable = false) {
+    function insert_video($url, $title = "", $closable = false, $tooltip = "Kattintson a gombra a videó betöltéséhez") {
         if ($closable) {
             echo '<div class="video-group">';
-                echo '<button class="video-button button" onclick="getVideo(\''.$url.'\', this)">';
+                echo '<button class="video-button button" onclick="getVideo(\''.$url.'\', this)" title="'.$tooltip.'">';
                     echo '<i class="material-icons">ondemand_video</i> '.$title;
                 echo '</button>';
 
@@ -119,5 +122,16 @@
                 echo '</div>';
             echo '</div>';
         }
+    }
+
+    function get_email_from_template($template_file_path, $data) {
+        $template = file_get_contents($template_file_path);
+
+        foreach ($data as $key => $value)
+        {
+            $template = str_replace('%'.$key.'%', $value, $template);
+        }
+
+        return $template;
     }
 ?>
