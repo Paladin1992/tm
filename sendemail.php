@@ -1,4 +1,4 @@
-<?php
+﻿<?php
     include('helpers.php');
     include('captcha.php');
 
@@ -32,6 +32,7 @@
         $headers = "MIME-Version: 1.0"."\r\n";
         $headers .= "Content-type:text/html;charset=UTF-8"."\r\n";
         $headers .= "From: ".$email;
+	//$headers .= "From: TM Mindenkinek <noreply@tmmindenkinek.nhely.hu>"
         
         mail($to, $subject, $message, $headers);
 
