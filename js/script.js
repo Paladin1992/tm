@@ -168,7 +168,8 @@ function sendEmail() {
             $form.find('fieldset').prop('disabled', false);
         });
     } catch (ex) {
-        throw new Error(ex.message);
+        console.error(ex.Message);
+        showMessage(ex.Message, 'error');
     }    
 }
 
