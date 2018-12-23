@@ -61,7 +61,7 @@
     </div>
 </blockquote>
 
-<h3 class="inter">Szakmai ajánlás</h3>
+<h3>Szakmai ajánlás</h3>
 <?php
     insert_figure(
         "images/veer_ajanlasa.jpg", // src

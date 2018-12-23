@@ -1,5 +1,5 @@
 <p>
-    A TM<sup>&reg;</sup> (Transzcendentális Meditáció<sup>&reg;</sup>) egy egyszerű, erőfeszítés nélküli,
+    A TM&reg; (Transzcendentális Meditáció&reg;) egy egyszerű, erőfeszítés nélküli,
     természetes mentális technika, melyet Maharishi Mahesh Yogi hozott el a nyugati világba.
     A technikát naponta kétszer, kb. 20 percen át gyakorlunk kényelmes, ülő helyzetben.
     Ez idő alatt az elme aktivitása lecsökken, aminek következtében az idegrendszer lenyugszik,
@@ -7,7 +7,7 @@
 </p>
 
 <p>
-    A TM<sup>&reg;</sup> technika lehetővé teszi, hogy az elme befelé forduljon és lenyugodjon,
+    A TM&reg; technika lehetővé teszi, hogy az elme befelé forduljon és lenyugodjon,
     túljusson a gondolatokon, és így az ember megtapasztalja az önmagán belül jelenlévő energia,
     kreativitás és intelligencia csendes forrását, a nyugalommal teli éberség természetes állapotát.
     A technika gyakorlása közben az agy működése sokkal koherensebbé válik, és a test mély pihenéshez jut.
@@ -21,17 +21,17 @@
     A változásokat, amelyek az elme tudatosságának kiterjedése és a test mély pihenése által jönnek létre
     az ember életében és környezetében, beható tudományos vizsgálatoknak vetették alá az elmúlt több mint 30 évben.
     Napjainkig kb. 600 ilyen tudományos kutatás készült a világ 30 országának kb. 250 tudományos intézetében
-    (bővebben lásd az <a href="index.php?p=hatasok" class="dark-orange">Igazolt hatások</a> menüpont alatt).
+    (bővebben lásd az <a href="index.php?p=hatasok" class="in-text" title="Ugrás az Igazolt hatások aloldalra">Igazolt hatások</a> menüpont alatt).
 </p>
 
 <p>
-    A TM<sup>&reg;</sup> technika gyakorlása nem igényli az életvitel megváltoztatását.
-    A TM<sup>&reg;</sup> nem hit, nem vallás és nem filozófia, hanem egy egyszerű, mentális technika,
+    A TM&reg; technika gyakorlása nem igényli az életvitel megváltoztatását.
+    A TM&reg; nem hit, nem vallás és nem filozófia, hanem egy egyszerű, mentális technika,
     amelyet bárki gyakorolhat, függetlenül nemétől, életkorától, iskolai végzettségétől,
     életmódjától, hitétől és vallásától.
 </p>
 
-<h3 class="inter">Mi történik a TM<sup>&reg;</sup> alatt?</h3>
+<h3>Mi történik a TM&reg; alatt?</h3>
 <blockquote>
     <p>
         „Ülünk és meditálunk. Elérjük a tiszta boldogság területét. Boldoggá válunk...
@@ -53,7 +53,7 @@
 </blockquote>
 
 <?php
-    insert_video("https://www.youtube.com/embed/4Cj7Q72P6BI", "A TM<sup>&reg;</sup> működése");
-    insert_video("https://www.youtube.com/embed/YqZX6NcR4LA", "A TM<sup>&reg;</sup> eredete");
+    insert_video("https://www.youtube.com/embed/4Cj7Q72P6BI", "A TM&reg; működése");
+    insert_video("https://www.youtube.com/embed/YqZX6NcR4LA", "A TM&reg; eredete");
     insert_video("https://www.youtube.com/embed/StnHoFyk8bg", "Életek változnak meg");
 ?>

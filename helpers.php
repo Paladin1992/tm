@@ -82,6 +82,17 @@
 
     // $orientation : "portrait" | "landscape"
     // $float       : "none" | "left" | "right"
+    function insert_raw_image($src, $orientation, $float, $alt, $title, $classes = "", $styles = "") {
+        $class = $classes == '' ? '' : ' '.$classes;
+        $style = $styles == '' ? '' : ' style="'.$styles.'"';
+
+        echo '<figure class="'.$orientation.' '.$float.' clearfix'.$class.'"'.$style.'>';
+            echo '<img src="'.$src.'" class="tm-thumbnail '.$orientation.'" alt="'.$alt.'" title="'.$title.'">';
+        echo '</figure>';
+    }
+
+    // $orientation : "portrait" | "landscape"
+    // $float       : "none" | "left" | "right"
     function insert_figure($src, $orientation, $float, $alt, $title, $figcaption, $classes = "", $styles = "") {
         $class = $classes == '' ? '' : ' '.$classes;
         $style = $styles == '' ? '' : ' style="'.$styles.'"';

@@ -147,8 +147,8 @@ main p {
 footer {
   color: white;
   font-size: 12px;
-  line-height: 35px;
   text-align: center;
+  height: 35px;
 }
 h3 {
   font-family: 'Book Antiqua', cursive;
@@ -156,8 +156,8 @@ h3 {
   font-weight: bold;
   margin: 0 0 10px;
 }
-h3.inter {
-  margin: 25px 0 15px;
+h3:not(:first-of-type) {
+  margin: 25px 0 10px;
 }
 a {
   color: #ffb600;
@@ -170,14 +170,17 @@ a.link:active {
   color: #ffb600;
   text-decoration: underline;
 }
-a.dark-orange {
-  color: #ff7700;
+a.in-text {
+  color: #ff8800;
   font-weight: bold;
+  text-decoration: underline;
 }
-a.dark-orange:visited,
-a.dark-orange:hover,
-a.dark-orange:active {
-  color: #ff7700;
+a.in-text:visited,
+a.in-text:active {
+  color: #ff8800;
+}
+a.in-text:hover {
+  color: #002050;
 }
 .button {
   background-color: #204080;
@@ -320,6 +323,9 @@ ul li:not(.menu) {
   margin: 0;
   padding: 3px 0 3px 40px;
 }
+ul li:not(.menu) .stretch {
+  margin-left: -40px;
+}
 ul.tm-contact li:not(.menu) {
   background-position: 0px 0px;
   background-size: 25px;
@@ -327,9 +333,6 @@ ul.tm-contact li:not(.menu) {
 }
 figure {
   text-align: center;
-}
-figure.portrait {
-  max-width: 250px;
 }
 figure.portrait.none {
   float: none;
@@ -342,9 +345,6 @@ figure.portrait.left {
 figure.portrait.right {
   float: right;
   margin-left: 15px;
-}
-figure.landscape {
-  max-height: 250px;
 }
 figure.landscape.none {
   float: none;
@@ -363,21 +363,34 @@ figure figcaption {
   margin: 5px 0 5px;
   width: 100%;
 }
+figure.famous-people {
+  margin-bottom: 20px !important;
+}
 figure.famous-people img {
   max-height: none;
   width: 80%;
+}
+figure a {
+  display: block;
 }
 img.tm-thumbnail {
   background-color: #204080;
   border: 4px solid #204080;
   border-radius: 2px;
   max-height: 250px;
-  padding: 1px;
 }
 img.tm-thumbnail:hover {
   border-color: #ffb600;
-  box-shadow: 0px 0px 10px 5px #999999;
+  box-shadow: 0px 0px 10px 3px #999999;
   cursor: pointer;
+}
+.orange-border img.tm-thumbnail {
+  background-color: #204080;
+  border: 4px solid #ffb600;
+  border-radius: 2px;
+  box-shadow: 0px 0px 10px 3px #999999;
+  cursor: default;
+  max-height: 250px;
 }
 .video {
   display: block;
@@ -467,20 +480,6 @@ img.tm-thumbnail:hover {
   color: #990000;
   display: inline-block;
 }
-.tooltip.in {
-  opacity: 0.95;
-}
-.tooltip > .tooltip-inner {
-  background-color: #ff8080;
-  color: #990000;
-  border: 1px solid #990000;
-  font-size: 14px;
-  max-width: 240px;
-  padding: 5px;
-}
-.tooltip.bottom > .tooltip-arrow {
-  border-bottom: 5px solid #990000;
-}
 .intro {
   font-size: 20px;
   font-style: italic;
@@ -530,7 +529,7 @@ img.tm-thumbnail:hover {
 }
 .card:hover {
   border-color: #ffb600;
-  box-shadow: 0px 0px 10px 5px #999999;
+  box-shadow: 0px 0px 10px 3px #999999;
 }
 .card .bg-line {
   border-radius: 50%;
@@ -612,30 +611,6 @@ form textarea {
 form button {
   right: 0;
 }
-.captcha-container .captcha-info {
-  font-size: 12px;
-}
-.captcha-container .captcha-img {
-  border-radius: 3px;
-  display: inline-block;
-  margin: 0px auto 5px;
-}
-.captcha-container .captcha-text {
-  font-size: 20px;
-  width: auto;
-  height: 50px;
-}
-.captcha-container .btn-refresh-captcha {
-  font-size: 1.5em;
-  line-height: 1;
-  left: 0;
-  margin: 5px auto 5px;
-  min-width: initial;
-  padding: initial;
-  width: 50px;
-  height: 50px;
-  transform: none;
-}
 .gdpr-container {
   margin: 10px -2px;
   position: relative;
@@ -655,6 +630,7 @@ form button {
 .gdpr-container .gdpr-caption {
   display: table-cell;
   height: 26px;
+  padding-left: 3px;
   vertical-align: middle;
 }
 @media screen and (max-width: 767px) {
@@ -778,6 +754,9 @@ form button {
     float: right;
     right: 5px;
     transform: translateY(-50%) scaleX(-1) rotateZ(-20deg);
+  }
+  figure {
+    margin: 10px 0;
   }
   figure.portrait {
     max-width: 100%;
@@ -920,12 +899,6 @@ form button {
   }
   .alert {
     margin: 10px 0 0;
-  }
-  .captcha-container .captcha-img {
-    margin: 5px auto 5px;
-  }
-  .captcha-container .captcha-text {
-    width: 100%;
   }
   .gdpr-container .gdpr-fake-checkbox {
     font-size: 32px;

@@ -5,7 +5,10 @@ const ALERT_FADE_OUT_MS = 500;
 const QUOT_READ_MORE_TOGGLE_MS = 1000;
 const SCROLL_SPEED_MS = 800;
 const SLIDE_SPEED_MS = 500;
-const ERROR_LOAD_CAPTCHA = 'Az új captcha betöltése sikertelen.';
+const CAPTCHA_MIN_SCALE = 0.762;
+const CAPTCHA_ERROR_LOAD = 'Az új captcha betöltése sikertelen.';
+
+var $captchaContainer = $('.g-recaptcha');
 
 $(document).ready(function() {
     // menu
@@ -24,7 +27,7 @@ $(document).ready(function() {
         if ($container.hasClass('open')) { // close
             $container.removeClass('open')
                       .animate({ height: '200px' }, QUOT_READ_MORE_TOGGLE_MS, () => {
-                         scrollToItem($container); // kell?
+                         scrollToItem($container);
                       });
 
             $(this).html('Tovább olvasom &raquo;');
@@ -56,17 +59,25 @@ $(document).ready(function() {
         checkSendButtonConditions();
     });
 
+    if ($captchaContainer.length > 0) {
+        $(window).on('resize', function() {
+            resizeCaptcha();
+        });
+    }
+
+    resizeCaptcha();
+
     // captcha
-    refreshCaptcha();
+    //refreshCaptcha();
 
     // set Bootstrap tooltips to manual
-    $('[data-toggle="tooltip"]').tooltip({ trigger: 'manual', animation: true })
+    //$('[data-toggle="tooltip"]').tooltip({ trigger: 'manual', animation: true })
 
-    $('input.captcha-text').on('input', function() {
-        var userInput = $(this).val();
-        var action = /\D/.test(userInput) ? 'show' : 'hide';
-        $('[data-toggle="tooltip"]').tooltip(action);
-    });
+    // $('input.captcha-text').on('input', function() {
+    //     var userInput = $(this).val();
+    //     var action = /\D/.test(userInput) ? 'show' : 'hide';
+    //     $('[data-toggle="tooltip"]').tooltip(action);
+    // });
 });
 
 function scrollToItem($item) {
@@ -79,9 +90,13 @@ function checkSendButtonConditions() {
     var emptyFields = $('form').serializeArray().filter(function(item) {
         return /^\s*$/.test(item.value);
     });
+    var captchaResponse = grecaptcha.getResponse();
     var gdprRulesChecked = $('.gdpr-real-checkbox').prop('checked');
 
-    $('#btn-send-email').prop('disabled', emptyFields.length > 0 || !gdprRulesChecked);
+    $('#btn-send-email').prop('disabled',
+        emptyFields.length > 0 // empty input field is found
+        || !captchaResponse // OR captcha failed
+        || !gdprRulesChecked); // OR GDPR-checkbox is not checked
 }
 
 function getVideo(url, button) {
@@ -181,17 +196,29 @@ function showContact($card) {
     }
 }
 
-function refreshCaptcha() {
-    $.get({
-        url: 'getcaptcha.php',
-        cache: false
-    }, function(response, status) {
-        if (status === 'success') {
-            var data = JSON.parse(response);
-            $('.captcha-img').attr('src', data.image);
-            $('.captcha-hash').val(data.hash);
-        } else {
-            showMessage(ERROR_LOAD_CAPTCHA, 'error');
-        }
+function resizeCaptcha() {
+    var width = window.innerWidth - 90; // 2*45 px on the sides
+            
+    if (width >= 302) return;
+    
+    var scale = Math.max(width / 302, CAPTCHA_MIN_SCALE);
+    $captchaContainer.css({
+        'transform': 'scale(' + scale + ')',
+        'transform-origin': '0 0'
     });
 }
+
+// function refreshCaptcha() {
+//     $.get({
+//         url: 'getcaptcha.php',
+//         cache: false
+//     }, function(response, status) {
+//         if (status === 'success') {
+//             var data = JSON.parse(response);
+//             $('.captcha-img').attr('src', data.image);
+//             $('.captcha-hash').val(data.hash);
+//         } else {
+//             showMessage(ERROR_LOAD_CAPTCHA, 'error');
+//         }
+//     });
+// }

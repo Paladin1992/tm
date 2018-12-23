@@ -1,14 +1,4 @@
-﻿<!-- remove after 2019-01-12 -->
-<?php
-    $today = new DateTime();
-    $startDate = new DateTime('2018-01-12');
-    if ($today < $startDate) {
-        header('Location: trial.php');
-    }
-?>
-<!-- END OF remove after 2019-01-12 -->
-
-<?php
+﻿<?php
     include_once("helpers.php");
     $site = (isset($_GET['p']) ? $_GET['p'] : 'fooldal');
 ?>
@@ -26,6 +16,7 @@
     
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src='https://www.google.com/recaptcha/api.js'></script>
 </head>
 
 <body>

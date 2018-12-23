@@ -1,13 +1,15 @@
-<h3>A TM<sup>&reg;</sup> hatása az emberi agy működésére</h3>
+<h3>A TM&reg; hatása az emberi agy működésére</h3>
 
 <?php
     insert_figure(
-        "images/mri_felvetel.png", // src
+        "images/mri_felvetel.jpg", // src
         "landscape", // orientation
         "right", // float
         "MRI felvétel", // alt
         "MRI felvétel (új lapon nyílik meg)", // title
-        "MRI felvétel"); // figcaption
+        "Egy normál és egy feszült idegállapotú ember agyának MRI felvétele", // figcaption
+        "", // classes
+        "max-width: 300px"); // styles
 ?>
 
 <p class="clearfix">
@@ -16,13 +18,13 @@
     akkor az megakadályozza abban, hogy erkölcsileg, morálisan megfelelő döntést tudjon hozni.
     A funkcionális lyukak kialakulásának oka a nem megfelelő idejű és minőségű alvás, illetve a stressz.
     A nem megfelelő minőségű alvás oka a stressz. Így ha eleget alszunk, és stresszmentes életet élünk, az agyunk megfelelően fog működni.
-    A TM<sup>&reg;</sup> egy olyan egyszerű, természetes, erőfeszítésmentes stresszoldó mentális technika,
+    A TM&reg; egy olyan egyszerű, természetes, erőfeszítésmentes stresszoldó mentális technika,
     mely az agykoherenciát növeli, ezáltal az idegrendszerünket normalizálja (melynek központja az agy),
     így segíti elő a megfelelő döntések meghozatalát.
 </p>
 
 <?php
-    insert_video("https://www.youtube.com/embed/YAWJFJ5Fadw", "A TM<sup>&reg;</sup> hatása az agyműködésre", true);
+    insert_video("https://www.youtube.com/embed/YAWJFJ5Fadw", "A TM&reg; hatása az agyműködésre", true);
 ?>
 
 <h3>Egyéb pozitív hatások</h3>
@@ -37,10 +39,12 @@
             osztályzatok (az iskolában); erősebb figyelem; kiterjedtebb
             tudatosság.
         </p>
-        <?php
-            insert_video('https://www.youtube.com/embed/zLxEdaRYHQ8', 'A TM<sup>&reg;</sup> hatása a hiperaktivitásra', true); // ez az a videó?
-            insert_video('https://www.youtube.com/embed/82VZunyYWZ0', 'A TM<sup>&reg;</sup> hatása az autizmusra', true);
-        ?>
+        <div class="stretch">
+            <?php
+                insert_video('https://www.youtube.com/embed/zLxEdaRYHQ8', 'A TM&reg; hatása a hiperaktivitásra', true); // ez az a videó?
+                insert_video('https://www.youtube.com/embed/82VZunyYWZ0', 'A TM&reg; hatása az autizmusra', true);
+            ?>
+        </div>
     </li>
     <li>
         <b>a testre:</b>
@@ -52,10 +56,12 @@
             mérséklődése; alacsonyabb koleszterinszint; csökkenő
             reakcióidő; egy hosszabb, egészségesebb élet.
         </p>
-        <?php
-            insert_video('https://www.youtube.com/embed/bRyL5gQhdCE', 'A TM<sup>&reg;</sup> hatása a szív- és érrendszeri betegségekre', true);
-            insert_video('https://www.youtube.com/embed/8adXncuC91k', 'A TM<sup>&reg;</sup> hatása egy gyógyíthatatlan betegségre</sup>', true);
-        ?>
+        <div class="stretch">
+            <?php
+                insert_video('https://www.youtube.com/embed/bRyL5gQhdCE', 'A TM&reg; hatása a szív- és érrendszeri betegségekre', true);
+                insert_video('https://www.youtube.com/embed/8adXncuC91k', 'A TM&reg; hatása egy gyógyíthatatlan betegségre</sup>', true);
+            ?>
+        </div>
     </li>
     <li>
         <b>a kapcsolatokban:</b>
@@ -65,11 +71,12 @@
             mások növekvő becsülése; kevesebb idegesség, düh és
             depresszió.
         </p>
-
-        <?php
-            insert_video('https://www.youtube.com/embed/d7BnveKaFdY', 'A TM<sup>&reg;</sup> hatása az énképre', true);
-            insert_video('https://www.youtube.com/embed/Ap3vEVnv9-8', 'A TM<sup>&reg;</sup> hatása a magaviseletre', true);
-        ?>
+        <div class="stretch">
+            <?php
+                insert_video('https://www.youtube.com/embed/d7BnveKaFdY', 'A TM&reg; hatása az énképre', true);
+                insert_video('https://www.youtube.com/embed/Ap3vEVnv9-8', 'A TM&reg; hatása a magaviseletre', true);
+            ?>
+        </div>
     </li>
     <li>
         <b>a szakmai életben:</b>
@@ -80,10 +87,12 @@
             hatékony vezetői képesség kifejlődése; kevesebb cselekvés, több eredmény;
             a munkatársakkal való jobb kapcsolat; kevesebb stressz a munka során.
         </p>
-        <?php
-            insert_video('https://www.youtube.com/embed/SrVWDAStbqg', 'A TM<sup>&reg;</sup> hatása a munkabírásra', true);
-            insert_video('https://www.youtube.com/embed/Mjm73GYEBOM', 'A TM<sup>&reg;</sup> mint versenyelőny', true);
-        ?>
+        <div class="stretch">
+            <?php
+                insert_video('https://www.youtube.com/embed/SrVWDAStbqg', 'A TM&reg; hatása a munkabírásra', true);
+                insert_video('https://www.youtube.com/embed/Mjm73GYEBOM', 'A TM&reg; mint versenyelőny', true);
+            ?>
+        </div>
     </li>
     <li>
         <b>a világban:</b>
@@ -92,9 +101,11 @@
             közlekedési baleset; kevesebb gyilkosság; csökkenő terrorizmus;
             kevesebb nemzetközi konfliktus; a nemzetek közötti növekvő harmónia; világbéke.
         </p>
-        <?php
-            insert_video('https://www.youtube.com/embed/BGFWSc1FPTc', 'A TM<sup>&reg;</sup> egyesítő ereje', true);
-            insert_video('https://www.youtube.com/embed/B0nwJnmbslc', 'A TM<sup>&reg;</sup> hatása a világ jövőjére', true);
-        ?>
+        <div class="stretch">
+            <?php
+                insert_video('https://www.youtube.com/embed/BGFWSc1FPTc', 'A TM&reg; egyesítő ereje', true);
+                insert_video('https://www.youtube.com/embed/B0nwJnmbslc', 'A TM&reg; hatása a világ jövőjére', true);
+            ?>
+        </div>
     </li>
 </ul>

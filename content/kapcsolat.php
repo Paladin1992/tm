@@ -1,5 +1,5 @@
 <p>
-    <b>Mátyás Margaréta</b> TM<sup>&reg;</sup>-tanár vagyok, akit Maharishi Mahesh Yogi képzett ki arra,
+    <b>Mátyás Margaréta</b> TM&reg;-tanár vagyok, akit Maharishi Mahesh Yogi képzett ki arra,
     hogy a technikát tovább tudjam adni egy tanfolyam keretében, az alábbiak szerint:
 
     <ul class="tm-contact">
@@ -24,13 +24,13 @@
 
 <blockquote>
     <?php
-        insert_figure(
+        insert_raw_image(
             "images/portre.jpg", // src
             "portrait", // orientation
             "right", // float
             "Mátyás Margaréta fotó", // alt
             "Mátyás Margaréta", // title
-            "") // figcaption
+            "orange-border"); // classes
     ?>
 
     <p>
@@ -75,7 +75,9 @@
                     <textarea name="message" placeholder="Ide írhatja az üzenetet"></textarea>
                 </div>
             
-                <div class="captcha-container">
+                <div class="g-recaptcha" data-callback="checkSendButtonConditions" data-sitekey="6LeBM4QUAAAAAKRjyCW0Nl0bNUmEMoz9y3T58D2c"></div>
+
+                <!-- <div class="captcha-container">    
                     <div class="captcha-info">Írja be számjegyekkel a képen látható művelet eredményét:</div>
                     <img class="captcha-img" src="" alt="CAPTCHA kép"/>
                     <button type="button" onclick="refreshCaptcha()" class="btn btn-primary button btn-refresh-captcha" title="Új képet kérek!">
@@ -84,7 +86,7 @@
                     
                     <input class="captcha-text" type="text" name="captcha" placeholder="Írja be az összeget" data-toggle="tooltip" data-placement="bottom" title="A mezőbe csak számot lehet beírni."/>
                     <input type="hidden" name="hash" class="captcha-hash">
-                </div>
+                </div> -->
 
                 <div class="gdpr-container">
                     <input type="checkbox" name="gdpr-rules" class="gdpr-real-checkbox">
