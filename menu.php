@@ -15,7 +15,7 @@
         <div class="collapse navbar-collapse" id="tm-navbar">
             <ul class="nav navbar-nav">
                 <?php
-                    get_menu($site);
+                    get_menu($page);
                 ?>
             </ul>
         </div>

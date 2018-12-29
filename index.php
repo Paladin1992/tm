@@ -1,14 +1,17 @@
 ﻿<?php
     include_once("helpers.php");
-    $site = (isset($_GET['p']) ? $_GET['p'] : 'fooldal');
+    $page = (isset($_GET['p']) ? $_GET['p'] : 'fooldal');
 ?>
 <!DOCTYPE html>
 <html lang="hu">
 <head>
-    <title><?=print_page_title($site, false);?> &bull; TM Mindenkinek</title>
-    <meta charset="utf-8">
+    <title><?=print_page_title($page);?> &bull; TM Mindenkinek</title>
+
+    <meta charset="UTF-8">
+    <meta name="keywords" content="<?=get_menu_item_data($page)['keywords']?>">
+    <meta name="description" content="<?=get_menu_item_data($page)['description']?>">
+    <meta name="author" content="MaGe">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Security-Policy" content="img-src 'self' data:">
 
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
@@ -29,20 +32,17 @@
         <div id="tm-navbar-placeholder"></div>
 
         <main>
-
             <?php
-                $file_path = "content/".$site.".php";
+                $file_path = "content/".$page.".php";
                 if (file_exists($file_path)) {
                     include($file_path);
                 } else {
-                    echo '<div class="alert alert-danger" style="display: block;">A kért oldal tartalma még nem elérhet&odblac;. Addig nézzen meg egy másik menüpontot! :)</div>'.PHP_EOL;
+                    header("Location: index.php?p=fooldal");
                 }
             ?>
         </main>
 
-        <footer>
-            <?php include("footer.php"); ?>
-        </footer>
+        <?php include("footer.php"); ?>
     </div>
 
     <script src="js/script.js"></script>

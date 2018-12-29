@@ -48,8 +48,8 @@
         return ($i < $menu_count ? $menu[$i] : null);
     }
 
-    function get_menu_item($current_site, $is_active) {
-        $menu_item_data = get_menu_item_data($current_site);
+    function get_menu_item($current_page, $is_active) {
+        $menu_item_data = get_menu_item_data($current_page);
         $caption = $menu_item_data['caption'];
         $url = $menu_item_data['url'];
         $active_class = ($is_active ? 'active' : '');
@@ -61,23 +61,18 @@
         echo '<li class="menu '.$active_class.'"><a href="index.php?p='.$url.'">'.$caption.'</a></li>';
     }
 
-    function get_menu($current_site) {
+    function get_menu($current_page) {
         global $menu, $menu_count;
 
         for ($i = 0; $i < $menu_count; $i++) {
             $url = $menu[$i]['url'];
-            get_menu_item($url, $url == $current_site);
+            get_menu_item($url, $url == $current_page);
         }
     }
 
-    function print_page_title($site, $wrap_in_h2 = true) {
-        $title = get_menu_item_data($site)['caption'];
-        
-        if ($wrap_in_h2) {
-            echo '<h2>'.$title.'</h2>';
-        } else {
-            echo $title;
-        }
+    function print_page_title($page, $wrap_in_h2 = false) {
+        $title = get_menu_item_data($page)['caption'];
+        echo $wrap_in_h2 ? '<h2>'.$title.'</h2>' : $title;
     }
 
     // $orientation : "portrait" | "landscape"

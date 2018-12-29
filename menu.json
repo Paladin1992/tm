@@ -1,26 +1,38 @@
 [
     {
         "caption": "Főoldal",
-        "url": "fooldal"
+        "url": "fooldal",
+        "keywords": "",
+        "description": ""
     },
     {
         "caption": "Önmegvalósítás",
-        "url": "onmegvalositas"
+        "url": "onmegvalositas",
+        "keywords": "",
+        "description": ""
     },
     {
         "caption": "Mi a TM?",
-        "url": "mi-a-tm"
+        "url": "mi-a-tm",
+        "keywords": "",
+        "description": ""
     },
     {
         "caption": "Igazolt hatások",
-        "url": "hatasok"
+        "url": "hatasok",
+        "keywords": "",
+        "description": ""
     },
     {
         "caption": "Ajánlások",
-        "url": "ajanlasok"
+        "url": "ajanlasok",
+        "keywords": "",
+        "description": ""
     },
     {
         "caption": "Kapcsolat",
-        "url": "kapcsolat"
+        "url": "kapcsolat",
+        "keywords": "",
+        "description": ""
     }
 ]
