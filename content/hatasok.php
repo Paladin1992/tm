@@ -1,4 +1,4 @@
-<h3>A TM&reg; hatása az emberi agy működésére</h3>
+<h3>A TM<sup>&reg;</sup> hatása az emberi agy működésére</h3>
 
 <?php
     insert_figure(
@@ -18,13 +18,13 @@
     akkor az megakadályozza abban, hogy erkölcsileg, morálisan megfelelő döntést tudjon hozni.
     A funkcionális lyukak kialakulásának oka a nem megfelelő idejű és minőségű alvás, illetve a stressz.
     A nem megfelelő minőségű alvás oka a stressz. Így ha eleget alszunk, és stresszmentes életet élünk, az agyunk megfelelően fog működni.
-    A TM&reg; egy olyan egyszerű, természetes, erőfeszítésmentes stresszoldó mentális technika,
+    A TM<sup>&reg;</sup> egy olyan egyszerű, természetes, erőfeszítésmentes stresszoldó mentális technika,
     mely az agykoherenciát növeli, ezáltal az idegrendszerünket normalizálja (melynek központja az agy),
     így segíti elő a megfelelő döntések meghozatalát.
 </p>
 
 <?php
-    insert_video("https://www.youtube.com/embed/YAWJFJ5Fadw", "A TM&reg; hatása az agyműködésre", true);
+    insert_video("https://www.youtube.com/embed/YAWJFJ5Fadw", "A TM<sup>&reg;</sup> hatása az agyműködésre", true);
 ?>
 
 <h3>Egyéb pozitív hatások</h3>
@@ -41,8 +41,8 @@
         </p>
         <div class="stretch">
             <?php
-                insert_video('https://www.youtube.com/embed/zLxEdaRYHQ8', 'A TM&reg; hatása a hiperaktivitásra', true); // ez az a videó?
-                insert_video('https://www.youtube.com/embed/82VZunyYWZ0', 'A TM&reg; hatása az autizmusra', true);
+                insert_video('https://www.youtube.com/embed/zLxEdaRYHQ8', 'A TM<sup>&reg;</sup> hatása a hiperaktivitásra', true); // ez az a videó?
+                insert_video('https://www.youtube.com/embed/82VZunyYWZ0', 'A TM<sup>&reg;</sup> hatása az autizmusra', true);
             ?>
         </div>
     </li>
@@ -58,8 +58,8 @@
         </p>
         <div class="stretch">
             <?php
-                insert_video('https://www.youtube.com/embed/bRyL5gQhdCE', 'A TM&reg; hatása a szív- és érrendszeri betegségekre', true);
-                insert_video('https://www.youtube.com/embed/8adXncuC91k', 'A TM&reg; hatása egy gyógyíthatatlan betegségre</sup>', true);
+                insert_video('https://www.youtube.com/embed/bRyL5gQhdCE', 'A TM<sup>&reg;</sup> hatása a szív- és érrendszeri betegségekre', true);
+                insert_video('https://www.youtube.com/embed/8adXncuC91k', 'A TM<sup>&reg;</sup> hatása egy gyógyíthatatlan betegségre</sup>', true);
             ?>
         </div>
     </li>
@@ -73,8 +73,8 @@
         </p>
         <div class="stretch">
             <?php
-                insert_video('https://www.youtube.com/embed/d7BnveKaFdY', 'A TM&reg; hatása az énképre', true);
-                insert_video('https://www.youtube.com/embed/Ap3vEVnv9-8', 'A TM&reg; hatása a magaviseletre', true);
+                insert_video('https://www.youtube.com/embed/d7BnveKaFdY', 'A TM<sup>&reg;</sup> hatása az énképre', true);
+                insert_video('https://www.youtube.com/embed/Ap3vEVnv9-8', 'A TM<sup>&reg;</sup> hatása a magaviseletre', true);
             ?>
         </div>
     </li>
@@ -89,8 +89,8 @@
         </p>
         <div class="stretch">
             <?php
-                insert_video('https://www.youtube.com/embed/SrVWDAStbqg', 'A TM&reg; hatása a munkabírásra', true);
-                insert_video('https://www.youtube.com/embed/Mjm73GYEBOM', 'A TM&reg; mint versenyelőny', true);
+                insert_video('https://www.youtube.com/embed/SrVWDAStbqg', 'A TM<sup>&reg;</sup> hatása a munkabírásra', true);
+                insert_video('https://www.youtube.com/embed/Mjm73GYEBOM', 'A TM<sup>&reg;</sup> mint versenyelőny', true);
             ?>
         </div>
     </li>
@@ -103,8 +103,8 @@
         </p>
         <div class="stretch">
             <?php
-                insert_video('https://www.youtube.com/embed/BGFWSc1FPTc', 'A TM&reg; egyesítő ereje', true);
-                insert_video('https://www.youtube.com/embed/B0nwJnmbslc', 'A TM&reg; hatása a világ jövőjére', true);
+                insert_video('https://www.youtube.com/embed/BGFWSc1FPTc', 'A TM<sup>&reg;</sup> egyesítő ereje', true);
+                insert_video('https://www.youtube.com/embed/B0nwJnmbslc', 'A TM<sup>&reg;</sup> hatása a világ jövőjére', true);
             ?>
         </div>
     </li>

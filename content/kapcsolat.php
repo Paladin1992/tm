@@ -1,5 +1,5 @@
 <p>
-    <b>Mátyás Margaréta</b> TM&reg;-tanár vagyok, akit Maharishi Mahesh Yogi képzett ki arra,
+    <b>Mátyás Margaréta</b> TM<sup>&reg;</sup>-tanár vagyok, akit Maharishi Mahesh Yogi képzett ki arra,
     hogy a technikát tovább tudjam adni egy tanfolyam keretében, az alábbiak szerint:
 
     <ul class="tm-contact">

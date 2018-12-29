@@ -486,6 +486,9 @@ img.tm-thumbnail:hover {
   text-align: center;
   margin-bottom: 30px;
 }
+.orange {
+  color: #ffb600;
+}
 @keyframes arrow-levitating {
   0% {
     top: 0px;

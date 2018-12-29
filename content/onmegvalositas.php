@@ -43,11 +43,11 @@
 <p>
     Ha hiányzik e csodás önvalód, csak meg kell keresni. Ő nem ment sehová, sose tűnt el. Ott van benned.
     Csak az utat kell megtalálni, hogy újra eljuthass hozzá.
-    Ebben segít a <a href="index.php?p=mi-a-tm" class="in-text" title="Ugrás a Mi a TM? aloldalra">TM&reg;</a>.
+    Ebben segít a <a href="index.php?p=mi-a-tm" class="in-text" title="Ugrás a Mi a TM? aloldalra">TM</a><sup class="orange">&reg;</sup>.
     Hisz az élet mindent megad ahhoz, hogy a tudatunkat megemelve saját önvalónkat éljük,
     és ezáltal az életfaladatunkat vagy sorsunkat beteljesítsük.
     Az <a href="index.php?p=hatasok" class="in-text" title="Ugrás az Igazolt hatások aloldalra">Igazolt hatások</a> bővebben bemutatja,
-    hogyan segített a TM&reg; a világ különböző részein élő embereknek!"
+    hogyan segített a TM<sup>&reg;</sup> a világ különböző részein élő embereknek!
 </p>
 
 <blockquote>
