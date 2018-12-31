@@ -15,13 +15,14 @@
     ami kiterjedt tudatossághoz vezet.
     Az idegrendszer és a test egyedülállóan mély pihenése feloldja a mélyen gyökerező stresszeket,
     így az idegrendszer és az egész fiziológia működése is normalizálódik.
+    (Lásd <a href="index.php?p=ajanlasok" class="in-text" title="Ugrás az Ajánlások aloldalra">Dr. Selye János ajánlása</a>.)
 </p>
 
 <p>
     A változásokat, amelyek az elme tudatosságának kiterjedése és a test mély pihenése által jönnek létre
     az ember életében és környezetében, beható tudományos vizsgálatoknak vetették alá az elmúlt több mint 30 évben.
     Napjainkig kb. 600 ilyen tudományos kutatás készült a világ 30 országának kb. 250 tudományos intézetében
-    (bővebben lásd az <a href="index.php?p=hatasok" class="in-text" title="Ugrás az Igazolt hatások aloldalra">Igazolt hatások</a> menüpont alatt).
+    (bővebben az <a href="index.php?p=hatasok" class="in-text" title="Ugrás az Igazolt hatások aloldalra">Igazolt hatások</a> menüpont alatt).
 </p>
 
 <p>
@@ -29,6 +30,8 @@
     A TM<sup>&reg;</sup> nem hit, nem vallás és nem filozófia, hanem egy egyszerű, mentális technika,
     amelyet bárki gyakorolhat, függetlenül nemétől, életkorától, iskolai végzettségétől,
     életmódjától, hitétől és vallásától.
+    A tanfolyamról a <a href="index.php?p=kapcsolat" class="in-text" title="Ugrás a Kapcsolat aloldalra">Kapcsolat</a>
+    oldalon talál bővebb információt.
 </p>
 
 <h3>Mi történik a TM<sup>&reg;</sup> alatt?</h3>

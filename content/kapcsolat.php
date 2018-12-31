@@ -13,13 +13,17 @@
 </p>
 
 <p>
-    A TM tanfolyam elvégzése után azt önállóan tudjuk gyakorolni,
-    de a TM tanártól bármikor kérhetünk segítséget, útmutatást.
+    A TM<sup>&reg;</sup> tanfolyam elvégzése után azt önállóan tudjuk gyakorolni,
+    de a TM<sup>&reg;</sup> tanártól bármikor kérhetünk segítséget, útmutatást.
 </p>
 
 <p>
     A bevezető és előkészítő előadás <b>díjtalan</b>, melyre elérhetőségeimen jelentkezhet.
     Ezen való részvétel semmilyen kötelezettséggel nem jár.
+    Ezen az előadáson felvilágosítást kaphat arról, hogy
+    <a href="index.php?p=mi-a-tm" class="in-text" title="Ugrás a Mi a TM? aloldalra">mi a TM</a><sup class="orange">&reg;</sup>,
+    hogyan lehet elsajátítani,
+    és milyen <a href="index.php?p=hatasok" class="in-text" title="Ugrás az Igazolt hatások aloldalra">igazolt hatásai</a> vannak.
 </p>
 
 <blockquote>
@@ -30,7 +34,10 @@
             "right", // float
             "Mátyás Margaréta fotó", // alt
             "Mátyás Margaréta", // title
-            "orange-border"); // classes
+            "orange-border", // classes
+            "", // styles
+            true // use hider?
+        );
     ?>
 
     <p>

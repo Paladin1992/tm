@@ -7,7 +7,8 @@
     a sérülések és az intenzív élmények okozta terhekkel. Egész életén át folytatott kutatásai nyomán
     arra a következtetésre jutott, hogy a stressz minden betegség kifejlődésében szerepet játszik.
     Ha valaki nem képes megbirkózni a stresszekkel, az alkalmazkodási betegségekhez vezethet,
-    mint amilyenek a fekélyek, a magas vérnyomás és számos egyéb probléma, amelyet a stressz okoz vagy súlyosbít.
+    mint amilyenek a fekélyek, a magas vérnyomás és számos egyéb probléma, amelyet a stressz okoz vagy súlyosbít
+    (bővebben az <a href="index.php?p=hatasok" class="in-text" title="Ugrás az Igazolt hatások aloldalra">Igazolt hatások</a> menüpont alatt).
 </p>
 
 <p>
@@ -75,21 +76,22 @@
 <p class="clearfix">
 1955-ben Dr. Veér András, a Népjóléti Minisztérium Mentálhygiéne miniszteri biztosa,
 aki az <b>Országos Pszichiátriai és Neurológiai Intézet Főigazgató Főorvosa</b> is,
-írt egy ajánló levelet, melyben a Transzcendentális Meditációt ajánlja.
+írt egy ajánló levelet, melyben a <a href="index.php?p=mi-a-tm" class="in-text" title="Ugrás a Mi a TM? aloldalra">Transzcendentális Meditációt</a> ajánlja.
 </p>
 
 <h3>Híres TM-esek</h3>
 
 <?php
-    insert_figure(
+    insert_raw_image(
         "images/hiressegek.jpg", // src
         "portrait", // orientation
         "none", // float
         "Híres TM-esek", // alt
         "Híres TM-esek (új lapon nyílik meg)", // title
-        "", // figcaption
         "famous-people", // classes
-        "max-width: none"); // inline styles
+        "max-width: none", // inline styles
+        true // use hider?
+    );
 ?>
 
 <?php

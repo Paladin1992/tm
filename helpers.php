@@ -75,59 +75,82 @@
         echo $wrap_in_h2 ? '<h2>'.$title.'</h2>' : $title;
     }
 
-    // $orientation : "portrait" | "landscape"
-    // $float       : "none" | "left" | "right"
-    function insert_raw_image($src, $orientation, $float, $alt, $title, $classes = "", $styles = "") {
-        $class = $classes == '' ? '' : ' '.$classes;
-        $style = $styles == '' ? '' : ' style="'.$styles.'"';
+    function wrap_into_hider($content) {
+        $result = '';
 
-        echo '<figure class="'.$orientation.' '.$float.' clearfix'.$class.'"'.$style.'>';
-            echo '<img src="'.$src.'" class="tm-thumbnail '.$orientation.'" alt="'.$alt.'" title="'.$title.'">';
-        echo '</figure>';
+        $result .= '<div class="hider-container">';
+            $result .= '<div class="hider"></div>';
+            $result .= $content;
+        $result .= '</div>';
+
+        return $result;
     }
 
     // $orientation : "portrait" | "landscape"
     // $float       : "none" | "left" | "right"
-    function insert_figure($src, $orientation, $float, $alt, $title, $figcaption, $classes = "", $styles = "") {
+    function insert_raw_image($src, $orientation, $float, $alt, $title, $classes = "", $styles = "", $useHider = false) {
         $class = $classes == '' ? '' : ' '.$classes;
         $style = $styles == '' ? '' : ' style="'.$styles.'"';
+        $result = '';
 
-        echo '<figure class="'.$orientation.' '.$float.' clearfix'.$class.'"'.$style.'>';
-            echo '<a href="'.$src.'" target="_blank">';
-                echo '<img src="'.$src.'" class="tm-thumbnail '.$orientation.'" alt="'.$alt.'" title="'.$title.'">';
-            echo '</a>';
-            echo '<figcaption>'.$figcaption.'</figcaption>';
-        echo '</figure>';
+        $result .= '<figure class="'.$orientation.' '.$float.' clearfix'.$class.'"'.$style.'>';
+            $image = '<img src="'.$src.'" class="tm-thumbnail '.$orientation.'" alt="'.$alt.'" title="'.$title.'">';
+            $result .= $useHider ? wrap_into_hider($image) : $image;
+        $result .= '</figure>';
+
+        echo $result;
+    }
+
+    // $orientation : "portrait" | "landscape"
+    // $float       : "none" | "left" | "right"
+    function insert_figure($src, $orientation, $float, $alt, $title, $figcaption, $classes = "", $styles = "", $useHider = false) {
+        $class = $classes == '' ? '' : ' '.$classes;
+        $style = $styles == '' ? '' : ' style="'.$styles.'"';
+        $result = '';
+
+        $result .= '<figure class="'.$orientation.' '.$float.' clearfix'.$class.'"'.$style.'>';
+            $result .= '<a href="'.$src.'" target="_blank">';
+                $image = '<img src="'.$src.'" class="tm-thumbnail '.$orientation.'" alt="'.$alt.'" title="'.$title.'">';
+                $result .= $useHider ? wrap_into_hider($image) : $image;
+            $result .= '</a>';
+            $result .= '<figcaption>'.$figcaption.'</figcaption>';
+        $result .= '</figure>';
+
+        echo $result;
     }
 
     function insert_video($url, $title = "", $closable = false, $tooltip = "Kattintson a gombra a videó betöltéséhez") {
-        if ($closable) {
-            echo '<div class="video-group">';
-                echo '<button class="video-button button" onclick="getVideo(\''.$url.'\', this)" title="'.$tooltip.'">';
-                    echo '<i class="material-icons">ondemand_video</i> '.$title;
-                echo '</button>';
+        $result = '';
 
-                echo '<div class="video-container">';
-                    echo '<div class="video-header">';
-                        echo '<div class="video-title">'.$title.'</div>';
-                        echo '<div class="video-close" onclick="closeVideo(this)">&times;</div>';
-                    echo '</div>';
-                    echo '<div class="video-content">';
-                        echo '<iframe class="video" width="560" height="315" src="" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
-                    echo '</div>';
-                echo '</div>';
-            echo '</div>';
+        if ($closable) {
+            $result .= '<div class="video-group">';
+                $result .= '<button class="video-button button" onclick="getVideo(\''.$url.'\', this)" title="'.$tooltip.'">';
+                    $result .= '<i class="material-icons">ondemand_video</i> '.$title;
+                $result .= '</button>';
+
+                $result .= '<div class="video-container">';
+                    $result .= '<div class="video-header">';
+                        $result .= '<div class="video-title">'.$title.'</div>';
+                        $result .= '<div class="video-close" onclick="closeVideo(this)">&times;</div>';
+                    $result .= '</div>';
+                    $result .= '<div class="video-content">';
+                        $result .= '<iframe class="video" width="560" height="315" src="" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+                    $result .= '</div>';
+                $result .= '</div>';
+            $result .= '</div>';
         } else {
-            echo '<div class="video-container">';
-                echo '<div class="video-header">';
-                    echo '<div class="video-title">'.$title.'</div>';
-                echo '</div>';
-                echo '<div class="video-content visible">';
-                     echo '<iframe class="video" width="560" height="315" src="'.$url.'?rel=0"'.
+            $result .= '<div class="video-container">';
+                $result .= '<div class="video-header">';
+                    $result .= '<div class="video-title">'.$title.'</div>';
+                $result .= '</div>';
+                $result .= '<div class="video-content visible">';
+                     $result .= '<iframe class="video" width="560" height="315" src="'.$url.'?rel=0"'.
                           'frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
-                echo '</div>';
-            echo '</div>';
+                $result .= '</div>';
+            $result .= '</div>';
         }
+
+        echo $result;
     }
 
     function get_email_from_template($template_file_path, $data) {
