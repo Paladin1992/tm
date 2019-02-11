@@ -21,7 +21,7 @@
     A funkcionális lyukak kialakulásának oka a nem megfelelő idejű és minőségű alvás, illetve a stressz.
     A nem megfelelő minőségű alvás oka szintén a stressz.
     Így ha eleget alszunk, és stresszmentes életet élünk, az agyunk megfelelően fog működni.
-    A <a href="index.php?p=mi-a-tm" class="in-text" title="Ugrás a Mi a TM? aloldalra">TM</a><sup class="orange">&reg;</sup>
+    A <a href="mi-a-tm" class="in-text" title="Ugrás a Mi a TM? aloldalra">TM</a><sup class="orange">&reg;</sup>
     egy olyan egyszerű, természetes, erőfeszítésmentes stresszoldó mentális technika,
     mely az agykoherenciát növeli, ezáltal az idegrendszerünket normalizálja (melynek központja az agy),
     így segíti elő a megfelelő döntések meghozatalát.
@@ -85,7 +85,7 @@
     <li>
         <b>a szakmai életben:</b>
         <p>
-            erősebb <a href="index.php?p=onmegvalositas" class="in-text" title="Ugrás az Önmegvalósítás aloldalra">önmegvalósítás</a> elérése;
+            erősebb <a href="onmegvalositas" class="in-text" title="Ugrás az Önmegvalósítás aloldalra">önmegvalósítás</a> elérése;
             helyes döntéshozatal;
             nagyobb elégedettség a karrierrel; jobb munkateljesítmény;
             gyorsabb problémamegoldó képesség; a munka növekvő élvezete;

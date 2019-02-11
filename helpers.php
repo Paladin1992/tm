@@ -58,7 +58,7 @@
         $img_right = '<img src="images/margareta.png" class="menu-flower-right">';
         $caption = $img_left.'<span class="inner-caption">'.$caption.'</span>'.$img_right;
         
-        echo '<li class="menu '.$active_class.'"><a href="index.php?p='.$url.'">'.$caption.'</a></li>';
+        echo '<li class="menu '.$active_class.'"><a href="'.$url.'">'.$caption.'</a></li>';
     }
 
     function get_menu($current_page) {
@@ -70,9 +70,13 @@
         }
     }
 
-    function print_page_title($page, $wrap_in_h2 = false) {
-        $title = get_menu_item_data($page)['caption'];
-        echo $wrap_in_h2 ? '<h2>'.$title.'</h2>' : $title;
+    function print_page_title($page, $wrap_in_h1 = false, $exclude = []) {
+        $pageToExclude = in_array($page, $exclude);
+
+        if (!$pageToExclude) {
+            $title = get_menu_item_data($page)['caption'];
+            echo $wrap_in_h1 ? '<h1>'.$title.'</h1>' : $title;
+        }
     }
 
     function wrap_into_hider($content) {

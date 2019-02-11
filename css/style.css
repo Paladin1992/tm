@@ -1,9 +1,24 @@
 @font-face {
+  font-family: 'Book Antiqua';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Book Antiqua'), local('Book-Antiqua'), url(../fonts/book-antiqua.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Book Antiqua';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Book Antiqua Bold'), local('Book-Antiqua-Bold'), url(../fonts/book-antiqua-bold.ttf) format('truetype');
+}
+@font-face {
   /* latin */
   font-family: 'Rochester';
   font-style: normal;
   font-weight: 400;
-  src: local('Rochester Regular'), local('Rochester-Regular'), url(../fonts/rochester.woff2) format('woff2');
+  src: url('../fonts/rochester.eot');
+  /* IE9 Compat Modes */
+  src: local('Rochester Regular'), local('Rochester-Regular'), url('../fonts/rochester.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('../fonts/rochester.woff2') format('woff2'), /* Super Modern Browsers */ url('../fonts/rochester.woff') format('woff'), /* Modern Browsers */ url('../fonts/rochester.ttf') format('truetype'), /* Safari, Android, iOS */ url('../fonts/rochester.svg#Rochester') format('svg');
+  /* Legacy iOS */
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 @font-face {
@@ -136,7 +151,7 @@ main {
   background-position: 50% 50%;
   background-size: 250px;
   border-radius: 0 0 25px 25px;
-  padding: 20px 20px 15px;
+  padding: 10px 20px 15px;
   position: relative;
   min-height: 345px;
 }
@@ -149,6 +164,10 @@ footer {
   font-size: 12px;
   text-align: center;
   height: 35px;
+}
+h1 {
+  font-size: 26px;
+  margin-top: 0;
 }
 h3 {
   font-family: 'Book Antiqua', cursive;
@@ -246,9 +265,9 @@ a.in-text:hover {
 .button:disabled:hover,
 .button.left:disabled:hover,
 .button.right:disabled:hover {
-  background-color: #999;
-  border-color: #333;
-  color: #333;
+  background-color: #999999;
+  border-color: #333333;
+  color: #333333;
 }
 input:not([type="checkbox"]),
 textarea {
@@ -264,13 +283,12 @@ blockquote {
   border-color: #ffb600;
   border-radius: 0 5px 5px 0;
   box-shadow: 2px 2px 10px 0px #999999;
+  font-size: 16px;
+  font-style: italic;
+  text-align: justify;
   margin: 10px 0;
   padding: 15px 25px;
   position: relative;
-  font-size: 16px;
-  font-style: italic;
-  quotes: "\201C" "\201D";
-  text-align: justify;
 }
 blockquote.main {
   font-size: 17px;
@@ -316,8 +334,8 @@ ul {
 }
 ul li:not(.menu) {
   background-image: url("../images/margareta.png");
-  background-repeat: no-repeat;
   background-position: left 10px;
+  background-repeat: no-repeat;
   background-size: 30px;
   list-style: none;
   margin: 0;
@@ -443,8 +461,8 @@ img.tm-thumbnail:hover {
   width: 80%;
 }
 .video-button i.material-icons {
-  vertical-align: bottom;
   margin-right: 8px;
+  vertical-align: bottom;
 }
 .video-title {
   color: white;
@@ -532,8 +550,8 @@ img.tm-thumbnail:hover {
 .card {
   background-color: #002050;
   background-image: url(../images/margareta.png);
-  background-repeat: no-repeat;
   background-position: 15px 25px;
+  background-repeat: no-repeat;
   background-size: 160px;
   border: 4px solid white;
   border-radius: 3px;
@@ -940,7 +958,7 @@ form button {
     background-image: url(../images/tmlogo.png);
     background-repeat: no-repeat;
     background-size: 90px;
-    background-position: left center;
+    background-position: left bottom;
     display: block;
     text-align: initial;
     min-height: 100px;
@@ -976,9 +994,9 @@ form button {
   nav ul > .active > a,
   nav ul > .active > a:hover {
     background-color: #002050 !important;
+    border-bottom: 3px solid #ffb600;
     border-radius: 0;
     color: #ffb600 !important;
-    border-bottom: 3px solid #ffb600;
   }
   nav ul > .active > a img,
   nav ul > .active > a:hover img {

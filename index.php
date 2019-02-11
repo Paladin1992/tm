@@ -24,8 +24,11 @@
 
 <body>
     <div class="container <?=bs_col(12, 12, 8, 8, true);?> tm-container">
+        <header>
+            <img src="images/tmfocim.png" class="tm-main-title" alt="TM logo" title="TM logo">
+        </header>
+
         <?php
-            include("header.php");
             include("menu.php");
         ?>
     
@@ -35,14 +38,22 @@
             <?php
                 $file_path = "content/".$page.".php";
                 if (file_exists($file_path)) {
+                    print_page_title($page, true, ['fooldal']);
                     include($file_path);
                 } else {
-                    header("Location: index.php?p=fooldal");
+                    header("Location: fooldal");
                 }
             ?>
         </main>
 
-        <?php include("footer.php"); ?>
+        <footer>
+            <?php
+                $startYear = 2019;
+                $currentYear = date("Y");
+                echo '&copy; '.$startYear.($currentYear > $startYear ? '-'.$currentYear : '').' Minden jog fenntartva<br>';
+                echo 'Weblap: MaGe';
+            ?>
+        </footer>
     </div>
 
     <script src="js/script.js"></script>

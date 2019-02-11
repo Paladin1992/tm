@@ -21,9 +21,9 @@
     A bevezető és előkészítő előadás <b>díjtalan</b>, melyre elérhetőségeimen jelentkezhet.
     Ezen való részvétel semmilyen kötelezettséggel nem jár.
     Ezen az előadáson felvilágosítást kaphat arról, hogy
-    <a href="index.php?p=mi-a-tm" class="in-text" title="Ugrás a Mi a TM? aloldalra">mi a TM</a><sup class="orange">&reg;</sup>,
+    <a href="mi-a-tm" class="in-text" title="Ugrás a Mi a TM? aloldalra">mi a TM</a><sup class="orange">&reg;</sup>,
     hogyan lehet elsajátítani,
-    és milyen <a href="index.php?p=hatasok" class="in-text" title="Ugrás az Igazolt hatások aloldalra">igazolt hatásai</a> vannak.
+    és milyen <a href="igazolt-hatasok" class="in-text" title="Ugrás az Igazolt hatások aloldalra">igazolt hatásai</a> vannak.
 </p>
 
 <blockquote>
