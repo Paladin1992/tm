@@ -22,20 +22,26 @@ $(document).ready(function() {
 
     // blockquote show toggle
     $('.quot-show-toggle a').on('click', function() {
-        var $container = $('blockquote.short');
+        var $container = $(this).parents('blockquote.short');
 
         if ($container.hasClass('open')) { // close
-            $container.removeClass('open')
-                      .animate({ height: '200px' }, QUOT_READ_MORE_TOGGLE_MS, () => {
-                         scrollToItem($container);
-                      });
+            $container
+                .removeClass('open')
+                .animate(
+                    { height: '200px' },
+                    QUOT_READ_MORE_TOGGLE_MS,
+                    function() { scrollToItem($container); }
+                );
 
             $(this).html('Tovább olvasom &raquo;');
         } else { // open
-            $container.addClass('open')
-                      .animate({ height: $container.get(0).scrollHeight }, QUOT_READ_MORE_TOGGLE_MS, () => {
-                         scrollToItem($container);
-                      });
+            $container
+                .addClass('open')
+                .animate(
+                    { height: $container.get(0).scrollHeight },
+                    QUOT_READ_MORE_TOGGLE_MS,
+                    function() { scrollToItem($container); }
+                );
 
             $(this).html('&laquo; Kis méret');
         }
@@ -66,18 +72,6 @@ $(document).ready(function() {
     }
 
     resizeCaptcha();
-
-    // captcha
-    //refreshCaptcha();
-
-    // set Bootstrap tooltips to manual
-    //$('[data-toggle="tooltip"]').tooltip({ trigger: 'manual', animation: true })
-
-    // $('input.captcha-text').on('input', function() {
-    //     var userInput = $(this).val();
-    //     var action = /\D/.test(userInput) ? 'show' : 'hide';
-    //     $('[data-toggle="tooltip"]').tooltip(action);
-    // });
 });
 
 function scrollToItem($item) {
@@ -208,18 +202,3 @@ function resizeCaptcha() {
         'transform-origin': '0 0'
     });
 }
-
-// function refreshCaptcha() {
-//     $.get({
-//         url: 'getcaptcha.php',
-//         cache: false
-//     }, function(response, status) {
-//         if (status === 'success') {
-//             var data = JSON.parse(response);
-//             $('.captcha-img').attr('src', data.image);
-//             $('.captcha-hash').val(data.hash);
-//         } else {
-//             showMessage(ERROR_LOAD_CAPTCHA, 'error');
-//         }
-//     });
-// }

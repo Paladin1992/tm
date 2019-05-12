@@ -22,6 +22,12 @@
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 @font-face {
+  font-family: 'Milkshake';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Milkshake'), url(../fonts/milkshake.ttf) format('truetype');
+}
+@font-face {
   /* fallback */
   font-family: 'Material Icons';
   font-style: normal;
@@ -62,8 +68,8 @@ body {
   -o-background-size: cover;
   background-size: cover;
   color: #002050;
-  font-family: 'Book Antiqua', cursive;
-  font-size: 16px;
+  font-family: 'Calibri', cursive;
+  font-size: 18px;
   margin: 0;
   padding: 0;
 }
@@ -145,11 +151,6 @@ nav button i.opened {
 }
 main {
   background-color: white;
-  background-image: url(../images/bg_logo_vizjel.png);
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: 50% 50%;
-  background-size: 250px;
   border-radius: 0 0 25px 25px;
   padding: 10px 20px 15px;
   position: relative;
@@ -165,18 +166,34 @@ footer {
   text-align: center;
   height: 35px;
 }
-h1 {
-  font-size: 26px;
-  margin-top: 0;
+footer .mage {
+  font-family: 'Calibri', cursive;
+  font-variant: unicase;
 }
-h3 {
-  font-family: 'Book Antiqua', cursive;
+h1 {
+  font-family: 'Milkshake', cursive;
+  font-size: 36px;
+  margin: 0 0 20px;
+}
+.welcome {
+  font-family: 'Milkshake', cursive;
+  font-size: 36px;
+  text-align: center;
+  margin: 0 0 20px;
+}
+h2 {
+  font-family: 'Calibri', cursive;
   font-size: 20px;
   font-weight: bold;
-  margin: 0 0 10px;
-}
-h3:not(:first-of-type) {
   margin: 25px 0 10px;
+}
+h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0;
+}
+p {
+  line-height: 1.25 !important;
 }
 a {
   color: #ffb600;
@@ -269,6 +286,13 @@ a.in-text:hover {
   border-color: #333333;
   color: #333333;
 }
+#btn-send-email {
+  min-width: 120px;
+}
+#btn-send-email i {
+  font-size: 20px;
+  margin-right: 3px;
+}
 input:not([type="checkbox"]),
 textarea {
   border: 2px inset white;
@@ -283,10 +307,10 @@ blockquote {
   border-color: #ffb600;
   border-radius: 0 5px 5px 0;
   box-shadow: 2px 2px 10px 0px #999999;
-  font-size: 16px;
+  font-size: 17px;
   font-style: italic;
   text-align: justify;
-  margin: 10px 0;
+  margin: 20px 0 10px;
   padding: 15px 25px;
   position: relative;
 }
@@ -303,8 +327,14 @@ blockquote.short {
 blockquote.short.open {
   padding-bottom: 25px;
 }
+blockquote.space-below {
+  margin-bottom: 30px;
+}
 blockquote p {
   font-style: italic;
+}
+blockquote p.no-space {
+  margin: 0;
 }
 blockquote .author {
   text-align: right;
@@ -348,6 +378,9 @@ ul.tm-contact li:not(.menu) {
   background-position: 0px 0px;
   background-size: 25px;
   padding-left: 35px;
+}
+ul.proved-effects li:not(.menu) {
+  margin: 0 0 25px;
 }
 .hider {
   background-image: url(../images/hider.png);
@@ -400,7 +433,7 @@ figure.famous-people {
 figure.famous-people img {
   border: none;
   max-height: none;
-  width: 80%;
+  width: 100%;
 }
 figure.famous-people img:hover {
   border: none;
@@ -411,23 +444,15 @@ figure a {
   display: block;
 }
 img.tm-thumbnail {
-  background-color: #204080;
-  border: 4px solid #204080;
+  background-color: transparent;
+  border: none !important;
   border-radius: 2px;
-  max-height: 250px;
+  box-shadow: 0px 0px 5px 0px #999999;
+  max-height: 235px;
 }
 img.tm-thumbnail:hover {
   border-color: #ffb600;
-  box-shadow: 0px 0px 10px 3px #999999;
   cursor: pointer;
-}
-.orange-border img.tm-thumbnail {
-  background-color: #204080;
-  border: 4px solid #ffb600;
-  border-radius: 2px;
-  box-shadow: 0px 0px 10px 3px #999999;
-  cursor: default;
-  max-height: 250px;
 }
 .video {
   display: block;
@@ -460,9 +485,10 @@ img.tm-thumbnail:hover {
   margin: 0 auto;
   width: 80%;
 }
-.video-button i.material-icons {
-  margin-right: 8px;
-  vertical-align: bottom;
+.video-button i.fa.fa-youtube-play {
+  font-size: 30px;
+  vertical-align: sub;
+  margin-right: 5px;
 }
 .video-title {
   color: white;
@@ -517,11 +543,15 @@ img.tm-thumbnail:hover {
   color: #990000;
   display: inline-block;
 }
-.intro {
+.intro-main {
   font-size: 20px;
   font-style: italic;
   text-align: center;
   margin-bottom: 30px;
+}
+.intro {
+  font-weight: bold;
+  font-style: italic;
 }
 .orange {
   color: #ffb600;
@@ -590,6 +620,7 @@ img.tm-thumbnail:hover {
 .card .card-job,
 .card .card-phone,
 .card .card-email {
+  font-family: 'Calibri', cursive;
   font-size: 14px;
   margin-bottom: 3px;
 }
@@ -691,6 +722,11 @@ form button {
   }
   nav .tm-main-title {
     display: block;
+    color: white;
+    font-family: 'Milkshake', cursive;
+    font-size: 54px;
+    text-align: center;
+    margin: 0 0 20px;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -757,7 +793,7 @@ form button {
   nav ul li a {
     background-color: white;
     color: #204080 !important;
-    font-family: 'Book Antiqua', cursive;
+    font-family: 'Calibri', cursive;
     font-size: 1.5em;
     font-style: italic;
     font-weight: bold;
@@ -966,6 +1002,11 @@ form button {
   }
   header .tm-main-title {
     display: block;
+    color: white;
+    font-family: 'Milkshake', cursive;
+    font-size: 54px;
+    text-align: center;
+    margin: 0 0 20px;
     position: absolute;
     top: 58%;
     left: 50%;
@@ -1020,9 +1061,8 @@ form button {
   nav ul li a {
     border-bottom: 3px solid #002050;
     color: white !important;
-    font-family: 'Book Antiqua', cursive;
-    font-size: 16px;
-    font-weight: bold;
+    font-family: 'Calibri', cursive;
+    font-size: 17px;
     text-align: center;
     margin-right: 9px;
     padding: 20px 6px 10px !important;

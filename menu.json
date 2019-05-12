@@ -1,36 +1,42 @@
 [
     {
-        "caption": "Főoldal",
+        "menuItemCaption": "Főoldal",
+        "h1": "TM Mindenkinek",
         "url": "fooldal",
-        "keywords": "boldogság, élet célja, kreativitás, intelligencia, Maharishi Mahesh Yogi",
-        "description": "A boldogság növekedése és erősödése az élet célja az evolúció által"
+        "keywords": "TM mindenkinek, TM, Transzcendentális Meditáció, boldogság, élet célja, kreativitás, intelligencia, Maharishi Mahesh Yogi",
+        "description": "Mátyás Margaréta vagyok, TM-tanár - Tanulja meg a TM technikát tőlem, elsősorban Vác vagy Budapest környékén!"
     },
     {
-        "caption": "Önmegvalósítás",
+        "menuItemCaption": "Önmegvalósítás",
+        "h1": "Önmegvalósítás",
         "url": "onmegvalositas",
         "keywords": "fejlődés, tudat, tudatszint, önvaló, Maharishi Mahesh Yogi",
-        "description": "Hogyan találod meg önmagad?"
+        "description": "A TM segít, hogy minél előbb visszatalálj igazi, félelmek nélküli önmagadhoz."
     },
     {
-        "caption": "Mi a TM?",
+        "menuItemCaption": "Mi a TM?",
+        "h1": "Mi a TM?",
         "url": "mi-a-tm",
         "keywords": "TM, Transzcendentális Meditáció, stressz, meditáció, pihenés",
-        "description": "A technika ahhoz, hogy az ember nyugalomra és boldogságra leljen a mindennapi életben."
+        "description": "A TM egy kiváló technika ahhoz, hogy az ember nyugalomra és boldogságra leljen a mindennapi életben."
     },
     {
-        "caption": "Igazolt hatások",
+        "menuItemCaption": "Igazolt hatások",
+        "h1": "Igazolt hatások",
         "url": "igazolt-hatasok",
         "keywords": "elme, test, betegség, pánikroham, rák, magas vérnyomás, szívinfarktus, autizmus, hiperaktivitás, depresszió, alkoholizmus, kapcsolatok, szakmai élet, világ, világbéke",
-        "description": "Hogyan segít a TM a világ különböző részein élő embereknek?"
+        "description": "A TM segítséget nyújthat betegség, depresszió, pánikroham, magas vérnyomás, szívinfarktus, autizmus, hiperaktivitás, alkoholizmus, emberi kapcsolatok vagy akár a szakmai élet területén."
     },
     {
-        "caption": "Ajánlások",
+        "menuItemCaption": "Ajánlások",
+        "h1": "Ajánlások",
         "url": "ajanlasok",
         "keywords": "Dr. Selye János, idegrendszer, Vác, Budapest, Dunakeszi, Nagymaros, Liv Tyler, Jennifer Lopez, Jennifer Aniston, Katy Perry, Cameron Diaz, Jim Carrey, Hugh Jackman, Howard Stern, Dr. Oz, Oprah Winfrey, Paul McCartney, Ringo Starr, Arnold Schwarzenegger, Clint Eastwood, David Lynch",
-        "description": "Dr. Selye János szakmai ajánlása és világhírű TM-esek"
+        "description": "Dr. Selye János szakmai ajánlása, világhírű TM-esek, és néhány saját tanítványom véleménye."
     },
     {
-        "caption": "Kapcsolat",
+        "menuItemCaption": "Kapcsolat",
+        "h1": "Kapcsolat",
         "url": "kapcsolat",
         "keywords": "TM, Transzcendentális Meditáció, tanfolyam, Mátyás Margaréta, elérhetőség, kapcsolat, Vác, Budapest, Dunakeszi",
         "description": "Mátyás Margaréta vagyok, elsősorban Vác és Budapest vonzáskörzetében tanítok TM-et. Vedd fel velem a kapcsolatot, és tanuld meg a TM-et tőlem!"

@@ -1,28 +1,35 @@
 // #region [ Declaration ]
     // #region [ Colors ]
+    @almostWhite: #fff0d0;
+    @lightGray: #999999;
+    @darkGray: #333333;
+
     @blue: #204080;
     @middleBlue: #2989d8;
     @bluntBlue: #0070b0;
     @darkBlue: #002050;
 
+    @paleGreen: #99ee55;
+    @green: #006600;
+
     @orange: #ffb600;
     @darkOrange: #ff8800;
+    @lightBrown: #c7a04a;
     @brown: #994422;
     @darkBrown: #66270f;
 
-    @quote: #002050;
-    @quoteBg: #fff0d0;
-    @quoteShadow: #c7a04a;
-
-    @alertSuccessBg: #99ee55;
-    @alertSuccess: #006600;
-    @alertErrorBg: #ff8080;
-    @alertError: #990000;
-
-    @darkGray: #333333;
+    @paleRed: #ff8080;
     @lightRed: #cc0000;
+    @mediumRed: #990000;
 
-    @lightGray: #999999;
+    @quote: @darkBlue;
+    @quoteBg: @almostWhite;
+    @quoteShadow: @lightBrown;
+
+    @alertSuccessBg: @paleGreen;
+    @alertSuccess: @green;
+    @alertErrorBg: @paleRed;
+    @alertError: @mediumRed;
     // #endregion
 
     // #region [ Fonts ]
@@ -53,11 +60,28 @@
         unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
     }
 
-    @font_body: 'Book Antiqua', cursive;
-    @font_h3: 'Book Antiqua', cursive;
-    @font_menu: 'Book Antiqua', cursive;
-    @font_button: Arial, Helvetica, sans-serif;
-    @font_card: 'Rochester', cursive;
+    @font-face {
+        font-family: 'Milkshake';
+        font-style: normal;
+        font-weight: 400;
+        src: local('Milkshake'), url(../fonts/milkshake.ttf) format('truetype');
+    }
+
+    @arial: Arial, Helvetica, sans-serif;
+    @bookAntiqua: 'Book Antiqua', cursive;
+    @calibri: 'Calibri', cursive;
+    @milkshake: 'Milkshake', cursive;
+    @rochester: 'Rochester', cursive;
+    @timesNewRoman: 'Times New Roman', Times, serif;
+
+    @font_body: @calibri; //@timesNewRoman; //@bookAntiqua;
+    @font_mainTitle: @milkshake;
+    @font_subTitle: @calibri; //@timesNewRoman; //@bookAntiqua;
+    @font_menu: @calibri; //@bookAntiqua;
+    @font_button: @arial;
+    @font_card: @calibri;
+    @font_card_handscript: @rochester;
+    @font_maker: @calibri;
     // #endregion
 
     // #region [ Icons ]
@@ -112,7 +136,7 @@ body {
     color: @darkBlue;
 
     font-family: @font_body;
-    font-size: 16px;
+    font-size: 18px;
 
     margin: 0;
     padding: 0;
@@ -229,11 +253,6 @@ nav {
 
 main {
     background-color: white;
-    background-image: url(../images/bg_logo_vizjel.png);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: 50% 50%;
-    background-size: 250px;
     border-radius: 0 0 25px 25px;
 
     padding: 10px 20px 15px;
@@ -254,24 +273,47 @@ footer {
     text-align: center;
 
     height: 35px;
+
+    & .mage {
+        font-family: @font_maker;
+        font-variant: unicase;
+    }
 }
 // #endregion
 
 // #region [ Common ]
 h1 {
-    font-size: 26px;
+    font-family: @font_mainTitle;
+    font-size: 36px;
 
-    margin-top: 0;
+    margin: 0 0 20px;
 }
 
-h3 {
-    font-family: @font_h3;
+.welcome {
+    font-family: @font_mainTitle;
+    font-size: 36px;
+    text-align: center;
+
+    margin: 0 0 20px;
+}
+
+h2 {
+    font-family: @font_subTitle;
     font-size: 20px;
     font-weight: bold;
 
-    margin: 0 0 10px;
+    margin: 25px 0 10px;
+}
 
-    &:not(:first-of-type) { margin: 25px 0 10px; }
+h3 {
+    font-size: 18px;
+    font-weight: bold;
+
+    margin: 0;
+}
+
+p {
+    line-height: 1.25 !important;
 }
 
 a {
@@ -367,6 +409,15 @@ a {
     }
 }
 
+#btn-send-email {
+    min-width: 120px;
+
+    & i {
+        font-size: 20px;
+        margin-right: 3px;
+    }
+}
+
 input:not([type="checkbox"]), textarea {
     border: 2px inset white;
     border-radius: 5px;
@@ -380,11 +431,11 @@ blockquote {
     border-radius: 0 5px 5px 0;
     box-shadow: 2px 2px 10px 0px @lightGray;
 
-    font-size: 16px;
+    font-size: 17px;
     font-style: italic;
     text-align: justify;
 
-    margin: 10px 0;
+    margin: 20px 0 10px;
     padding: 15px 25px;
     position: relative;
 
@@ -402,7 +453,17 @@ blockquote {
         &.open { padding-bottom: 25px; }
     }
 
-    & p { font-style: italic; }
+    &.space-below {
+        margin-bottom: 30px;
+    }
+
+    & p {
+        font-style: italic;
+
+        &.no-space {
+            margin: 0;
+        }
+    }
 
     & .author { text-align: right; }
 
@@ -454,6 +515,12 @@ ul {
             background-size: 25px;
 
             padding-left: 35px;
+        }
+    }
+
+    &.proved-effects {
+        & li:not(.menu) {
+            margin: 0 0 25px;
         }
     }
 }
@@ -526,7 +593,7 @@ figure {
             border: none;
 
             max-height: none;
-            width: 80%;
+            width: 100%;
 
             &:hover {
                 border: none;
@@ -540,26 +607,16 @@ figure {
 }
 
 img.tm-thumbnail {
-    background-color: @blue;
-    border: 4px solid @blue;
+    background-color: transparent;
+    border: none !important;    
     border-radius: 2px;
+    box-shadow: 0px 0px 5px 0px @lightGray;
 
-    max-height: 250px;
+    max-height: 235px;
 
     &:hover {
         border-color: @orange;
-        box-shadow: 0px 0px 10px 3px @lightGray;
         cursor: pointer;
-    }
-
-    .orange-border & {
-        background-color: @blue;
-        border: 4px solid @orange;
-        border-radius: 2px;
-        box-shadow: 0px 0px 10px 3px @lightGray;
-        cursor: default;
-
-        max-height: 250px;
     }
 }
 
@@ -600,9 +657,11 @@ img.tm-thumbnail {
         margin: 0 auto;
         width: 80%;
 
-        & i.material-icons {
-            margin-right: 8px;
-            vertical-align: bottom;
+        & i.fa.fa-youtube-play {
+            font-size: 30px;
+            vertical-align: sub;
+
+            margin-right: 5px;
         }
     }
 
@@ -676,12 +735,17 @@ img.tm-thumbnail {
 // #endregion
 
 // #region [ Content ]
-.intro {
+.intro-main {
     font-size: 20px;
     font-style: italic;
     text-align: center;
     
     margin-bottom: 30px;
+}
+
+.intro {
+    font-weight: bold;
+    font-style: italic;
 }
 
 .orange { color: @orange; }
@@ -748,7 +812,7 @@ img.tm-thumbnail {
     }
 
     & .card-name {
-        font-family: @font_card;
+        font-family: @font_card_handscript;
         font-size: 24px;
         font-style: italic;
 
@@ -758,13 +822,14 @@ img.tm-thumbnail {
     & .card-job,
     & .card-phone,
     & .card-email {
+        font-family: @font_card;
         font-size: 14px;
 
         margin-bottom: 3px;
     }
 
     & .card-good-wish {
-        font-family: @font_card;
+        font-family: @font_card_handscript;
         font-size: 24px;
         font-style: italic;
 
@@ -894,7 +959,13 @@ form {
 
         & .tm-main-title {
             display: block;
+            color: white;
 
+            font-family: @font_mainTitle;
+            font-size: 54px;
+            text-align: center;
+
+            margin: 0 0 20px;
             position: absolute;
             top: 50%;
             left: 50%;
@@ -1228,7 +1299,13 @@ form {
 
         & .tm-main-title {
             display: block;
+            color: white;
 
+            font-family: @font_mainTitle;
+            font-size: 54px;
+            text-align: center;
+
+            margin: 0 0 20px;
             position: absolute;
             top: 58%;
             left: 50%;
@@ -1289,8 +1366,7 @@ form {
                     color: white !important;
 
                     font-family: @font_menu;
-                    font-size: 16px;
-                    font-weight: bold;
+                    font-size: 17px;
                     text-align: center;
                     
                     margin-right: 9px;

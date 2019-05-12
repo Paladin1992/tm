@@ -1,5 +1,5 @@
 <p>
-    <b>Mátyás Margaréta</b> TM<sup>&reg;</sup>-tanár vagyok, akit Maharishi Mahesh Yogi képzett ki arra,
+    <b>Mátyás Margaréta</b> TM&reg;-tanár vagyok, akit Maharishi Mahesh Yogi képzett ki arra,
     hogy a technikát tovább tudjam adni egy tanfolyam keretében, az alábbiak szerint:
 
     <ul class="tm-contact">
@@ -13,15 +13,15 @@
 </p>
 
 <p>
-    A TM<sup>&reg;</sup> tanfolyam elvégzése után azt önállóan tudjuk gyakorolni,
-    de a TM<sup>&reg;</sup> tanártól bármikor kérhetünk segítséget, útmutatást.
+    A TM&reg; tanfolyam elvégzése után azt önállóan tudjuk gyakorolni,
+    de a TM&reg; tanártól bármikor kérhetünk segítséget, útmutatást.
 </p>
 
 <p>
     A bevezető és előkészítő előadás <b>díjtalan</b>, melyre elérhetőségeimen jelentkezhet.
     Ezen való részvétel semmilyen kötelezettséggel nem jár.
     Ezen az előadáson felvilágosítást kaphat arról, hogy
-    <a href="mi-a-tm" class="in-text" title="Ugrás a Mi a TM? aloldalra">mi a TM</a><sup class="orange">&reg;</sup>,
+    <a href="mi-a-tm" class="in-text" title="Ugrás a Mi a TM? aloldalra">mi a TM</a><span class="orange">&reg;</span>,
     hogyan lehet elsajátítani,
     és milyen <a href="igazolt-hatasok" class="in-text" title="Ugrás az Igazolt hatások aloldalra">igazolt hatásai</a> vannak.
 </p>
@@ -29,13 +29,13 @@
 <blockquote>
     <?php
         insert_raw_image(
-            "images/portre.jpg", // src
+            "images/matyas_margareta_portre.jpg", // src
             "portrait", // orientation
             "right", // float
-            "Mátyás Margaréta fotó", // alt
+            "Mátyás Margaréta portré", // alt
             "Mátyás Margaréta", // title
-            "orange-border", // classes
-            "", // styles
+            "", // classes
+            "margin-bottom: 10px", // styles
             true // use hider?
         );
     ?>
@@ -84,17 +84,6 @@
             
                 <div class="g-recaptcha" data-callback="checkSendButtonConditions" data-sitekey="6LeBM4QUAAAAAKRjyCW0Nl0bNUmEMoz9y3T58D2c"></div>
 
-                <!-- <div class="captcha-container">    
-                    <div class="captcha-info">Írja be számjegyekkel a képen látható művelet eredményét:</div>
-                    <img class="captcha-img" src="" alt="CAPTCHA kép"/>
-                    <button type="button" onclick="refreshCaptcha()" class="btn btn-primary button btn-refresh-captcha" title="Új képet kérek!">
-                        <span class="glyphicon glyphicon-refresh"></span>
-                    </button>
-                    
-                    <input class="captcha-text" type="text" name="captcha" placeholder="Írja be az összeget" data-toggle="tooltip" data-placement="bottom" title="A mezőbe csak számot lehet beírni."/>
-                    <input type="hidden" name="hash" class="captcha-hash">
-                </div> -->
-
                 <div class="gdpr-container">
                     <input type="checkbox" name="gdpr-rules" class="gdpr-real-checkbox">
                     <div class="material-icons gdpr-fake-checkbox">check_box_outline_blank</div>
@@ -102,7 +91,10 @@
                 </div>
 
                 <div class="clearfix">
-                    <button id="btn-send-email" type="submit" onclick="sendEmail()" class="btn btn-primary button left" disabled>Küldés</button>
+                    <button id="btn-send-email" type="submit" onclick="sendEmail()" class="btn btn-primary button left" disabled>
+                        <i class="fa fa-envelope-o"></i>
+                        Küldés
+                    </button>
                     <div class="mail-response alert"></div>
                 </div>
             </fieldset>

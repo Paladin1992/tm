@@ -50,7 +50,7 @@
 
     function get_menu_item($current_page, $is_active) {
         $menu_item_data = get_menu_item_data($current_page);
-        $caption = $menu_item_data['caption'];
+        $caption = $menu_item_data['menuItemCaption'];
         $url = $menu_item_data['url'];
         $active_class = ($is_active ? 'active' : '');
 
@@ -74,8 +74,12 @@
         $pageToExclude = in_array($page, $exclude);
 
         if (!$pageToExclude) {
-            $title = get_menu_item_data($page)['caption'];
-            echo $wrap_in_h1 ? '<h1>'.$title.'</h1>' : $title;
+
+            if ($wrap_in_h1) {
+                echo '<h1>'.get_menu_item_data($page)['h1'].'</h1>';
+            } else {
+                echo get_menu_item_data($page)['menuItemCaption'];
+            }
         }
     }
 
@@ -129,7 +133,7 @@
         if ($closable) {
             $result .= '<div class="video-group">';
                 $result .= '<button class="video-button button" onclick="getVideo(\''.$url.'\', this)" title="'.$tooltip.'">';
-                    $result .= '<i class="material-icons">ondemand_video</i> '.$title;
+                    $result .= '<i class="fa fa-youtube-play"></i> '.$title;
                 $result .= '</button>';
 
                 $result .= '<div class="video-container">';

@@ -1,4 +1,4 @@
-<p>
+<p class="intro">
     Minden ember életében eljön az a pillanat, amikor felteszi magának a kérdést: mit értem el az életben?
     Megvalósítottam az álmomat, amit szerettem volna? A saját életemet éltem? Elértem, amit akartam?
     Valódi, értelmes életet éltem? Ezek a kérdések nemcsak a halál előtt jelenhetnek meg bennünk,
@@ -18,7 +18,7 @@
 <p>
     Az élet óceánja oly hatalmas és kimeríthetetlen szépségeket tárhat élénk,
     ha elég bátrak és stabilak vagyunk önmagunkban ahhoz, hogy nekivágjunk.
-    Az élet természetesen teljes. Megvan benne minden, amire az embernek szüksége van.
+    <strong>Az élet természetesen teljes. Megvan benne minden, amire az embernek szüksége van.</strong>
     A csoda ott van, mindenki számára elérhető. Az óceán szépsége annak mélységében rejlik.
     Ha a mélységet feltárjuk, akkor a felszíni viharok is lenyűgöző szépségüket fogják feltárni előttünk.
     Ha az önvalónk erős, akkor a élet kihívásai nem viharokként fognak megjelenni, hanem a saját önvalónk,
@@ -36,22 +36,35 @@
 </p>
 
 <p>
-    A fájdalmak és sérülések elrejtik azt a csodásan ragyogó önvalónkat, aki tudja, hogy miért van itt,
-    hogy mi a feladata, és elég bátor ahhoz, hogy ezt meg is valósítsa.
+    <strong>A fájdalmak és sérülések elrejtik azt a csodásan ragyogó önvalónkat, aki tudja, hogy miért van itt,
+    hogy mi a feladata, és elég bátor ahhoz, hogy ezt meg is valósítsa.</strong>
 </p>
 
 <p>
     Ha hiányzik e csodás önvalód, csak meg kell keresni. Ő nem ment sehová, sose tűnt el. Ott van benned.
     Csak az utat kell megtalálni, hogy újra eljuthass hozzá.
-    Ebben segít a <a href="mi-a-tm" class="in-text" title="Ugrás a Mi a TM? aloldalra">TM</a><sup class="orange">&reg;</sup>.
+    Ebben segít a <a href="mi-a-tm" class="in-text" title="Ugrás a Mi a TM? aloldalra">TM</a><span class="orange">&reg;</span>.
     Hisz az élet mindent megad ahhoz, hogy a tudatunkat megemelve saját önvalónkat éljük,
     és ezáltal az életfaladatunkat vagy sorsunkat beteljesítsük.
     Az <a href="igazolt-hatasok" class="in-text" title="Ugrás az Igazolt hatások aloldalra">Igazolt hatások</a> bővebben bemutatja,
-    hogyan segített a TM<sup>&reg;</sup> a világ különböző részein élő embereknek!
+    hogyan segített a TM&reg; a világ különböző részein élő embereknek!
 </p>
 
 <blockquote>
-    <p>
+    <?php
+        insert_raw_image(
+            "images/maharishi_mahesh_yogi.jpg", // src
+            "portrait", // orientation
+            "left", // float
+            "Maharishi Mahesh Yogi portréja", // alt
+            "Maharishi Mahesh Yogi", // title
+            "", // classes
+            "", // inline styles
+            true // use hider?
+        );
+    ?>
+    
+    <p class="no-space">
         „Senki sem képes más tudatszintjének felemelésére. Akik ismerik a tudat fejlesztésének módját,
         azok természetesen a tájékoztatással és útmutatással nyújthatnak némi segítséget,
         de saját tudatszintjének felemeléséért mindenki önmaga felelős.
@@ -60,7 +73,7 @@
         Az egyén és a világegyetem között tehát bensőséges és eltéphetetlen kapcsolat áll fenn.
         Egyesek azzal segítettek magukon, hogy feltárták az élet e hatalmas bölcsességét,
         de mindenkinek saját magának kell kiválasztania a számára megfelelő utat.”
-        
-        <div class="author">&mdash; Maharashi Mahesh Yogi</div>
     </p>
+
+    <div class="author">&mdash; Maharashi Mahesh Yogi</div>
 </blockquote>

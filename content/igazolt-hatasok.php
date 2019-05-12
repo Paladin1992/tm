@@ -1,11 +1,11 @@
-<h3>A TM<sup>&reg;</sup> hatása az emberi agy működésére</h3>
+<h2>A TM&reg; hatása az emberi agy működésére</h2>
 
 <?php
     insert_figure(
         "images/mri_felvetel.jpg", // src
         "landscape", // orientation
         "right", // float
-        "MRI felvétel", // alt
+        "Egy normál és egy feszült idegállapotú ember agyának MRI felvétele", // alt
         "MRI felvétel (új lapon nyílik meg)", // title
         "Egy normál és egy feszült idegállapotú ember agyának MRI felvétele", // figcaption
         "", // classes
@@ -14,14 +14,19 @@
     );
 ?>
 
-<p class="clearfix">
+<p>
     Az ember homloklebenye az agy vezérigazgatója. Ő irányít és hozza meg a végső döntéseket.
     Ha az ember homloklebenyében úgynevezett funkcionális lyukak alakulnak ki (lásd MRI felvétel),
     akkor az megakadályozza abban, hogy erkölcsileg, morálisan megfelelő döntést tudjon hozni.
+</p>
+
+<p>
     A funkcionális lyukak kialakulásának oka a nem megfelelő idejű és minőségű alvás, illetve a stressz.
-    A nem megfelelő minőségű alvás oka szintén a stressz.
     Így ha eleget alszunk, és stresszmentes életet élünk, az agyunk megfelelően fog működni.
-    A <a href="mi-a-tm" class="in-text" title="Ugrás a Mi a TM? aloldalra">TM</a><sup class="orange">&reg;</sup>
+</p>
+
+<p class="clearfix">
+    A <a href="mi-a-tm" class="in-text" title="Ugrás a Mi a TM? aloldalra">TM</a><span class="orange">&reg;</span>
     egy olyan egyszerű, természetes, erőfeszítésmentes stresszoldó mentális technika,
     mely az agykoherenciát növeli, ezáltal az idegrendszerünket normalizálja (melynek központja az agy),
     így segíti elő a megfelelő döntések meghozatalát.
@@ -31,11 +36,11 @@
     insert_video("https://www.youtube.com/embed/YAWJFJ5Fadw", "A TM<sup>&reg;</sup> hatása az agyműködésre", true);
 ?>
 
-<h3>Egyéb pozitív hatások</h3>
+<h2>A TM&reg; pozitív hatásai</h2>
 
-<ul>
+<ul class="proved-effects">
     <li>
-        <b>az elmére:</b>
+        <h3>az elmére:</h3>
         <p>
             jobb memória; tisztább és rendezettebb gondolkodás; nagyobb
             kreativitás és koncentrálóképesség; az agy teljes
@@ -51,7 +56,7 @@
         </div>
     </li>
     <li>
-        <b>a testre:</b>
+        <h3>a testre:</h3>
         <p>
             kevesebb stressz; több energia; jobb egészség; alacsonyabb
             egészségügyi költségek; pihentetőbb alvás; alacsonyabb
@@ -68,7 +73,7 @@
         </div>
     </li>
     <li>
-        <b>a kapcsolatokban:</b>
+        <h3>a kapcsolatokban:</h3>
         <p>
             beteljesítő barátságok; belső béke; több önbizalom; nagyobb
             perspektíva az életről; növekvő tolerancia; saját magunk és
@@ -83,7 +88,7 @@
         </div>
     </li>
     <li>
-        <b>a szakmai életben:</b>
+        <h3>a szakmai életben:</h3>
         <p>
             erősebb <a href="onmegvalositas" class="in-text" title="Ugrás az Önmegvalósítás aloldalra">önmegvalósítás</a> elérése;
             helyes döntéshozatal;
@@ -100,7 +105,7 @@
         </div>
     </li>
     <li>
-        <b>a világban:</b>
+        <h3>a világban:</h3>
         <p>
             javuló városi életminőség; kevesebb bűnözés; kevesebb
             közlekedési baleset; kevesebb gyilkosság; csökkenő terrorizmus;

@@ -1,14 +1,18 @@
-<h3>A stresszkutatás atyjának ajánlása</h3>
+<h2>A stresszkutatás atyjának ajánlása</h2>
 
 <p>
     Selye János (Hans Hugo Bruno Selye, 1907-1982) az osztrák-magyar származású kanadai orvos és vegyész,
     akit sokszor neveznek a "stresszkutatás atyjának", már 1926-ban, másodéves orvostanhallgatóként elkezdett dolgozni
     később híressé vált stressz-elméletén. Ez azt írja le, hogy az emberek miként képesek megbirkózni
-    a sérülések és az intenzív élmények okozta terhekkel. Egész életén át folytatott kutatásai nyomán
-    arra a következtetésre jutott, hogy a stressz minden betegség kifejlődésében szerepet játszik.
+    a sérülések és az intenzív élmények okozta terhekkel.
+</p>
+
+<p>
+    Egész életén át folytatott kutatásai nyomán arra a következtetésre jutott,
+    hogy a stressz minden betegség kifejlődésében szerepet játszik.
     Ha valaki nem képes megbirkózni a stresszekkel, az alkalmazkodási betegségekhez vezethet,
     mint amilyenek a fekélyek, a magas vérnyomás és számos egyéb probléma, amelyet a stressz okoz vagy súlyosbít
-    (bővebben az <a href="igazolt-hatasok" class="in-text" title="Ugrás az Igazolt hatások aloldalra">Igazolt hatások</a> menüpont alatt).
+    (bővebben lásd: <a href="igazolt-hatasok" class="in-text" title="Ugrás az Igazolt hatások aloldalra">Igazolt hatások</a>).
 </p>
 
 <p>
@@ -62,7 +66,7 @@
     </div>
 </blockquote>
 
-<h3>Híres TM-esek</h3>
+<h2>Híres TM-esek</h2>
 
 <?php
     insert_raw_image(
@@ -80,3 +84,115 @@
 <?php
     insert_video('https://www.youtube.com/embed/6Gkrls0f-ns', 'TM-et gyakorló hírességek', true);
 ?>
+
+<h2>Tanítványaim véleményei</h2>
+
+<blockquote>
+    <p><strong>Edit, kétgyerekes anya &ndash; Dunakeszi:</strong></p>
+
+    <p>
+        Nagyon hálás vagyok, hogy Margarétához sodort a sors, és Ő lett a TM-tanárom!
+        Kedves és jókedvű, végtelenül türelmes, nagyon felkészült és lelkiismeretes.
+        Jól megtalálta a hangot nyegle kamaszfiammal is, ami külön érdem!
+        Igazi varázsló(nő)! Köszönöm! Köszönjük!
+    </p>
+
+    <p>
+        Nem könnyű szavakkal kifejezni, hogy milyen hatása van a Transzcendentális Meditáció gyakorlásának.
+        Könnyed vagy, éber és energikus. Közben mégis nyugodt és elégedett.
+        Valahogy egyre jobban alakulnak a dolgaid. Nincsenek aggodalmaid. Egyszerűen csak vagy.
+    </p>
+</blockquote>
+
+<blockquote class="short">
+    <p><strong>Gyuri &ndash; Vác:</strong></p>
+
+    <p>
+        2018. aug. 29. - szept. 1., amikor is elvégeztem a TM-et nálad!
+        Azóta is rendszeresen meditálok és ezt jó szívvel, bátran ajánlhatom,
+        mert mindenkinek a saját boldogságának megtalálásába fektetett pénz és energia kamatostul megtérül!
+        Ez így persze első olvasásra kicsit hihetetlennek tűnhet, de én már megtapasztaltam ennek segítségével,
+        hogy mit jelent az: "ÚTON LENNI" a teljes átalakulás felé!
+    </p>
+
+    <p>
+        Korábban nem igazán tudtam ellazulni, meditálni. Ezzel a technikával pedig hathatósan sikerült!
+        Az eredmények nekem úgy 2-3 hónap után kezdtek "jelentkezni".
+        Szinte észrevétlenül alakul át a körülvevő világ... minden sokkal simábban, gördülékenyebben megy,
+        megszűnik a görcsösség, akarnokság, a problémák sokszor észrevétlenül megoldódnak. A konfliktusok elcsitulnak...
+        Problémáim vannak és lesznek is! Nemrég voltam műtéten, otthagytam a munkahelyem, a házunkat áruljuk stb.
+        De már nem érzem ennek a nyomasztó súlyát, sem a betegség okozta tünetek fájdalmait,
+        mert a folyamatos meditáció ezeket szépen kompenzálja! De ezeket csak akkor tudtam átérezni,
+        amikor ténylegesen megtapasztaltam, hogy a dolog működik!
+    </p>
+
+    <p>
+        Nem nagy szó azt mondanom, hogy ez a boldogság útja...
+        Nem a környezet változik, hanem én magam.
+        De ezáltal minden változik, mert azt kapom, amit adok!
+        Feltétel nélküli szeretetet, jóságot, és szolgálatot!
+        Na és megtanultam elengedni, és nem rágódni a múlton, ami szintén nagyon fontos!
+    </p>
+
+    <p>
+        Ezek a TM gyakorlása által mind-mind "maguktól" jönnek!
+        Legalábbis bennem ezt a hatást váltotta ki!
+        Viszont nagyon fontos a kitartás, hogy folytassuk akkor is, ha elakadunk,
+        és az eredmények aztán meghozzák a hitünket is!
+    </p>
+
+    <div class="quot-show-toggle">
+        <div class="quot-link-container">
+            <a>Tovább olvasom &raquo;</a>
+        </div>
+    </div>
+</blockquote>
+
+<blockquote class="short">
+    <p><strong>Gergő, informatikus &ndash; Nagymaros:</strong></p>
+
+    <p>
+        Sokáig azt hittem, hogy az én életem mentes a stressztől. Tévedtem.
+    </p>
+
+    <p>
+        Azt vettem észre magamon, hogy a legjelentéktelenebb apróság is felidegesített, és többször volt olyan erős dührohamom,
+        hogy úgy éreztem, meg tudnék ölni valakit, miközben majd' felrobbantam mérgemben.
+        Pedig magam sem tudtam, hogy ezt mi okozza, mert alapvetően békés embernek ismernek.
+        Már felmerült bennem, hogy elmegyek pszichológushoz, mert egy rakás idegesítő gondolat cikázott a fejemben,
+        melyektől örökké érzelmi hullámvasúton éreztem magam - de meg akartam szabadulni tőlük!
+        Na, ez volt a stressz.
+    </p>
+
+    <p>
+        Egyértelműen segítségre volt szükségem. Már úgy voltam vele, hogy mindegy, ki vagy mi az, csak segítsen!
+        Ekkor már sokadjára mondta nekem Margaréta, hogy tanuljam meg a TM-et, mégis makacsul ellenálltam.
+        Aztán végül eljött egy pont, hogy nem bírtam tovább,
+        és gondoltam: "minden mindegy" alapon adok egy esélyt a dolognak, hátha beválik...
+    </p>
+
+    <p>
+        Bő egy héttel később már gyakoroltam a TM-et, és azonnal éreztem jótékony hatását.
+        Hogy őszinte legyek, fogalmam sincs, mi történik velem a meditáció alatt:
+        hogyan oldja ez a technika a szervezetben összegyűlt stresszt;
+        mitől érzem azt a kellemes bizsergést a homlokom mögött;
+        mitől lazulok el annyira; mitől szűntek meg a dührohamaim;
+        mitől érzem frissebbnek és kipihentebbnek magam,
+        de talán nem is érdekes: egyszerűen csak JÓ! Élvezni kell, és elfogadni, hogy működik!
+        Egy-egy meditáció után mindaz, ami miatt esetleg idegeskedtem volna,
+        hirtelen jelentéktelennek és nevetségesnek tűnik;
+        csökken a félelemérzetem, a problémák megoldhatóvá, az akadályok leküzdhetővé válnak.
+    </p>
+
+    <p>
+        Nem a világ változott meg körülöttem, hanem az én látásmódom, és ez jelentős változást hoz a mindennapokba!
+        Úgy is mondhatnám: a TM révén döbbentem rá, hogy mindvégig ott álltam a kincseskamrámban,
+        csak épp háttal a kincsnek... Köszönöm Margarétának az útmutatást!
+    </p>
+
+    <div class="quot-show-toggle">
+        <div class="quot-link-container">
+            <a>Tovább olvasom &raquo;</a>
+        </div>
+    </div>
+</blockquote>
