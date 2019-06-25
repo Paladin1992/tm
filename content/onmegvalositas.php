@@ -75,5 +75,5 @@
         de mindenkinek saját magának kell kiválasztania a számára megfelelő utat.”
     </p>
 
-    <div class="author">&mdash; Maharashi Mahesh Yogi</div>
+    <div class="author">&mdash; Maharishi Mahesh Yogi</div>
 </blockquote>

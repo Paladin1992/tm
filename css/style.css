@@ -2,13 +2,13 @@
   font-family: 'Book Antiqua';
   font-style: normal;
   font-weight: 400;
-  src: local('Book Antiqua'), local('Book-Antiqua'), url(../fonts/book-antiqua.ttf) format('truetype');
+  src: url(../fonts/book-antiqua.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Book Antiqua';
   font-style: normal;
   font-weight: 700;
-  src: local('Book Antiqua Bold'), local('Book-Antiqua-Bold'), url(../fonts/book-antiqua-bold.ttf) format('truetype');
+  src: url(../fonts/book-antiqua-bold.ttf) format('truetype');
 }
 @font-face {
   /* latin */
@@ -17,7 +17,7 @@
   font-weight: 400;
   src: url('../fonts/rochester.eot');
   /* IE9 Compat Modes */
-  src: local('Rochester Regular'), local('Rochester-Regular'), url('../fonts/rochester.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('../fonts/rochester.woff2') format('woff2'), /* Super Modern Browsers */ url('../fonts/rochester.woff') format('woff'), /* Modern Browsers */ url('../fonts/rochester.ttf') format('truetype'), /* Safari, Android, iOS */ url('../fonts/rochester.svg#Rochester') format('svg');
+  src: url('../fonts/rochester.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('../fonts/rochester.woff2') format('woff2'), /* Super Modern Browsers */ url('../fonts/rochester.woff') format('woff'), /* Modern Browsers */ url('../fonts/rochester.ttf') format('truetype'), /* Safari, Android, iOS */ url('../fonts/rochester.svg#Rochester') format('svg');
   /* Legacy iOS */
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
@@ -25,7 +25,13 @@
   font-family: 'Milkshake';
   font-style: normal;
   font-weight: 400;
-  src: local('Milkshake'), url(../fonts/milkshake.ttf) format('truetype');
+  src: url(../fonts/milkshake.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Calibri';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../fonts/calibri.ttf) format('truetype');
 }
 @font-face {
   /* fallback */
@@ -68,7 +74,7 @@ body {
   -o-background-size: cover;
   background-size: cover;
   color: #002050;
-  font-family: 'Calibri', cursive;
+  font-family: 'Calibri', Helvetica, sans-serif;
   font-size: 18px;
   margin: 0;
   padding: 0;
@@ -167,7 +173,7 @@ footer {
   height: 35px;
 }
 footer .mage {
-  font-family: 'Calibri', cursive;
+  font-family: 'Calibri', Helvetica, sans-serif;
   font-variant: unicase;
 }
 h1 {
@@ -182,7 +188,7 @@ h1 {
   margin: 0 0 20px;
 }
 h2 {
-  font-family: 'Calibri', cursive;
+  font-family: 'Calibri', Helvetica, sans-serif;
   font-size: 20px;
   font-weight: bold;
   margin: 25px 0 10px;
@@ -620,7 +626,7 @@ img.tm-thumbnail:hover {
 .card .card-job,
 .card .card-phone,
 .card .card-email {
-  font-family: 'Calibri', cursive;
+  font-family: 'Calibri', Helvetica, sans-serif;
   font-size: 14px;
   margin-bottom: 3px;
 }
@@ -793,7 +799,7 @@ form button {
   nav ul li a {
     background-color: white;
     color: #204080 !important;
-    font-family: 'Calibri', cursive;
+    font-family: 'Calibri', Helvetica, sans-serif;
     font-size: 1.5em;
     font-style: italic;
     font-weight: bold;
@@ -1061,7 +1067,7 @@ form button {
   nav ul li a {
     border-bottom: 3px solid #002050;
     color: white !important;
-    font-family: 'Calibri', cursive;
+    font-family: 'Calibri', Helvetica, sans-serif;
     font-size: 17px;
     text-align: center;
     margin-right: 9px;

@@ -37,13 +37,13 @@
         font-family: 'Book Antiqua';
         font-style: normal;
         font-weight: 400;
-        src: local('Book Antiqua'), local('Book-Antiqua'), url(../fonts/book-antiqua.ttf) format('truetype');
+        src: url(../fonts/book-antiqua.ttf) format('truetype');
     }
     @font-face {
         font-family: 'Book Antiqua';
         font-style: normal;
         font-weight: 700;
-        src: local('Book Antiqua Bold'), local('Book-Antiqua-Bold'), url(../fonts/book-antiqua-bold.ttf) format('truetype');
+        src: url(../fonts/book-antiqua-bold.ttf) format('truetype');
     }
 
     @font-face { /* latin */
@@ -51,7 +51,7 @@
         font-style: normal;
         font-weight: 400;
         src: url('../fonts/rochester.eot'); /* IE9 Compat Modes */
-        src: local('Rochester Regular'), local('Rochester-Regular'),
+        src:
             url('../fonts/rochester.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
             url('../fonts/rochester.woff2') format('woff2'), /* Super Modern Browsers */
             url('../fonts/rochester.woff') format('woff'), /* Modern Browsers */
@@ -64,12 +64,19 @@
         font-family: 'Milkshake';
         font-style: normal;
         font-weight: 400;
-        src: local('Milkshake'), url(../fonts/milkshake.ttf) format('truetype');
+        src: url(../fonts/milkshake.ttf) format('truetype');
+    }
+
+    @font-face {
+        font-family: 'Calibri';
+        font-style: normal;
+        font-weight: 400;
+        src: url(../fonts/calibri.ttf) format('truetype');
     }
 
     @arial: Arial, Helvetica, sans-serif;
-    @bookAntiqua: 'Book Antiqua', cursive;
-    @calibri: 'Calibri', cursive;
+    @bookAntiqua: 'Book Antiqua', Helvetica, sans-serif;
+    @calibri: 'Calibri', Helvetica, sans-serif;
     @milkshake: 'Milkshake', cursive;
     @rochester: 'Rochester', cursive;
     @timesNewRoman: 'Times New Roman', Times, serif;

@@ -80,7 +80,7 @@
         hanem a tiszta boldogságra is.”
     </p>
 
-    <div class="author">&mdash; Maharashi Mahesh Yogi</div>
+    <div class="author">&mdash; Maharishi Mahesh Yogi</div>
 </blockquote>
 
 <?php

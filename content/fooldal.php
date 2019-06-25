@@ -31,5 +31,5 @@
         mivel ezek nem tartoznak az élet alapvető természetéhez.”
     </p>
     
-    <div class="author">&mdash; Maharashi Mahesh Yogi</div>
+    <div class="author">&mdash; Maharishi Mahesh Yogi</div>
 </blockquote>
